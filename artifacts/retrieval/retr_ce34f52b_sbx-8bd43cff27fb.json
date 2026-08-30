@@ -1,0 +1,72 @@
+{
+  "query": "Apex Chemicals suspension damage breakdown replacement CH40IK6238",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-e7851b35",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-18 | ch40ik6238 | odo=230105.0 | mechanic=Guddu | AC compressor smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8661,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-55b06f35",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-24 | CH40IK6238 | odo=301939.0 | mechanic=Guddu | AC compressor issue reported by driver, repaired and tested. Road test OK.",
+      "score": 0.8654,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-1faa8a01",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | RJ43DD3546 | odo=162479.0 | mechanic=Salim bhai | DEF pump smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8431,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e4459853",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-09 | PB68LJ4728 | odo=273714.0 | mechanic=Ramesh | AC compressor gear slip kar raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8418,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-4d27e733",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-29 | PB 79 EX 8744 | odo=265209.0 | mechanic=Harpreet | DEF pump smoke aa raha tha, repair kiya. Next check 10k km pe.",
+      "score": 0.8378,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-afa08092",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-24 | UP29HF3900 | odo=63720.0 | mechanic=Salim bhai | battery smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8368,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 231.2,
+  "run_id": "sbx-8bd43cff27fb",
+  "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0009"
+}

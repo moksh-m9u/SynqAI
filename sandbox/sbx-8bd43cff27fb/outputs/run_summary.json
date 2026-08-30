@@ -1,0 +1,12 @@
+{
+  "run_id": "sbx-8bd43cff27fb",
+  "kind": "sandbox",
+  "started": "2026-08-30T09:27:26.999591+00:00",
+  "finished": "2026-08-30T09:27:49.819339+00:00",
+  "records": 3,
+  "work_orders": 3,
+  "quarantined": 0,
+  "quarantine_reasons": [],
+  "total_execution_ms": 22820,
+  "approve": "auto"
+}

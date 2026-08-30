@@ -1,0 +1,72 @@
+{
+  "query": "shakti cement replacement near delhi",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-1faa8a01",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | RJ43DD3546 | odo=162479.0 | mechanic=Salim bhai | DEF pump smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8226,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_01_shakti_sla",
+      "source": "emails/thread_01_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8195,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8117,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-c0360daa",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-25 | HR-41-FO-7216 | odo=414011.0 | mechanic=Ramesh | DEF pump overheat ho raha tha, weld kiya. Next check 10k km pe.",
+      "score": 0.8087,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-228b4a3f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-30 | hr13hg1333 | odo=198211.0 | mechanic=Salim bhai | radiator pickup kam ho gayi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8067,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_03_shakti_ops",
+      "source": "emails/thread_03_shakti_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_03_shakti_ops\nSubject: Rate revision Q3\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Sun, 09 Aug 2026 14:52 +0530\nSubject: RE: Rate revision Q3\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
+      "score": 0.8064,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 18592.2,
+  "run_id": "dashboard",
+  "thread_id": "playground"
+}

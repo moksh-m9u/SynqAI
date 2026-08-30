@@ -110,6 +110,8 @@ def _run_ticket(graph, ticket: Ticket, approve_mode: str, run_id: str,
         else:
             decision, by = "REJECT", "Approver(CLI)"
         resume = {"decision": decision, "by": by}
+    elif approve_mode == "hold":
+        return state.values  # pause at HITL: draft stays pending, no resume touch
     else:
         resume = {"decision": "APPROVE", "by": "Approver(auto)"}
     graph.invoke(Command(resume=resume), config=config)

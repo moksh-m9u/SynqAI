@@ -53,7 +53,7 @@ def render() -> None:
         type="primary", use_container_width=True, key="sbx_run", disabled=not (records and confirm),
     ):
         run_id = new_run_id("sbx")
-        approve = "ask"if approve_stop else "auto"
+        approve = "hold"if approve_stop else "auto"
         snapshot = [dict(r) for r in records]  # read outside the worker thread (session_state)
         holder = run_job("Ticket sandbox run", lambda log: process_records(
             snapshot, run_id, kind="sandbox", approve=approve, log=log))
