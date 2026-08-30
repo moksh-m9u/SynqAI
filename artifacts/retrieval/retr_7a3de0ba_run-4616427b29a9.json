@@ -1,0 +1,72 @@
+{
+  "query": "Apex Chemicals brake failure warning breakdown replacement UP-37-UP-7482",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-491c2663",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-21 | HR70ZZ3780 | odo=366758.0 | mechanic=Salim bhai | brake drum issue reported by driver, replaced. Road test OK.",
+      "score": 0.871,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-fbc0c323",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-21 | HR-70-ZZ-3780 | odo=308666.0 | mechanic=Harpreet | brake drum awaaz aa rahi thi, replace kiya. Next check 10k km pe.",
+      "score": 0.8677,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-43d99776",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-03 | UK-41-CO-2604 | odo=69592.0 | mechanic=Ramesh | brake drum leak ho raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8619,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-614d2d69",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-10 | RJ34GX8933 | odo=382693.0 | mechanic=Vicky | brake pad start hone me dikkat thi, repair kiya. Next check 5k km pe.",
+      "score": 0.8616,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e3649820",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-12 | UP86CM7252 | odo=137542.0 | mechanic=Anand | brake pad start hone me dikkat thi, naya lagwaya. Next check 5k km pe.",
+      "score": 0.8613,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-9e3b6f37",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-29 | HR59KV7624 | odo=286486.0 | mechanic=Vicky | brake pad start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8597,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 207.9,
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0001"
+}

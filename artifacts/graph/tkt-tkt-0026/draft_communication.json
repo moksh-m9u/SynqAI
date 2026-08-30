@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0026",
+  "at": "2026-08-30T08:46:02.131639+00:00",
+  "timing_ms": 707.7,
   "draft": {
     "message_id": "MSG-TKT-0026",
     "ticket_id": "TKT-0026",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0026"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Orion Pharma\nBroken vehicle reg: CH81AQ4130\nReplacement vehicle reg: CH85NJ1986\nDispatch hub: Chandigarh\nRoute: Chandigarh → Rudrapur\nETA detail: Estimated arrival in about 10.3 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur\n\nDear Orion Pharma Team,\n\nWe are writing to inform you that a replacement vehicle (Reg: CH85NJ1986) has been dispatched from our Chandigarh hub following a breakdown of the original vehicle (Reg: CH81AQ4130). The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 10.3 hours. We apologize for the inconvenience and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 695.1,
+    "tokens": {
+      "prompt": 136,
+      "completion": 123
+    }
   }
 }

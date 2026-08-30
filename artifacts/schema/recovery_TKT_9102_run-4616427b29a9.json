@@ -20,6 +20,11 @@
   "actions": [
     "llm key mapping attempted for unknowns=['raw']"
   ],
+  "llm_debug": {
+    "prompt": "You map keys of a messy breakdown-ticket record to a canonical schema. Return ONLY JSON, no prose: an object mapping each input key to one canonical key.\nCanonical schema keys: {\"ticket_id\": \"unique ticket identifier, e.g. TKT-0001\", \"created_at\": \"ISO-8601 datetime of the breakdown\", \"vehicle\": \"vehicle registration number\", \"driver_id\": \"driver identifier like DRV-001 (may be null/empty)\", \"origin_hub\": \"origin hub city/name\", \"km_from_origin_hub\": \"float distance in km from origin hub\", \"destination\": \"destination city/name\", \"issue\": \"breakdown issue text\", \"severity\": \"HIGH|MEDIUM|LOW or empty\", \"client\": \"client/customer name\", \"status\": \"OPEN|CLOSED or other workflow status\", \"resolution_note\": \"resolution note (may be empty)\"}\nRecord: {\"ticket_id\": \"TKT-9102\", \"created_at\": \"not-a-date\", \"vehicle\": \"hr??unknown\", \"driver_id\": \"DRV-999\", \"origin_hub\": \"\", \"km_from_origin_hub\": 35, \"destination\": \"\", \"issue\": \"\", \"severity\": \"\", \"client\": \"Vertex Retail\", \"status\": \"OPEN\", \"resolution_note\": \"\", \"raw\": {}}\nRules: unknown/irrelevant keys map to '__skip__'. Values are NOT transformed here.",
+    "timing_ms": 996.3,
+    "raw_text": "{\n  \"ticket_id\": \"ticket_id\",\n  \"created_at\": \"created_at\",\n  \"vehicle\": \"vehicle\",\n  \"driver_id\": \"driver_id\",\n  \"origin_hub\": \"origin_hub\",\n  \"km_from_origin_hub\": \"km_from_origin_hub\",\n  \"destination\": \"destination\",\n  \"issue\": \"issue\",\n  \"severity\": \"severity\",\n  \"client\": \"client\",\n  \"status\": \"status\",\n  \"resolution_note\": \"resolution_note\",\n  \"raw\": \"__skip__\"\n}"
+  },
   "mapping": {
     "ticket_id": "ticket_id",
     "created_at": "created_at",

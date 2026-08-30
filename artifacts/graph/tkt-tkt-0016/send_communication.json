@@ -2,6 +2,8 @@
   "node": "send_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0016",
+  "at": "2026-08-30T08:46:12.603988+00:00",
+  "timing_ms": 0.4,
   "comms_sent": {
     "message_id": "MSG-TKT-0016",
     "ticket_id": "TKT-0016",

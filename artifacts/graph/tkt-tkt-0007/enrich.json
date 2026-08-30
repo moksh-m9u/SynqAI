@@ -2,6 +2,8 @@
   "node": "enrich",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0007",
+  "at": "2026-08-30T08:45:55.412751+00:00",
+  "timing_ms": 0.2,
   "ticket_id": "TKT-0007",
   "context": {
     "vehicle": {
@@ -276,5 +278,5 @@
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0007"
   },
-  "langsmith_trace": "01a051ac-d70d-7472-a534-4b806a656446"
+  "langsmith_trace": "01a051d8-c353-7020-a961-aa100ca12dd1"
 }

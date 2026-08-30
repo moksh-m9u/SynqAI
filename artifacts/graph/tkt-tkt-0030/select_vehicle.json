@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0030",
+  "at": "2026-08-30T08:46:30.719573+00:00",
+  "timing_ms": 2.7,
   "ticket_id": "TKT-0030",
   "selection": {
     "ticket_id": "TKT-0030",
@@ -201,5 +203,5 @@
     "candidate_hub": "Rudrapur",
     "chosen_year": 2020
   },
-  "langsmith_trace": "01a051ac-3a19-7562-a4da-911bd9ee70e7"
+  "langsmith_trace": "01a051d9-4d3c-7900-963c-5f65b98b10b6"
 }

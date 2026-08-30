@@ -1,0 +1,72 @@
+{
+  "query": "Orion Pharma clutch slipping breakdown replacement CH-81-AQ-4130",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-dee6d0d1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-31 | PB-47-HL-3939 | odo=339483.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8859,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-4bc35e1f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-21 | PB-31-NP-8886 | odo=85200.0 | mechanic=Ramesh | clutch plate issue reported by driver, replaced. Road test OK.",
+      "score": 0.8758,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-0c86bf7d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-26 | UK-29-GJ-4566 | odo=291967.0 | mechanic=Anand | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8718,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-8768cb85",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-26 | UP41IF2771 | odo=123347.0 | mechanic=Harpreet | clutch plate start hone me dikkat thi, repair kiya. Next check 15k km pe.",
+      "score": 0.8716,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-1b0669a1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-18 | HR15HP2193 | odo=256361.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8667,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-985d587a",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-26 | pb42bw8144 | odo=156011.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced. Road test OK.",
+      "score": 0.8638,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 212.5,
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0026"
+}

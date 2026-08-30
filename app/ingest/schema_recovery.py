@@ -55,7 +55,7 @@ _HEURISTIC_KEY_MAP = {
 }
 
 
-def _llm_map_keys(raw: dict, groq_llm=None) -> dict[str, str]:
+def _llm_map_keys(raw: dict, groq_llm=None, debug: dict[str, Any] | None = None) -> dict[str, str]:
     """Ask Qwen for a JSON {raw_key -> canonical_key} mapping. Pure inference."""
     if groq_llm is None:
         return {}
@@ -66,15 +66,24 @@ def _llm_map_keys(raw: dict, groq_llm=None) -> dict[str, str]:
         f"Record: {json.dumps(raw)}\n"
         "Rules: unknown/irrelevant keys map to '__skip__'. Values are NOT transformed here."
     )
+    if debug is not None:
+        debug["prompt"] = prompt
     try:
+        import time as _t
+        _t0 = _t.perf_counter()
         resp = groq_llm.invoke(prompt)
         text = resp.content if hasattr(resp, "content") else str(resp)
+        if debug is not None:
+            debug.update({"timing_ms": round((_t.perf_counter() - _t0) * 1000, 1),
+                          "raw_text": text[-4000:]})
         m = re.search(r"\{.*\}", text, re.S)
         if not m:
             return {}
         mapping = json.loads(m.group(0))
         return {k: v for k, v in mapping.items() if v != "__skip__"}
-    except Exception:
+    except Exception as exc:
+        if debug is not None:
+            debug["error"] = str(exc)[:200]
         return {}
 
 
@@ -94,10 +103,12 @@ def recover_record(raw: dict[str, Any], run_id: str = "", thread_id: str = "",
     unknowns = [k for k in raw if not heuristic_map.get(k) and k not in TICKET_SCHEMA]
 
     llm_map: dict[str, str] = {}
+    llm_debug: dict[str, Any] = {}
     if unknowns or groq_llm is not None:
         llm = groq_llm or build_llm()
         if llm is not None:
-            llm_map = _llm_map_keys(raw, llm)
+            llm_map = _llm_map_keys(raw, llm, debug=llm_debug)
+            report["llm_debug"] = llm_debug
             report["actions"].append(f"llm key mapping attempted for unknowns={unknowns}")
 
     # merge: LLM wins on ambiguity, heuristic fills gaps; mapping never guesses values

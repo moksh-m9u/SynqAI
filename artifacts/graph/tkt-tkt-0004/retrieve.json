@@ -2,6 +2,8 @@
   "node": "retrieve",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0004",
+  "at": "2026-08-30T08:46:16.608536+00:00",
+  "timing_ms": 577.7,
   "ticket_id": "TKT-0004",
   "retrieval": {
     "query": "Vertex Retail clutch slipping breakdown replacement PB-84-TB-2343",
@@ -12,7 +14,9 @@
         "document_type": "transcript",
         "text": "INTERVIEWER: Tell me about the clients. Who is difficult?\n\nRAJENDER: Difficult is the wrong word. They all have a real rulebook and a paper rulebook. Shakti Cement's contract says 48 hour delivery window. Forget the contract. If a Shakti load crosses 36 hours, their plant head calls our MD directly, on his personal number, and then the MD calls me, and my evening is finished. So in my head Shakti is a 36 hour client. Plan everything to 36. The extra 12 hours in the contract is for God, not for us.\n\nVertex Retail, opposite problem. Their contract says nothing about delivery time of day. But their warehouse at Ludhiana stops accepting after 6 pm. Not 6:15. The gate man will not open. So if a Vertex truck is going to reach after 6, don't let it reach after 6. Hold it at the last halt, deliver next morning at 8 when the gate opens, and inform their coordinator the previous evening. And listen, this is important: it is never marked as a failed delivery. It is a scheduled morning delivery. Mark it failed and Vertex's system generates a penalty note automatically and then two finance teams fight for a month over 4,000 rupees.\n\nApex Chemicals. (pauses) They track our number plates. I am not joking. If a truck has any issue on an Apex run, a breakdown, a late arrival, anything, that same truck does not go back to Apex on the very next dispatch. Send a different vehicle at least once in between. Their gate register has plate numbers going back years and if the same \"problem truck\" shows up next time, their stores manager makes it a whole thing. It costs us nothing to rotate. So rotate.\n\nOrion Pharma, only one rule but it is absolute: their loads never wait at a hub overnight unrefrigerated, and their consignments always get the newest available vehicle, 2020 or later. Pharma audit requirement, they check the RC copy. Send a 2016 truck and the load is rejected at the gate, full trip wasted.",
         "score": 0.8594,
-        "rule_candidate": true
+        "rule_candidate": true,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "dispatcher_001",
@@ -20,7 +24,9 @@
         "document_type": "transcript",
         "text": "INTERVIEWER: Rajender ji, thank you for doing this. The idea is simple. Whatever is in your head about how dispatch actually works, we want it written down before you leave. Not the SOP document. The real rules.\n\nRAJENDER: (laughs) The SOP document. I wrote half of it in 2015 and nobody has read it since, including me. Fine. Ask.",
         "score": 0.8371,
-        "rule_candidate": true
+        "rule_candidate": true,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "email_thread_34_internal_misc",
@@ -28,7 +34,9 @@
         "document_type": "email_thread",
         "text": "Thread: thread_34_internal_misc\nSubject: Fuel card limits revision\nDate: 1900-01-01 00:00:00\nSir,\n\nPlease advise on the above.\n\nHub team\n------------------------------------------------------------\nFrom: dispatch@meridianfreight.example.in\nTo: hub@meridianfreight.example.in\nDate: Sun, 21 Jun 2026 20:25 +0530\nSubject: RE: Fuel card limits revision\n\nProceed as per last quarter's process.\n\nRajender Pal Yadav",
         "score": 0.8158,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "email_thread_03_shakti_ops",
@@ -36,7 +44,9 @@
         "document_type": "email_thread",
         "text": "Thread: thread_03_shakti_ops\nSubject: Rate revision Q3\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Sun, 09 Aug 2026 14:52 +0530\nSubject: RE: Rate revision Q3\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
         "score": 0.8122,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-dee6d0d1",
@@ -44,7 +54,9 @@
         "document_type": "maintenance_record",
         "text": "2025-03-31 | PB-47-HL-3939 | odo=339483.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
         "score": 0.8798,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-4bc35e1f",
@@ -52,7 +64,9 @@
         "document_type": "maintenance_record",
         "text": "2026-04-21 | PB-31-NP-8886 | odo=85200.0 | mechanic=Ramesh | clutch plate issue reported by driver, replaced. Road test OK.",
         "score": 0.8755,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-cced816b",
@@ -60,7 +74,9 @@
         "document_type": "maintenance_record",
         "text": "2025-11-06 | HR59KV7624 | odo=313983.0 | mechanic=Vicky | clutch plate gear slip kar raha tha, naya lagwaya. Next check 5k km pe.",
         "score": 0.8644,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-0c86bf7d",
@@ -68,7 +84,9 @@
         "document_type": "maintenance_record",
         "text": "2026-02-26 | UK-29-GJ-4566 | odo=291967.0 | mechanic=Anand | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
         "score": 0.8633,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-bbfd8df1",
@@ -76,7 +94,9 @@
         "document_type": "maintenance_record",
         "text": "2025-12-24 | HR68TS2638 | odo=414415.0 | mechanic=Salim bhai | clutch plate gear slip kar raha tha, weld kiya. Next check 10k km pe.",
         "score": 0.8628,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       },
       {
         "chunk_id": "maint_MNT-985d587a",
@@ -84,7 +104,9 @@
         "document_type": "maintenance_record",
         "text": "2025-06-26 | pb42bw8144 | odo=156011.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced. Road test OK.",
         "score": 0.8584,
-        "rule_candidate": false
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
       }
     ],
     "top_refs": [
@@ -94,6 +116,6 @@
       "maintenance_log.xlsx"
     ],
     "grounded": true,
-    "langsmith_trace": "01a051ad-1c4a-7611-97e9-bae759ba9718"
+    "langsmith_trace": "01a051d9-13de-7cc1-a001-ef14dcae53ad"
   }
 }

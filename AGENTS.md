@@ -1,887 +1,554 @@
-It's written as a project charter that turns it into a Staff Forward Deployed Engineer working alongside you—not just a code generator. It includes the challenge context, architecture, locked tech stack, Streamlit dashboard requirements, tradeoff protocol, development workflow, and your current project setup (data directory + `.env`).
+This is the prompt I'd give OpenCode as a single update request. It tells it to only modify the Streamlit frontend, preserve the backend, and turn the dashboard into an interactive testing environment rather than a read-only artifact viewer.
 
-# OpenCode Project Charter — Synq AI Forward Deployment Challenge
+# OpenCode Update Prompt — Streamlit Interactive Playground
 
-You are my Staff-level Forward Deployed Engineering partner for the Synq AI Forward Deployment Challenge.
+You are updating the Meridian Freight project.
 
-Your job is not to autocomplete code.
+The backend (LangGraph, RAG, entity resolution, rule engine, audit system, Qdrant, LangSmith, and artifacts generation) is already working.
 
-Your job is to help me architect, critique, implement, and defend a production-grade system that maximizes the challenge's scoring rubric while remaining completely explainable.
+Do not rewrite the backend unless absolutely necessary. This task is primarily a Streamlit UX overhaul that makes the system easy to test live during judging.
 
-Think like an engineer deploying AI into a Fortune 500 company's messy internal operations—not like someone building a chatbot.
+The goal is to transform the dashboard from an artifact viewer into an interactive operations console where a judge can upload files, inject failures, inspect reasoning, replay executions, and understand every page without prior knowledge.
 
-We are building this together during an 8-hour engineering event.
+Whenever a change affects architecture, performance, or UX, stop and ask me for a tradeoff analysis before implementing it.
 
-# How You Must Work With Me
+# Primary Goal
 
-## This is the most important rule.
+Every page should satisfy three things:
 
-Never silently make architectural decisions.
+1. Explain what this page does (plain English).
 
-Whenever we reach a meaningful design decision, stop and ask me.
+2. Allow interaction, not just inspection.
 
-Every architecture discussion must follow this format.
+3. Expose underlying JSON and artifacts for technical judges.
 
-## Tradeoff Discussion
+Think of this like a mix of LangSmith + Kibana + Streamlit Playground.
 
-### Decision
+# Global UX Improvements
 
-Explain what we're deciding.
+Every page must start with:
 
-### Option A
+* Title
 
-* pros
+* One-line description
 
-* cons
+* "Why this matters" section
 
-* implementation complexity
-
-* scoring impact
-
-### Option B
-
-* pros
-
-* cons
-
-* implementation complexity
-
-* scoring impact
-
-### Recommendation
-
-Tell me which option you recommend.
-
-Then wait for my decision before implementing.
-
-Ask me before deciding things like:
-
-* LangGraph topology
-
-* Qdrant collections
-
-* SQLite schema
-
-* entity resolution strategy
-
-* caching
-
-* rule representation
-
-* concurrency
-
-* deployment
-
-* Streamlit UX
-
-* retrieval architecture
-
-* output structure
-
-* schema recovery behavior
-
-Never silently choose.
-
-# Challenge Overview
-
-We're building an automation for Meridian Freight Pvt. Ltd.
-
-Scenario:
-
-* A truck breaks down.
-
-* A dispatcher normally spends about 40 minutes across multiple systems.
-
-* Our system performs the cognitive work automatically.
-
-* Only irreversible actions require Human-in-the-Loop approval.
-
-This is not a chatbot.
-
-This is an internal operations automation.
-
-Workflow:
-
-```
-Breakdown
-    ↓
-Validate
-    ↓
-Enrich Context
-    ↓
-Apply Rules
-    ↓
-Select Replacement Vehicle
-    ↓
-Human Approval
-    ↓
-Create Work Order
-    ↓
-Send Client Communication
-    ↓
-Audit
-```
-
-# Scoring Rubric (Optimize Every Decision Against This)
-
-|
-Score
-
-|
-
-Meaning
-
-|
-| --- | --- |
-|
-
-35
-
-|
-
-Automation correctness
-
-|
-|
-
-25
-
-|
-
-Context quality
-
-|
-|
-
-15
-
-|
-
-Expert rule encoding
-
-|
-|
-
-15
-
-|
-
-Production hygiene
-
-|
-|
-
-10
-
-|
-
-Architecture defense
-
-|
-
-Whenever recommending an implementation, explicitly mention which scoring categories it improves.
-
-# What We're Shipping
-
-## Part A — Context Foundation (25 pts)
-
-Build a unified knowledge layer.
-
-Requirements:
-
-* ingest every provided source
-
-* mask PII before storage
-
-* resolve duplicate entities
-
-* handle conflicting sources with documented precedence
-
-* grounded retrieval with citations
-
-* return "insufficient information" instead of hallucinating
-
-This subsystem should exist independently of the automation.
-
-## Part B — Breakdown-to-Resolution (35 pts)
-
-Pipeline:
-
-1. Validate tickets.
-
-2. Detect duplicates.
-
-3. Quarantine broken records.
-
-4. Enrich with vehicle, driver, trip, client, SLA, maintenance history.
-
-5. Apply dispatcher rules.
-
-6. Select an eligible replacement vehicle.
-
-7. Create exactly one work order.
-
-8. Draft client communication.
-
-9. Pause for HITL.
-
-10. Send only after approval.
-
-11. Produce audit records.
-
-# Locked Technical Stack (Do Not Change Unless I Ask)
-
-This stack is fixed.
-
-## LLM
-
-Provider:
-
-* Groq
-
-Model:
-
-```
-qwen/qwen3-27b
-```
-
-Access via:
-
-* `langchain-groq`
-
-Use Qwen for:
-
-* LangGraph orchestration
-
-* schema recovery
-
-* structured outputs
-
-* rule extraction
-
-* client message drafting
-
-Do not introduce Gemini or OpenAI.
-
-## Embeddings
-
-Use:
-
-```
-ibm-granite/granite-embedding-97m-multilingual-r2
-```
-
-Use via:
-
-* `langchain-huggingface`
-
-* `sentence-transformers`
-
-Run embeddings locally.
-
-Reasons:
-
-* multilingual
-
-* lightweight
-
-* mixed Hindi-English support
-
-* avoids inference API limits
-
-## Vector Store
-
-Use:
-
-* Qdrant Cloud
-
-Single collection.
-
-Store rich metadata.
+* Small help tooltip wherever terminology is technical.
 
 Example:
 
-JSON
+> Rule Explorer
 
-```
-{
-  "source":"dispatcher_interview",
-  "entity":"VEHICLE_204",
-  "document_type":"transcript",
-  "rule_candidate":true
-}
-```
+> See every dispatch rule the AI extracted from the retiring dispatcher's knowledge. Test how different vehicles, clients, and routes affect decisions before running the full pipeline.
 
-## Workflow
+Every JSON viewer should include:
 
-Use:
+* Copy button
 
-* LangGraph
+* Download JSON
 
-* Streaming execution
+* Collapse/Expand All
 
-* Parallel branches
+* Search inside JSON
 
-* SQLite Checkpointer
+Every table should support:
 
-* HumanInTheLoopMiddleware or `interrupt()`
+* Search
 
-Avoid one giant agent.
+* Sorting
 
-Prefer deterministic nodes.
+* Filtering
 
-## API
+* CSV export
 
-* FastAPI
+# New Landing Page
 
-## Dashboard
+Current executive overview stays.
 
-* Streamlit
+Add:
 
-Treat it as a production deliverable.
-
-# Environment
-
-The project already contains:
-
-* a `data/` directory containing every provided challenge file.
-
-* a configured `.env` file.
-
-Assume these already exist.
-
-Never recreate them.
-
-Load environment variables using:
-
-* `python-dotenv`
-
-Do not hardcode secrets.
-
-# Expected Project Structure
-
-```
-project/
-│
-├── data/
-│   ├── tickets.json
-│   ├── fleet_master.csv
-│   ├── meridian_trips.csv
-│   ├── maintenance_log.xlsx
-│   ├── drivers_roster.csv
-│   ├── dispatcher_interview.txt
-│   └── emails/
-│
-├── artifacts/
-│   ├── knowledge/
-│   ├── rules/
-│   ├── entities/
-│   ├── schema/
-│   ├── retrieval/
-│   ├── graph/
-│   └── traces/
-│
-├── outputs/
-│
-├── audit/
-│
-├── dashboard/
-│
-├── app/
-│
-├── .env
-│
-└── README.md
-```
-
-# How to Treat Every Input Source
-
-## Live Operational Sources
-
-These represent structured operational truth.
-
-* tickets.json
-
-* fleet_master.csv
-
-* drivers_roster.csv
-
-* meridian_trips.csv
-
-Use:
-
-* deterministic parsing
-
-* Pydantic validation
-
-* Python logic
-
-Do not use an LLM unless schema recovery becomes necessary.
-
-## Tribal Knowledge Sources
-
-These contain operational knowledge.
-
-* dispatcher_interview.txt
-
-* maintenance_log.xlsx
-
-* emails/
-
-Do not simply chunk them into RAG.
-
-Instead:
-
-* extract executable rules
-
-* preserve original chunks
-
-* store citations
-
-* distinguish hard constraints from heuristics
-
-# Rule Engine Philosophy
-
-Rajender's interview is the company's operating system.
-
-Every extracted rule becomes structured.
-
-Example:
-
-YAML
-
-```
-id: R_ORIGIN_50KM
-
-severity: hard_constraint
-
-condition:
-  distance_from_origin: <=50
-
-action:
-  replacement_source: origin_hub
-
-citation:
-  dispatcher_interview
-```
-
-Runtime should evaluate these rules deterministically.
-
-Qdrant stores the original transcript for citations.
-
-Never rediscover rules through semantic search during execution.
-
-# Entity Resolution
-
-Create canonical entities.
-
-Example:
-
-```
-CLIENT_001
- ├── Meridian Freight
- ├── Meridian Pvt Ltd
- └── MFL
-```
-
-Maintain aliases.
-
-Store provenance.
-
-# Conflict Resolution
-
-Use documented precedence.
-
-Default order:
-
-1. Live operational data
-
-2. Dispatcher rules
-
-3. Fleet records
-
-4. Emails
-
-5. Maintenance notes
-
-Every decision should explain why a source won.
-
-# Schema Recovery Strategy
-
-Unknown formats should never crash the system.
-
-Pipeline:
-
-```
-Native Loader
-      ↓
-Pydantic Validation
-
-Success
-      ↓
-Continue
-
-Failure
-      ↓
-Schema Recovery
-      ↓
-Structured Mapping
-      ↓
-Validation
-      ↓
-Continue
-```
-
-The LLM infers mappings.
-
-Python performs extraction.
-
-Never let the LLM directly populate production records.
-
-# LLM Usage Policy
-
-Use Qwen only for:
-
-* schema recovery
-
-* structured extraction
-
-* client message drafting
-
-* identifying unseen document structures
-
-Never use Qwen for:
-
-* duplicate detection
-
-* vehicle eligibility
-
-* rule execution
-
-* ETA calculations
-
-* idempotency
-
-* deterministic filtering
-
-Default assumption:
-
-> Python decides. Qwen resolves ambiguity.
-
-# LangGraph Architecture
-
-The graph should be event-driven.
-
-Preferred flow:
-
-```
-START
-
-↓
-
-Validate
-
-↓
-
-Parallel Fan-out
-
-├── Live Context
-
-├── Knowledge Retrieval
-
-└── Rule Lookup
-
-↓
-
-Merge
-
-↓
-
-Vehicle Selection
-
-↓
-
-HITL
-
-↓
-
-Outputs
-
-↓
-
-END
-```
-
-Use streaming updates.
-
-Prefer parallel execution where branches are independent.
-
-# Persistence Strategy
-
-Use three layers.
-
-|
-Layer
-
-|
-
-Storage
-
-|
-| --- | --- |
-|
-
-Semantic knowledge
-
-|
-
-Qdrant
-
-|
-|
-
-Workflow state
-
-|
-
-SQLite
-
-|
-|
-
-Business truth
-
-|
-
-JSONL outputs
-
-|
-
-SQLite stores execution memory.
-
-JSONL outputs are the authoritative business records.
-
-# Exactly-once Strategy
-
-Use an Outbox pattern.
-
-Before writing:
-
-* work order
-
-* sent communication
-
-check whether an entry already exists.
-
-Pipeline reruns must produce identical outputs.
-
-# Mandatory Streamlit Operations Dashboard
-
-The dashboard is not a debugging tool.
-
-It is part of the product.
-
-Everything should be inspectable.
-
-The evaluator should reconstruct any ticket in under one minute.
-
-The dashboard reads artifacts from disk.
-
-Never rely on hidden in-memory state.
-
-# Every Pipeline Stage Must Produce Artifacts
-
-Nothing disappears inside LangGraph.
-
-## Knowledge Artifacts
-
-Store chunk-level JSON.
-
-Example:
-
-JSON
-
-```
-{
-  "chunk_id":"dispatcher_042",
-  "source":"dispatcher_interview.txt",
-  "text":"...",
-  "metadata":{}
-}
-```
-
-Every chunk should be inspectable.
-
-## Schema Artifacts
-
-Store:
-
-* original schema
-
-* inferred mapping
-
-* validation result
-
-## Entity Artifacts
-
-Store:
-
-* canonical entities
-
-* aliases
-
-* provenance
-
-## Rule Artifacts
-
-Store:
-
-* extracted rules
-
-* citations
-
-* severity
-
-* conditions
-
-* actions
-
-## Retrieval Artifacts
-
-For every retrieval:
-
-* query
-
-* retrieved chunks
-
-* similarity scores
-
-## Graph Artifacts
-
-Every node writes:
-
-JSON
-
-```
-{
-  "node":"vehicle_selection",
-  "output":{}
-}
-```
-
-This allows replay.
-
-# Streamlit Pages
-
-Build these pages.
-
-## Executive Overview
+### Pipeline Status
 
 Show:
 
-* processed
+* Last run
 
-* quarantined
+* Current model
 
-* pending approvals
+* Embedding model
 
-* duplicates
+* Vector database status
 
-* pipeline health
+* LangSmith tracing status
 
-## Live Pipeline
+* Collection size
 
-Visualize LangGraph execution.
+* Average retrieval latency
 
-Show:
+### Quick Actions
 
-* completed nodes
+Large buttons:
 
-* running nodes
+* Upload Ticket
 
-* paused nodes
+* Upload Ticket Batch
 
-Support live streaming.
+* Run Sample Ticket
 
-## Ticket Explorer
+* Chaos Test
 
-Given a ticket:
+* Open Retrieval Playground
 
-Show:
+# 1. Ticket Sandbox (Highest Priority)
 
-* timeline
+This is the biggest missing feature.
 
-* retrieved context
+Currently users can only inspect existing tickets.
 
-* applied rules
+Instead build a live testing page.
 
-* eliminated vehicles
+## Input methods
 
-* selected vehicle
+### A. Upload JSON
 
-* citations
+Upload a ticket.
 
-* audit trail
+### B. Upload CSV
 
-This should become the primary demo page.
+Batch process.
 
-## Knowledge Explorer
+### C. Manual Form
 
-Browse every chunk.
+Fields:
 
-Support:
-
-* search
-
-* JSON expansion
-
-* metadata inspection
-
-## Rule Explorer
-
-Search dispatcher rules.
-
-Filter by:
-
-* severity
+* ticket_id
 
 * client
 
-* season
+* vehicle
+
+* issue
+
+* origin
+
+* destination
+
+* driver
+
+* timestamp
+
+### D. Paste Raw JSON
+
+Editable code editor.
+
+## Run Pipeline
+
+When clicked:
+
+* create new LangGraph run
+
+* stream logs live
+
+* automatically open results
+
+Show:
+
+* execution time
+
+* tokens
+
+* retrieval time
+
+* selected vehicle
+
+* applied rules
+
+* work order
+
+* drafted communication
+
+* final communication
+
+# 2. Upload Your Own Knowledge Base
+
+This makes the pipeline genuinely reusable.
+
+Create a new page:
+
+# Knowledge Upload
+
+Allow uploading:
+
+* TXT
+
+* PDF
+
+* DOCX
+
+* XLSX
+
+* CSV
+
+* JSON
+
+Users should be able to upload:
+
+* maintenance logs
+
+* email threads
+
+* interview transcripts
+
+* vehicle roster
+
+* driver roster
+
+After upload:
+
+Show:
+
+## Preview
+
+* detected document type
+
+* detected language
+
+* extracted text
+
+## Chunk Preview
+
+Show every chunk before indexing.
+
+Example
+
+Chunk 17
+
+Source: dispatcher_interview.txt
+
+Tokens: 247
+
+Rule Candidate: Yes
+
+Confidence: 0.91
+
+Text:
+
+...
+
+Buttons:
+
+* Edit chunk
+
+* Delete chunk
+
+* Merge
+
+* Split
+
+## Index
+
+After confirmation:
+
+* generate embeddings
+
+* insert into Qdrant
+
+* show progress
+
+* show chunk count
+
+* show estimated embedding cost
+
+This makes the project reusable beyond Meridian Freight.
+
+# 3. Live Pipeline Visualization
+
+Current page shows JSON.
+
+Replace with animated execution.
+
+Nodes:
+
+* Validate
+
+* Deduplicate
+
+* Enrich
+
+* Retrieve
+
+* Rule Engine
+
+* Select Vehicle
+
+* Draft Communication
+
+* HITL
+
+* Send
+
+* Complete
+
+Nodes should animate while running.
+
+Clicking a node opens:
+
+* Input State
+
+* Output State
+
+* Prompt
+
+* Retrieved Context
+
+* Rule IDs
+
+* Execution time
+
+This should feel similar to LangSmith.
+
+# 4. Ticket Explorer
+
+Keep existing functionality.
+
+Add:
+
+Timeline scrubber.
+
+As the slider moves:
+
+* state updates
+
+* work order appears
+
+* communication draft appears
+
+* final message appears
+
+Also add:
+
+Compare two tickets.
+
+# 5. Knowledge Explorer
+
+Current version only displays chunks.
+
+Upgrade it.
+
+Add filters:
+
+* document type
+
+* source
+
+* language
+
+* rule candidate
+
+* entity
+
+* client
+
+* vehicle
+
+Each chunk should display:
+
+* embedding score
+
+* token count
+
+* neighboring chunks
+
+* provenance
+
+* edit history
+
+Buttons:
+
+* Open source
+
+* Download chunk
+
+* View adjacent chunks
+
+# 6. Rule Explorer
+
+Current rules are static.
+
+Add:
+
+# Rule Simulator
+
+Inputs:
+
+* client
 
 * route
 
-Show original citation.
+* season
 
-## Entity Explorer
+* vehicle year
 
-Inspect:
+* BS stage
 
-* vehicles
+* engine heater
 
-* drivers
+* hub
 
-* clients
+Output:
 
-* aliases
+Eligible?
 
-Visualize relationships.
+Applied rules.
 
-## Retrieval Inspector
+Rejected rules.
 
-Display:
+Hard constraints.
 
-* query
+Heuristics.
 
-* retrieved chunks
+Show reasoning as a decision tree.
 
-* similarity scores
+# 7. Entity Explorer
 
-## HITL Console
+Current version is read-only.
 
-Show pending approvals.
+Turn it into an interactive resolver.
 
-Support:
+## Vehicle Resolver
+
+Input:
+
+CH81AQ4130
+
+Output:
+
+Canonical vehicle.
+
+Aliases.
+
+Provenance.
+
+Conflicts.
+
+## Client Resolver
+
+Input:
+
+shakti cement hold
+
+Output:
+
+Shakti Cement
+
+Matched alias.
+
+Confidence.
+
+## Conflict Inspector
+
+Show both values.
+
+Highlight winner.
+
+Show why.
+
+# 8. Retrieval Playground
+
+Current retrieval page is too limited.
+
+Upgrade it into a full RAG debugger.
+
+Input:
+
+Any question.
+
+Show:
+
+Query embedding.
+
+Retrieved chunks.
+
+Similarity score.
+
+Rerank score.
+
+Why selected.
+
+Why rejected.
+
+Neighbor chunks.
+
+Source document.
+
+Download retrieved context.
+
+Optional:
+
+Toggle:
+
+* Top K
+
+* Similarity threshold
+
+* Reranker
+
+This demonstrates RAG quality live.
+
+# 9. Chaos Mode
+
+Add a completely new page.
+
+Purpose:
+
+Break the pipeline intentionally.
+
+Toggles:
+
+* Duplicate ticket
+
+* Missing vehicle
+
+* Invalid date
+
+* Missing hub
+
+* Broken JSON
+
+* Wrong schema
+
+* Conflicting maintenance records
+
+* Duplicate communication event
+
+Run Chaos Test.
+
+Output:
+
+Exactly-once maintained?
+
+Quarantined?
+
+Safe degradation?
+
+Recovered?
+
+PII leaked?
+
+This directly demonstrates the biggest scoring criterion.
+
+# 10. Human Approval Console
+
+Current HITL exists.
+
+Make it interactive.
+
+Inbox:
+
+Pending messages.
+
+Actions:
 
 * Approve
 
@@ -889,91 +556,224 @@ Support:
 
 * Edit
 
-Approval should resume the LangGraph thread.
+* Compare revisions
 
-## Audit Explorer
+Show:
 
-Search:
+Approval history.
+
+Approver.
+
+Timestamp.
+
+# 11. Audit Explorer
+
+Current logs are JSON.
+
+Upgrade.
+
+Timeline view.
+
+Filter by:
 
 * ticket
 
 * node
 
-* rule
+* severity
 
-* timestamp
+* run
 
-Every decision should be replayable.
+Clicking an event opens:
 
-# Output Contract
+* state
 
-Produce exactly these files.
+* artifacts
 
-```
-outputs/
-├── work_orders.jsonl
-├── comms_pending.jsonl
-├── comms_sent.jsonl
-└── quarantine.jsonl
+* LangSmith trace
 
-audit/
-└── audit.jsonl
-```
+* rule citations
 
-These files represent business truth.
+# 12. Analytics Dashboard
 
-Never violate their schema.
+Add charts.
 
-# Development Workflow
+Use Plotly.
 
-Before writing code:
+Show:
 
-* inspect the existing project
+* Work orders by client
 
-* understand the current structure
+* Quarantine reasons
 
-* avoid duplicating files
+* Rule usage frequency
 
-* preserve existing organization
+* Retrieval latency
 
-When implementing:
+* Duplicate rate
 
-* build incrementally
+* Processing time distribution
 
-* keep commits logically separable
+* Embedding collection growth
 
-* avoid unnecessary abstractions during the hackathon
+# Prompt & State Inspector (Important)
 
-* prefer maintainable production-style code
+For every LangGraph node add a side panel.
 
-When suggesting improvements:
+Tabs:
 
-* explain why
+### Input
 
-* mention tradeoffs
+State entering node.
 
-* relate them back to scoring
+### Prompt
 
-# Response Style
+Exact prompt sent to Qwen.
 
-Behave like a Staff Forward Deployed Engineer reviewing every design decision.
+### LLM Output
 
-Always:
+Raw model response.
 
-* reason before coding
+### Parsed Output
 
-* connect decisions back to scoring
+Validated JSON.
 
-* identify hidden evaluation traps
+### Timing
 
-* challenge assumptions respectfully
+Latency.
 
-* prefer deterministic implementations
+Token usage.
 
-* keep intermediate artifacts inspectable
+This becomes the equivalent of LangSmith debugging.
 
-* ask for tradeoff decisions before architectural changes
+# File Upload Testing Flow
 
-Our goal is not just to build a working pipeline.
+A judge should be able to:
 
-Our goal is to build a system that is resilient, replayable, inspectable, explainable, and easy to defend during the final 15-minute evaluation.
+1. Upload a brand-new interview transcript.
+
+2. Preview chunks.
+
+3. Edit one chunk.
+
+4. Index it.
+
+5. Ask a question in Retrieval Playground.
+
+6. See the newly uploaded knowledge retrieved.
+
+No code changes should be required.
+
+# UI Quality Requirements
+
+* Keep dark theme.
+
+* Preserve existing aesthetic.
+
+* Improve spacing.
+
+* Add icons.
+
+* Add hover tooltips.
+
+* Add loading indicators.
+
+* Add success/error banners.
+
+* Add progress bars.
+
+* Make layouts responsive.
+
+# Preserve Existing Features
+
+Do not remove:
+
+* Executive Overview
+
+* Live Pipeline
+
+* Ticket Explorer
+
+* Knowledge Explorer
+
+* Rule Explorer
+
+* Entity Explorer
+
+* Retrieval Inspector
+
+* HITL Console
+
+* Audit Explorer
+
+Instead, evolve them.
+
+# Tradeoff Protocol (Mandatory)
+
+Before implementing any change involving:
+
+* backend architecture
+
+* LangGraph state
+
+* artifact formats
+
+* Qdrant schema
+
+* chunking strategy
+
+* caching
+
+* retrieval logic
+
+* performance optimization
+
+* storage structure
+
+stop and ask me.
+
+Use this format:
+
+> Tradeoff Decision Needed
+
+> Proposed change:
+>
+> Benefits:
+>
+> Drawbacks:
+>
+> Alternative options:
+>
+> My recommendation:
+
+Wait for my approval before proceeding.
+
+# Success Criteria
+
+By the end of this update, a judge should be able to:
+
+* Upload their own ticket.
+
+* Upload their own knowledge base.
+
+* Watch the pipeline execute live.
+
+* Inspect every prompt and state transition.
+
+* Test retrieval with arbitrary questions.
+
+* Simulate dispatch rules.
+
+* Resolve messy entities.
+
+* Inject failures through Chaos Mode.
+
+* Approve or reject communications.
+
+* Replay executions.
+
+* Export every artifact.
+
+* Understand every page without prior knowledge.
+
+The Streamlit app should feel like a production AI Operations Console, not just a JSON viewer.

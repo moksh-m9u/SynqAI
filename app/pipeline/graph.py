@@ -6,6 +6,7 @@ each with the LangSmith run_id + graph thread_id so any decision is traceable.
 """
 from __future__ import annotations
 
+import time
 from datetime import datetime, timezone
 from typing import Any, TypedDict
 
@@ -58,9 +59,12 @@ def _trace_ids(config: dict[str, Any]) -> str:
     return ""
 
 
-def _node_artifact(thread_id: str, node: str, run_id: str, payload: dict[str, Any]) -> None:
+def _node_artifact(thread_id: str, node: str, run_id: str, payload: dict[str, Any],
+                   timing_ms: float | None = None) -> None:
     atomic_write_json(_artifact_dir(thread_id) / f"{node}.json",
-                      {"node": node, "run_id": run_id, "thread_id": thread_id, **payload})
+                      {"node": node, "run_id": run_id, "thread_id": thread_id,
+                       "at": datetime.now(timezone.utc).isoformat(),
+                       "timing_ms": timing_ms, **payload})
 
 
 def ticket_created_for_send(state) -> str:
@@ -86,6 +90,7 @@ def make_graph(services, checkpointer) -> Any:
 
     # ---------------------------------------------------------------- nodes
     def enrich_node(state: PipelineState, config: RunnableConfig) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         run_id = state.get("run_id", "")
         trace_id = _trace_ids(config)
         thread_id = (config.get("configurable") or {}).get("thread_id", "thread-x")
@@ -100,10 +105,11 @@ def make_graph(services, checkpointer) -> Any:
         s = {**state, "thread_id": thread_id, "ctx": {**ctx, "ticket": ticket}}
         _node_artifact(thread_id, "enrich", run_id, {
             "ticket_id": state["ticket_id"], "context": ctx, "langsmith_trace": trace_id,
-        })
+        }, timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         return {"ctx": s["ctx"], "thread_id": thread_id}
 
     def retrieve_node(state: PipelineState, config: RunnableConfig) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         run_id = state.get("run_id", "")
         trace_id = _trace_ids(config)
         thread_id = (config.get("configurable") or {}).get("thread_id", "thread-x")
@@ -117,7 +123,8 @@ def make_graph(services, checkpointer) -> Any:
             retr["hits"] = retr2["hits"] + retr["hits"]
             retr["top_refs"] = sorted({h["source"] for h in retr["hits"]})
         retr["langsmith_trace"] = trace_id
-        _node_artifact(thread_id, "retrieve", run_id, {"ticket_id": state["ticket_id"], "retrieval": retr})
+        _node_artifact(thread_id, "retrieve", run_id, {"ticket_id": state["ticket_id"], "retrieval": retr},
+                       timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         return {"retrieval": retr}
 
     def merge_node(state: PipelineState) -> dict[str, Any]:
@@ -134,6 +141,7 @@ def make_graph(services, checkpointer) -> Any:
         return {"ctx": ctx}
 
     def select_node(state: PipelineState, config: RunnableConfig) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         run_id = state.get("run_id", "")
         trace_id = _trace_ids(config)
         thread_id = (config.get("configurable") or {}).get("thread_id", "thread-x")
@@ -155,13 +163,15 @@ def make_graph(services, checkpointer) -> Any:
                     detail={"eliminations": sel_dict.get("eliminations")[:40],
                             "notes": sel_dict.get("notes"), "pool_size": sel_dict.get("pool_size")})
         _node_artifact(thread_id, "select_vehicle", run_id,
-                       {"ticket_id": state["ticket_id"], "selection": sel_dict, "langsmith_trace": trace_id})
+                       {"ticket_id": state["ticket_id"], "selection": sel_dict, "langsmith_trace": trace_id},
+                       timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         # mark the chosen vehicle as assigned for this queue run
         if chosen_reg:
             svc.assigned.add(chosen_reg)
         return {"selection": sel_dict}
 
     def work_order_node(state: PipelineState) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         ticket, sel = state["ticket"], state["selection"]
         wo = {
             "work_order_id": f"WO-{ticket['ticket_id']}",
@@ -178,13 +188,16 @@ def make_graph(services, checkpointer) -> Any:
                     detail={"vehicle_reg": wo["vehicle_reg"], "idempotent": wo["ticket_id"] == ticket["ticket_id"]})
         s = {**state, "work_order": wo}
         _node_artifact(state.get("thread_id", state["ticket_id"]), "create_work_order",
-                       state.get("run_id", ""), {"work_order": wo})
+                       state.get("run_id", ""), {"work_order": wo},
+                       timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         return {"work_order": wo}
 
     def draft_node(state: PipelineState) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         ctx, sel = state["ctx"], state["selection"]
+        llm_debug: dict[str, Any] = {}
         draft = draft_communication(ctx, sel, run_id=state.get("run_id", ""),
-                                    thread_id=state.get("thread_id", ""))
+                                    thread_id=state.get("thread_id", ""), debug=llm_debug)
         if draft is None:
             draft = {"message_id": None, "ticket_id": state["ticket_id"], "status": "NO_COMMS",
                      "context_summary": {"note": NO_COMMS_COMMENT}}
@@ -197,7 +210,8 @@ def make_graph(services, checkpointer) -> Any:
                     (draft.get("citations") or []) and [c["source"] for c in draft["citations"]],
                     detail={"recipient": draft.get("recipient"), "status": draft.get("status")})
         _node_artifact(state.get("thread_id", state["ticket_id"]), "draft_communication",
-                       state.get("run_id", ""), {"draft": draft})
+                       state.get("run_id", ""), {"draft": draft, "llm_debug": llm_debug},
+                       timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         return {"draft": draft}
 
     def hitl_node(state: PipelineState) -> dict[str, Any]:
@@ -215,6 +229,7 @@ def make_graph(services, checkpointer) -> Any:
         return {"approval": approval}
 
     def send_node(state: PipelineState) -> dict[str, Any]:
+        _t0 = time.perf_counter()
         draft = state.get("draft") or {}
         approval = state.get("approval")
         if not draft.get("status") == "PENDING_APPROVAL":
@@ -242,7 +257,8 @@ def make_graph(services, checkpointer) -> Any:
                     detail={"recipient": msg.get("recipient")}, actor="human")
         s = {**state, "comms_sent": msg}
         _node_artifact(state.get("thread_id", state["ticket_id"]), "send_communication",
-                       state.get("run_id", ""), {"comms_sent": msg})
+                       state.get("run_id", ""), {"comms_sent": msg},
+                       timing_ms=round((time.perf_counter() - _t0) * 1000, 1))
         return {"comms_sent": msg}
 
     # ---------------------------------------------------------------- graph

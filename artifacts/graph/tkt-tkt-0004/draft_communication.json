@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0004",
+  "at": "2026-08-30T08:46:19.364234+00:00",
+  "timing_ms": 2746.2,
   "draft": {
     "message_id": "MSG-TKT-0004",
     "ticket_id": "TKT-0004",
@@ -28,5 +30,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0004"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Vertex Retail\nBroken vehicle reg: PB84TB2343\nReplacement vehicle reg: PB53GV5325\nDispatch hub: Ludhiana\nRoute: Ludhiana → Delhi\nETA detail: Estimated arrival in about 9.3 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Delhi\n\nDear Vertex Retail Team,\n\nFollowing a mechanical breakdown of vehicle PB84TB2343, we have dispatched replacement vehicle PB53GV5325 from our Ludhiana hub. The new vehicle is currently en route to Delhi with an estimated arrival time of approximately 9.3 hours. We are monitoring the shipment closely to ensure minimal disruption to your delivery schedule. Please let us know if you require any further updates.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 2733.9,
+    "tokens": {
+      "prompt": 133,
+      "completion": 115
+    }
   }
 }

@@ -62,10 +62,11 @@ def _build_services() -> Services:
     return svc
 
 
-def _run_ticket(graph, ticket: Ticket, approve_mode: str, run_id: str) -> dict[str, Any]:
+def _run_ticket(graph, ticket: Ticket, approve_mode: str, run_id: str,
+                thread_id: str | None = None, node_cb=None) -> dict[str, Any]:
     """Stream the graph for one ticket, stop at the HITL interrupt, prompt (if
     asked), resume, and return the final state."""
-    thread_id = f"tkt-{ticket.ticket_id.lower()}"
+    thread_id = thread_id or f"tkt-{ticket.ticket_id.lower()}"
     config = {"configurable": {"thread_id": thread_id}}
     initial = {
         "ticket_id": ticket.ticket_id,
@@ -77,6 +78,8 @@ def _run_ticket(graph, ticket: Ticket, approve_mode: str, run_id: str) -> dict[s
         for chunk in graph.stream(initial, config=config, stream_mode="updates"):
             if not isinstance(chunk, dict):
                 continue
+            if node_cb:
+                node_cb(chunk)
             for node, payload in chunk.items():
                 if node == "__interrupt__":
                     continue

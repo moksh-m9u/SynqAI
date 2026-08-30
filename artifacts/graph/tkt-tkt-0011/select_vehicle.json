@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0011",
+  "at": "2026-08-30T08:45:40.644352+00:00",
+  "timing_ms": 2.7,
   "ticket_id": "TKT-0011",
   "selection": {
     "ticket_id": "TKT-0011",
@@ -345,5 +347,5 @@
     "candidate_hub": "Gurgaon",
     "chosen_year": 2024
   },
-  "langsmith_trace": "01a051ac-bac6-7da2-b9e7-3442d81ae1ad"
+  "langsmith_trace": "01a051d8-89a1-7510-8edf-ccb15dd89af0"
 }
