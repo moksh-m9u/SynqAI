@@ -18,6 +18,7 @@ SANDBOX_ROOT = ROOT / "sandbox"
 
 NAV = {
     "Overview": "overview",
+    "Decision Assistant": "decisions",
     "Ticket Sandbox": "sandbox",
     "Knowledge Upload": "upload",
     "Live Pipeline": "pipeline",

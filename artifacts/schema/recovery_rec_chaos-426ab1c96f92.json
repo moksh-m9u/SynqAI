@@ -1,0 +1,40 @@
+{
+  "run_id": "chaos-426ab1c96f92",
+  "thread_id": "",
+  "original": {
+    "TicketRef": "TKT-0009",
+    "VehicleTruck": "CH40IK6238",
+    "Fault": "suspension damage",
+    "Where": "Chandigarh",
+    "When": "2026-04-25T18:00:00",
+    "_chaos": {
+      "defect": "wrong_schema"
+    },
+    "raw": {}
+  },
+  "method": "llm_mapping",
+  "actions": [
+    "llm key mapping attempted for unknowns=['TicketRef', 'VehicleTruck', 'Where', 'When', '_chaos', 'raw']"
+  ],
+  "llm_debug": {
+    "prompt": "You map keys of a messy breakdown-ticket record to a canonical schema. Return ONLY JSON, no prose: an object mapping each input key to one canonical key.\nCanonical schema keys: {\"ticket_id\": \"unique ticket identifier, e.g. TKT-0001\", \"created_at\": \"ISO-8601 datetime of the breakdown\", \"vehicle\": \"vehicle registration number\", \"driver_id\": \"driver identifier like DRV-001 (may be null/empty)\", \"origin_hub\": \"origin hub city/name\", \"km_from_origin_hub\": \"float distance in km from origin hub\", \"destination\": \"destination city/name\", \"issue\": \"breakdown issue text\", \"severity\": \"HIGH|MEDIUM|LOW or empty\", \"client\": \"client/customer name\", \"status\": \"OPEN|CLOSED or other workflow status\", \"resolution_note\": \"resolution note (may be empty)\"}\nRecord: {\"TicketRef\": \"TKT-0009\", \"VehicleTruck\": \"CH40IK6238\", \"Fault\": \"suspension damage\", \"Where\": \"Chandigarh\", \"When\": \"2026-04-25T18:00:00\", \"_chaos\": {\"defect\": \"wrong_schema\"}, \"raw\": {}}\nRules: unknown/irrelevant keys map to '__skip__'. Values are NOT transformed here.",
+    "timing_ms": 1000.0,
+    "raw_text": "{\n  \"TicketRef\": \"ticket_id\",\n  \"VehicleTruck\": \"vehicle\",\n  \"Fault\": \"issue\",\n  \"Where\": \"origin_hub\",\n  \"When\": \"created_at\",\n  \"_chaos\": \"__skip__\",\n  \"raw\": \"__skip__\"\n}"
+  },
+  "mapping": {
+    "TicketRef": "ticket_id",
+    "VehicleTruck": "vehicle",
+    "Fault": "issue",
+    "Where": "origin_hub",
+    "When": "created_at",
+    "_chaos": "_unknown",
+    "raw": "_unknown"
+  },
+  "normalized": {
+    "ticket_id": "TKT-0009",
+    "vehicle": "CH40IK6238",
+    "issue": "suspension damage",
+    "origin_hub": "Chandigarh",
+    "created_at": "2026-04-25T18:00:00"
+  }
+}

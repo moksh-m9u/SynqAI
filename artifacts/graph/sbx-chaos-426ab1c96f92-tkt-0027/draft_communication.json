@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "chaos-426ab1c96f92",
+  "thread_id": "sbx-chaos-426ab1c96f92-tkt-0027",
+  "at": "2026-08-30T10:00:24.353349+00:00",
+  "timing_ms": 856.9,
+  "draft": {
+    "message_id": "MSG-TKT-0027",
+    "ticket_id": "TKT-0027",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that vehicle UP40IM3144 has experienced a breakdown and has been replaced by vehicle UP33PG6813. The replacement vehicle has been dispatched from the Lucknow hub to continue the Lucknow to Lucknow route. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any questions regarding this update.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UP40IM3144",
+      "replacement": "UP33PG6813",
+      "hub": "Lucknow",
+      "eta_hours": null,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "chaos-426ab1c96f92",
+    "thread_id": "sbx-chaos-426ab1c96f92-tkt-0027"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Shakti Cement\nBroken vehicle reg: UP40IM3144\nReplacement vehicle reg: UP33PG6813\nDispatch hub: Lucknow\nRoute: Lucknow → Lucknow\nETA detail: We are estimating the delivery window from route distance; a confirmed ETA will follow.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that vehicle UP40IM3144 has experienced a breakdown and has been replaced by vehicle UP33PG6813. The replacement vehicle has been dispatched from the Lucknow hub to continue the Lucknow to Lucknow route. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any questions regarding this update.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 842.2,
+    "tokens": {
+      "prompt": 141,
+      "completion": 120
+    }
+  }
+}

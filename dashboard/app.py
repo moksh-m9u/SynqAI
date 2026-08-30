@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT))
 from dashboard import base  # noqa: E402
 from dashboard.widgets import inject_css  # noqa: E402
 from dashboard.views import (  # noqa: E402
-    analytics, audit, chaos, entities, hitl, knowledge,
+    analytics, audit, chaos, decisions, entities, hitl, knowledge,
     knowledge_upload, overview, pipeline, retrieval,
     rules, sandbox, tickets,
 )
@@ -26,6 +26,7 @@ inject_css()
 
 _PAGE = {
     "overview": overview,
+    "decisions": decisions,
     "sandbox": sandbox,
     "upload": knowledge_upload,
     "pipeline": pipeline,

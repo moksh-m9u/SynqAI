@@ -1,0 +1,84 @@
+{
+  "query": "which vehicle can replace a broken truck for shakti cement near delhi tomorrow?",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": 0.2,
+  "rerank": true,
+  "retrieved": [
+    {
+      "chunk_id": "dispatcher_002",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Start with routes. What do you know that the system doesn't?\n\nRAJENDER: The system thinks a truck is a truck. It is not. First thing, and this one is non-negotiable: October to February, no BS4 vehicle goes on any Delhi NCR route. Any route that touches Delhi, Gurgaon, Faridabad, Noida. Winter mein pollution restrictions lag jaati hain, GRAP whatever they call it now, and a BS4 truck can get stopped at the border, challan, sometimes turned back fully loaded. We learned this the expensive way in 2022. Two trucks held at Kundli for a day and a half. Shakti Cement ka load tha. Never again. BS6 only on Delhi routes in winter, I don't care if the BS4 truck is parked twenty meters from the loading dock and the BS6 is in Jaipur.",
+      "score": 0.8513,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.5833,
+      "rerank_score": 0.7709
+    },
+    {
+      "chunk_id": "dispatcher_007",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: The mechanics tell me about \"Guddu ka jugaad.\"\n\nRAJENDER: (laughs) Guddu is the best temporary-fix man in Haryana. He can make a dead truck move with wire and prayer. That is a gift on the roadside at midnight. But every jugaad of his is a seven day clock. Whatever he patched must get a permanent repair within seven days, and until then that vehicle does not leave its home region. His fixes hold, but they hold like a promise, not like a part. Twice we forgot, sent the truck long-distance on a patch, and both times it died somewhere inconvenient. Seven days. Write it in red.",
+      "score": 0.8443,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.3333,
+      "rerank_score": 0.691
+    },
+    {
+      "chunk_id": "email_thread_01_shakti_sla",
+      "source": "emails/thread_01_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.843,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.25,
+      "rerank_score": 0.6651
+    },
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8388,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.25,
+      "rerank_score": 0.6622
+    },
+    {
+      "chunk_id": "maint_MNT-4e1228df",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-22 | PB-74-TA-4257 | odo=47231.0 | mechanic=Guddu | steering pump awaaz aa rahi thi, replace kiya. Next check 10k km pe.",
+      "score": 0.8389,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.0833,
+      "rerank_score": 0.6122
+    },
+    {
+      "chunk_id": "maint_MNT-d7439374",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-05 | UP86CM7252 | odo=280603.0 | mechanic=Ramesh | wheel bearing pickup kam ho gayi thi, replace kiya. Next check 15k km pe.",
+      "score": 0.836,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null,
+      "lexical_overlap": 0.0833,
+      "rerank_score": 0.6102
+    }
+  ],
+  "timing_ms": 706.7,
+  "run_id": "dashboard",
+  "thread_id": "playground"
+}
