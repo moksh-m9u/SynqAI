@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0014",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0014",
+    "ticket_id": "TKT-0014",
+    "recipient": "Orion Pharma",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Delhi to Ludhiana\n\nDear Orion Pharma Team,\n\nWe are writing to inform you that a replacement vehicle, registration HR73CY1771, has been dispatched from the Ambala hub following a breakdown of the original vehicle (DL64IB1058). The shipment is currently en route from Delhi to Ludhiana. Based on current conditions, the estimated time of arrival is approximately 9.3 hours. We will continue to monitor the journey closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-03-07 06:00:00"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "query": "Internal tyre burst breakdown replacement CH81AQ4130",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-648694c8",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-12 | CH81AQ4130 | odo=291340.0 | mechanic=Ramesh | brake drum vibration zyada tha, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe.",
+      "score": 0.8987,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5d602704",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-24 | CH10YZ3615 | odo=221625.0 | mechanic=Harpreet | front tyre awaaz aa rahi thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe.",
+      "score": 0.8817,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e7ea48ba",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-05-07 | UP-41-IF-2771 | odo=82784.0 | mechanic=Vicky | front tyre awaaz aa rahi thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe.",
+      "score": 0.8715,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-fa08344b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-14 | HR-47-UT-6925 | odo=393198.0 | mechanic=Vicky | rear tyre awaaz aa rahi thi, replace kiya. Next check 5k km pe.",
+      "score": 0.8713,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cf6968f1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-06 | UP53YM5558 | odo=237161.0 | mechanic=Salim bhai | front tyre start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe.",
+      "score": 0.8657,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-0b53d0de",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-01 | UK33BI7211 | odo=158414.0 | mechanic=Anand | front tyre overheat ho raha tha, weld kiya. Next check 15k km pe.",
+      "score": 0.8653,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05180-d1e3-77a1-995d-5a44c699eeca",
+  "thread_id": "tkt-tkt-0019"
+}

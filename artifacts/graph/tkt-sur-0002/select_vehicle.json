@@ -1,0 +1,36 @@
+{
+  "node": "select_vehicle",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0002",
+  "ticket_id": "SUR-0002",
+  "selection": {
+    "ticket_id": "SUR-0002",
+    "chosen": "PB74TA4257",
+    "pool_size": 16,
+    "eliminations": [],
+    "applied_rules": [
+      "R_ORIGIN_50KM",
+      "R_SHAKTI_36H"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Ludhiana",
+      "selected PB74TA4257 (year=2022, bs=BS6, heater=True, cap=31.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Ludhiana",
+    "chosen_year": 2022
+  },
+  "langsmith_trace": "01a0518e-bf6e-74d1-bc64-cc27d02fac1d"
+}

@@ -1,0 +1,266 @@
+{
+  "node": "enrich",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0013",
+  "ticket_id": "TKT-0013",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "HR14LS3426",
+      "vehicle_id": "MF-045",
+      "model": "Ashok Leyland 3520",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR14LS3426"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-049",
+      "home_hub": "Kanpur",
+      "joining_date": "2019-04-23",
+      "tenure_days": 2625,
+      "pii_masked": true
+    },
+    "client": "Orion Pharma",
+    "client_source": "Orion Pharma",
+    "maintenance": {
+      "records": [],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153688053462260722",
+        "date": "2018-09-13T23:15:34.622872",
+        "route": "Manthani_Chaitnya_D (Telangana)->Ramagundam_Pdmavati_D (Telangana)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 25294.0
+      },
+      {
+        "trip_id": "trip-153800093286769916",
+        "date": "2018-09-26T22:28:52.867950",
+        "route": "Coimbatore_Karayam_H (Tamil Nadu)->Udumalpet_Artclgrd_D (Tamil Nadu)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 91164.0
+      },
+      {
+        "trip_id": "trip-153773381460472111",
+        "date": "2018-09-23T20:16:54.605026",
+        "route": "Bangalore_Nelmngla_H (Karnataka)->Bengaluru_Bnnrghta_L (Karnataka)",
+        "client": "Orion Pharma",
+        "status": "COMPLETED",
+        "billed_amount": 22530.0
+      }
+    ],
+    "trip_summary": "124 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": true,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=17.0 <= 50 -> replacement from Ambala hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 17.0,
+          "origin_hub": "Ambala"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=17.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 17.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=6 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 6,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=6 hill=True -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 6,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=6 hill=True -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 6,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_ORION_2020",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Orion: only 2020 or newer vehicles, newest preferred",
+        "citation": [
+          "dispatcher_interview threads/thread_17 threads/thread_18"
+        ],
+        "evidence": {
+          "client": "Orion Pharma"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 2625d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 2625,
+          "night": false,
+          "driver_id": "DRV-049"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_ORION_2020"
+    ],
+    "eta": {
+      "base_hours": 9.6,
+      "padding_frac": 0.0,
+      "estimated_hours": 9.6,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 298.6,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=HR14LS3426",
+        "entity": "VEHICLE_HR14LS3426",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-049",
+        "entity": "DRIVER_DRV-049",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0013",
+        "entity": "CLIENT_Orion_Pharma",
+        "document_type": "ticket"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "entity": "RULE_R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0013",
+      "created_at": "2026-06-30 15:00:00",
+      "vehicle": "HR-14-LS-3426",
+      "driver_id": "DRV-049",
+      "origin_hub": "Ambala",
+      "km_from_origin_hub": 17.0,
+      "destination": "Rudrapur",
+      "issue": "gearbox jam",
+      "severity": "MEDIUM",
+      "client": "Orion Pharma",
+      "status": "CLOSED",
+      "resolution_note": "Towed to hub workshop.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0013",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0013"
+  },
+  "langsmith_trace": "01a051ac-f54a-7ed0-87e3-c0b2bec526f4"
+}

@@ -1,0 +1,285 @@
+{
+  "node": "enrich",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0008",
+  "ticket_id": "TKT-0008",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "PB59PM4997",
+      "vehicle_id": "MF-061",
+      "model": "Tata LPT 3118",
+      "year": 2015,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "PB59PM4997"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-039",
+      "home_hub": "Chandigarh",
+      "joining_date": "2020-09-12",
+      "tenure_days": 2051,
+      "pii_masked": true
+    },
+    "client": "Vertex Retail",
+    "client_source": "Vertex Retail",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2025-11-12",
+          "odometer_km": 50607.0,
+          "mechanic": "Salim bhai",
+          "notes": "rear tyre leak ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+        },
+        {
+          "date": "2026-07-20",
+          "odometer_km": 144572.0,
+          "mechanic": "Anand",
+          "notes": "air filter issue reported by driver, cleaned and refitted. Road test OK."
+        },
+        {
+          "date": "2025-08-17",
+          "odometer_km": 395628.0,
+          "mechanic": "Salim bhai",
+          "notes": "turbo issue reported by driver, temporary fix applied, needs permanent repair. Road test OK."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": "2025-11-12",
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": [
+          {
+            "date": "2025-11-12",
+            "mechanic": "Salim bhai",
+            "notes": "rear tyre leak ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+          }
+        ]
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153775130792507546",
+        "date": "2018-09-24T01:08:27.925453",
+        "route": "Chandigarh_Mehmdpur_H (Punjab)->Chandigarh_Kharar_DC (Chandigarh)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 55839.0
+      },
+      {
+        "trip_id": "trip-153713742034087241",
+        "date": "2018-09-16T22:36:49.860484",
+        "route": "Kolkata_Dankuni_HB (West Bengal)->CCU_Beliaghata_DPC (West Bengal)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 77877.0
+      },
+      {
+        "trip_id": "trip-153857499993942690",
+        "date": "2018-10-03T13:56:39.939667",
+        "route": "Moga_DPC (Punjab)->Muktsar_DPC (Punjab)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 27365.0
+      }
+    ],
+    "trip_summary": "119 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=27.0 <= 50 -> replacement from Ludhiana hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0,
+          "origin_hub": "Ludhiana"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=27.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": "2025-11-12",
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": [
+            {
+              "date": "2025-11-12",
+              "mechanic": "Salim bhai",
+              "notes": "rear tyre leak ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+            }
+          ]
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 2051d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 2051,
+          "night": false,
+          "driver_id": "DRV-039"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM"
+    ],
+    "eta": {
+      "base_hours": 21.3,
+      "padding_frac": 0.0,
+      "estimated_hours": 21.3,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 660.0,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=PB59PM4997",
+        "entity": "VEHICLE_PB59PM4997",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-039",
+        "entity": "DRIVER_DRV-039",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0008",
+        "entity": "CLIENT_Vertex_Retail",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=PB59PM4997",
+        "entity": "VEHICLE_PB59PM4997",
+        "document_type": "maintenance_history",
+        "records": 3
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0008",
+      "created_at": "2026-04-25 16:00:00",
+      "vehicle": "PB-59-PM-4997",
+      "driver_id": "DRV-039",
+      "origin_hub": "Ludhiana",
+      "km_from_origin_hub": 27.0,
+      "destination": "Kanpur",
+      "issue": "radiator leak",
+      "severity": "HIGH",
+      "client": "Vertex Retail",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0008",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0008"
+  },
+  "langsmith_trace": "01a051ac-3105-7ed1-bd17-782520d7ee00"
+}

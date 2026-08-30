@@ -1,0 +1,56 @@
+{
+  "query": "Shakti Cement fuel line leak breakdown replacement UP-40-IM-3144",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-363aa459",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-05-08 | UP54XZ6139 | odo=328421.0 | mechanic=Harpreet | DEF pump gear slip kar raha tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8644,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-8768cb85",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-26 | UP41IF2771 | odo=123347.0 | mechanic=Harpreet | clutch plate start hone me dikkat thi, repair kiya. Next check 15k km pe.",
+      "score": 0.859,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-d9f7d249",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-12 | HR79ZT4613 | odo=328410.0 | mechanic=Anand | fuel injector gear slip kar raha tha, weld kiya. Next check 5k km pe.",
+      "score": 0.8586,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-a2bc81a6",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-29 | UP53YM5558 | odo=399302.0 | mechanic=Ramesh | oil seal pickup kam ho gayi thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8579,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-1faa8a01",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | RJ43DD3546 | odo=162479.0 | mechanic=Salim bhai | DEF pump smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8562,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-6f087f0b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-10 | HR 39 BZ 6168 | odo=155620.0 | mechanic=Guddu | steering pump leak ho raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.856,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a0517c-79a6-7da2-9299-4574a6ab9865",
+  "thread_id": "tkt-tkt-0027"
+}

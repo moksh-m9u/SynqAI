@@ -1,0 +1,55 @@
+{
+  "node": "select_vehicle",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0027",
+  "ticket_id": "TKT-0027",
+  "selection": {
+    "ticket_id": "TKT-0027",
+    "chosen": "UP33PG6813",
+    "pool_size": 6,
+    "eliminations": [
+      {
+        "candidate": "UP40IM3144",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "UP40IM3144",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "RJ34GX8933",
+        "hub": "Jaipur",
+        "rule_id": "R_JUGAAD_7D",
+        "reason": "active jogadi restriction (home-region only, permanent fix pending)"
+      }
+    ],
+    "applied_rules": [
+      "R_ORIGIN_50KM",
+      "R_SHAKTI_36H"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Lucknow",
+      "selected UP33PG6813 (year=2023, bs=BS6, heater=True, cap=31.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Lucknow",
+    "chosen_year": 2023
+  },
+  "langsmith_trace": "01a051ac-99f8-7212-897c-9c6a80038353"
+}

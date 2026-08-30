@@ -1,0 +1,280 @@
+{
+  "node": "enrich",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0021",
+  "ticket_id": "TKT-0021",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "UP37RY4295",
+      "vehicle_id": "MF-022",
+      "model": "BharatBenz 2823R",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UP37RY4295"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-028",
+      "home_hub": "Delhi",
+      "joining_date": "2022-03-23",
+      "tenure_days": 1444,
+      "pii_masked": true
+    },
+    "client": "Apex Chemicals",
+    "client_source": "Apex Chemicals",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-07-02",
+          "odometer_km": 260778.0,
+          "mechanic": "Salim bhai",
+          "notes": "alternator overheat ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153708207040838113",
+        "date": "2018-09-16T07:14:30.408743",
+        "route": "Pune_Tathawde_H (Maharashtra)->Bhiwandi_Mankoli_HB (Maharashtra)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 85364.0
+      },
+      {
+        "trip_id": "trip-153743236691006206",
+        "date": "2018-09-20T08:32:46.910344",
+        "route": "Bangalore_Nelmngla_H (Karnataka)->Bengaluru_Peenya_L (Karnataka)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 83287.0
+      },
+      {
+        "trip_id": "trip-153761637486842759",
+        "date": "2018-09-22T11:39:34.868674",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Mumbai Hub (Maharashtra)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 69249.0
+      }
+    ],
+    "trip_summary": "96 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": true,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=467.0 <= 50 -> replacement from Kanpur hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 467.0,
+          "origin_hub": "Kanpur"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=467.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 467.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=3 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 3,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=3 hill=True -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 3,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=3 hill=True -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 3,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_APEX_ROTATION",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Apex: the problem vehicle is not returned on the next Apex dispatch",
+        "citation": [
+          "dispatcher_interview threads/thread_13 threads/thread_14"
+        ],
+        "evidence": {
+          "client": "Apex Chemicals"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 1444d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 1444,
+          "night": false,
+          "driver_id": "DRV-028"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_NEAREST_HUB",
+      "R_APEX_ROTATION"
+    ],
+    "eta": {
+      "base_hours": 9.5,
+      "padding_frac": 0.0,
+      "estimated_hours": 9.5,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 294.5,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=UP37RY4295",
+        "entity": "VEHICLE_UP37RY4295",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-028",
+        "entity": "DRIVER_DRV-028",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0021",
+        "entity": "CLIENT_Apex_Chemicals",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=UP37RY4295",
+        "entity": "VEHICLE_UP37RY4295",
+        "document_type": "maintenance_history",
+        "records": 1
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "entity": "RULE_R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "entity": "RULE_R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0021",
+      "created_at": "2026-03-06 17:00:00",
+      "vehicle": "UP37RY4295",
+      "driver_id": "DRV-028",
+      "origin_hub": "Kanpur",
+      "km_from_origin_hub": 467.0,
+      "destination": "Rudrapur",
+      "issue": "electrical failure",
+      "severity": "MEDIUM",
+      "client": "Apex Chemicals",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0021",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0021"
+  },
+  "langsmith_trace": "01a051ac-2718-7152-92ee-024b4b26e610"
+}

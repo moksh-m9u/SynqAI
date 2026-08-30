@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0012",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0012",
+    "ticket_id": "TKT-0012",
+    "recipient": "Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown, we have dispatched a replacement vehicle (Reg: PB18BK2160) from our Ludhiana hub to continue your route to Lucknow. The original vehicle (Reg: PB84TB2343) has been secured and is undergoing inspection. The new ETA is approximately 21.6 hours, which remains within our committed 36-hour door-to-door window. We will provide further updates as the shipment progresses.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-04-05 20:00:00"
+  }
+}

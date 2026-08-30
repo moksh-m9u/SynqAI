@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0028",
+  "draft": {
+    "message_id": "MSG-TKT-0028",
+    "ticket_id": "TKT-0028",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Delhi Route",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Delhi Route\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle UP71AL5892, a replacement unit (UP86CM7252) has been dispatched from our Kanpur hub.\nThe new vehicle is currently en route to Delhi with an estimated arrival time of approximately 12.6 hours.\nWe are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\nPlease let us know if you have any immediate concerns regarding this adjustment.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UP71AL5892",
+      "replacement": "UP86CM7252",
+      "hub": "Kanpur",
+      "eta_hours": 12.6,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0028"
+  }
+}

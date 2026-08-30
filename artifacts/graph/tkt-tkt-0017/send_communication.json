@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0017",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0017",
+    "ticket_id": "TKT-0017",
+    "recipient": "Orion Pharma",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Delhi Route\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle UP86CM7252, a replacement unit (UP37RY4295) has been dispatched from the Kanpur hub.\nThe new vehicle is currently en route to Delhi with an estimated arrival time of approximately 12.6 hours.\nWe are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\nPlease let us know if you have any immediate concerns regarding this adjustment.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-04-30 07:00:00"
+  }
+}

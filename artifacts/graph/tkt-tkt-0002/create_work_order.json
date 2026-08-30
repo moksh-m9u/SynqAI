@@ -1,0 +1,21 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0002",
+  "work_order": {
+    "work_order_id": "WO-TKT-0002",
+    "ticket_id": "TKT-0002",
+    "vehicle_reg": "DL30AN8381",
+    "created_at": "2026-07-13 21:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H"
+      }
+    ]
+  }
+}

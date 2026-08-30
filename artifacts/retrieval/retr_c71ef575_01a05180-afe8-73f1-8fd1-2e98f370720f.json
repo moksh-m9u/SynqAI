@@ -1,0 +1,56 @@
+{
+  "query": "Vertex Retail engine overheating breakdown replacement rj66rw8007",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-dfb82783",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-20 | UK79WJ9666 | odo=383663.0 | mechanic=Vicky | front tyre overheat ho raha tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8622,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-34b73b61",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-02 | RJ34GX8933 | odo=362619.0 | mechanic=Vicky | air filter overheat ho raha tha, replace kiya. Next check 10k km pe.",
+      "score": 0.8602,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-1731a50c",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-06 | RJ 66 RW 8007 | odo=203883.0 | mechanic=Ramesh | silencer issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8589,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-920e1f9d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-24 | UK81YH8800 | odo=360316.0 | mechanic=Ramesh | turbo issue reported by driver, temporary fix applied, needs permanent repair. Road test OK.",
+      "score": 0.8571,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-65262dc2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-18 | HR-16-SP-9238 | odo=163890.0 | mechanic=Anand | AC compressor overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.856,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5cf8bba2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-10 | PB43VC3573 | odo=341011.0 | mechanic=Anand | gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8554,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05180-afe8-73f1-8fd1-2e98f370720f",
+  "thread_id": "tkt-tkt-0022"
+}

@@ -1,0 +1,21 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0010",
+  "work_order": {
+    "work_order_id": "WO-TKT-0010",
+    "ticket_id": "TKT-0010",
+    "vehicle_reg": "UP17GN7381",
+    "created_at": "2026-02-22 18:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION"
+      }
+    ]
+  }
+}

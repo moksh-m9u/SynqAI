@@ -1,0 +1,56 @@
+{
+  "query": "Internal brake failure warning breakdown replacement PB42BW8144",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-0c98546c",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-05 | PB42BW8144 | odo=317567.0 | mechanic=Guddu | brake pad issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.9039,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e6c2d930",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-08 | PB 47 CH 2654 | odo=392724.0 | mechanic=Vicky | brake drum issue reported by driver, replaced. Road test OK.",
+      "score": 0.8871,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-9e3b6f37",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-29 | HR59KV7624 | odo=286486.0 | mechanic=Vicky | brake pad start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8787,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e3a133c4",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-22 | RJ45BB5786 | odo=242342.0 | mechanic=Guddu | brake pad start hone me dikkat thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8775,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-614d2d69",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-10 | RJ34GX8933 | odo=382693.0 | mechanic=Vicky | brake pad start hone me dikkat thi, repair kiya. Next check 5k km pe.",
+      "score": 0.8738,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-7f8fe864",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-04 | up18vk6143 | odo=228496.0 | mechanic=Guddu | brake drum issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8738,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a0517f-c2a4-7371-982b-d4fd13cf833b",
+  "thread_id": "tkt-tkt-0024"
+}

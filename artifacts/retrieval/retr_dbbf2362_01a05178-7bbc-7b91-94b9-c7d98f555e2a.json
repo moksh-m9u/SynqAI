@@ -1,0 +1,56 @@
+{
+  "query": "Shakti Cement clutch slipping breakdown replacement HR16SP9238",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-bbfd8df1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-24 | HR68TS2638 | odo=414415.0 | mechanic=Salim bhai | clutch plate gear slip kar raha tha, weld kiya. Next check 10k km pe.",
+      "score": 0.9034,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-45ce734e",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-21 | HR16SP9238 | odo=294586.0 | mechanic=Anand | battery gear slip kar raha tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8856,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cced816b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | HR59KV7624 | odo=313983.0 | mechanic=Vicky | clutch plate gear slip kar raha tha, naya lagwaya. Next check 5k km pe.",
+      "score": 0.8773,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e4459853",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-09 | PB68LJ4728 | odo=273714.0 | mechanic=Ramesh | AC compressor gear slip kar raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8744,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-1adee351",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-29 | HR77LN6419 | odo=273716.0 | mechanic=Ramesh | steering pump gear slip kar raha tha, weld kiya. Next check 15k km pe.",
+      "score": 0.8726,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-8768cb85",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-26 | UP41IF2771 | odo=123347.0 | mechanic=Harpreet | clutch plate start hone me dikkat thi, repair kiya. Next check 15k km pe.",
+      "score": 0.8723,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05178-7bbc-7b91-94b9-c7d98f555e2a",
+  "thread_id": "tkt-tkt-0020"
+}

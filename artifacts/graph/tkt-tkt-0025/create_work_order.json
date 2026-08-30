@@ -1,0 +1,17 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0025",
+  "work_order": {
+    "work_order_id": "WO-TKT-0025",
+    "ticket_id": "TKT-0025",
+    "vehicle_reg": "HR55GV5088",
+    "created_at": "2026-08-19 04:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM"
+      }
+    ]
+  }
+}

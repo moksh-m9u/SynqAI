@@ -1,0 +1,56 @@
+{
+  "query": "Vertex Retail gearbox jam breakdown replacement PB74TA4257",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-5cf8bba2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-10 | PB43VC3573 | odo=341011.0 | mechanic=Anand | gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8814,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-13adfadb",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-03 | PB84TB2343 | odo=228971.0 | mechanic=Anand | gearbox vibration zyada tha, weld kiya. Next check 15k km pe.",
+      "score": 0.8644,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5e4a5fd2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-24 | PB 68 LJ 4728 | odo=353489.0 | mechanic=Vicky | gearbox start hone me dikkat thi, naya lagwaya. Next check 15k km pe.",
+      "score": 0.8616,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-270b6f3c",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-17 | CH 74 TG 3504 | odo=221329.0 | mechanic=Harpreet | gearbox start hone me dikkat thi, repair kiya. Next check 5k km pe.",
+      "score": 0.8591,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-4e1228df",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-22 | PB-74-TA-4257 | odo=47231.0 | mechanic=Guddu | steering pump awaaz aa rahi thi, replace kiya. Next check 10k km pe.",
+      "score": 0.8585,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-4241497e",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-09 | UK 29 GJ 4566 | odo=379060.0 | mechanic=Salim bhai | turbo gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe.",
+      "score": 0.8558,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0003"
+}

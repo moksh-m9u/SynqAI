@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0003",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0003",
+    "ticket_id": "TKT-0003",
+    "recipient": "Vertex Retail",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Kanpur\n\nDear Vertex Retail Team,\n\nPlease be advised that vehicle PB74TA4257 has experienced a breakdown and is being replaced.\nA replacement vehicle, registration PB81RI8019, has been dispatched from the Ludhiana hub.\nThe new vehicle is currently en route to Kanpur with an estimated arrival time of approximately 21.3 hours.\nWe will continue to monitor the shipment and provide further updates as necessary.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-07-01 05:00:00"
+  }
+}

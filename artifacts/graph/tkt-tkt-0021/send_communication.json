@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0021",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0021",
+    "ticket_id": "TKT-0021",
+    "recipient": "Apex Chemicals",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Rudrapur Route\n\nDear Apex Chemicals Team,\n\nFollowing the breakdown of vehicle UP37RY4295, a replacement unit (UP71AL5892) has been dispatched from our Kanpur hub.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.5 hours.\nWe are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\nPlease let us know if you have any immediate concerns regarding this adjustment.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-03-06 17:00:00"
+  }
+}

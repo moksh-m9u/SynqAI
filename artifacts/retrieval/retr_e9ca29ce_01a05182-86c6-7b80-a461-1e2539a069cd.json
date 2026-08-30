@@ -1,0 +1,56 @@
+{
+  "query": "Apex Chemicals electrical failure breakdown replacement UP37RY4295",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-1faa8a01",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | RJ43DD3546 | odo=162479.0 | mechanic=Salim bhai | DEF pump smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8631,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5cf8bba2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-10 | PB43VC3573 | odo=341011.0 | mechanic=Anand | gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8576,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-afa08092",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-24 | UP29HF3900 | odo=63720.0 | mechanic=Salim bhai | battery smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8529,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e05d100b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-02 | UP-37-RY-4295 | odo=260778.0 | mechanic=Salim bhai | alternator overheat ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8513,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cb447a6d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-28 | RJ57LG5374 | odo=193848.0 | mechanic=Guddu | DEF pump smoke aa raha tha, replace kiya. Next check 10k km pe.",
+      "score": 0.8508,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-79a6f281",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-20 | RJ57LG5374 | odo=384511.0 | mechanic=Ramesh | AC compressor vibration zyada tha, repair kiya. Next check 5k km pe.",
+      "score": 0.8506,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05182-86c6-7b80-a461-1e2539a069cd",
+  "thread_id": "tkt-tkt-0021"
+}

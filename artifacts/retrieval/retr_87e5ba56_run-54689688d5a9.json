@@ -1,0 +1,56 @@
+{
+  "query": "Shakti Cement engine overheating breakdown replacement PB-13-AB-1234",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-65262dc2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-18 | HR-16-SP-9238 | odo=163890.0 | mechanic=Anand | AC compressor overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.869,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-7d2f6cdd",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-10 | CH-40-BH-2290 | odo=93026.0 | mechanic=Salim bhai | gearbox awaaz aa rahi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8656,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cfa74b6f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-29 | PB-79-EX-8744 | odo=415881.0 | mechanic=Salim bhai | fan belt vibration zyada tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8624,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5cf8bba2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-10 | PB43VC3573 | odo=341011.0 | mechanic=Anand | gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8621,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-af9d9f8e",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-26 | HR70ZZ3780 | odo=253129.0 | mechanic=Salim bhai | DEF pump vibration zyada tha, repair kiya. Next check 10k km pe.",
+      "score": 0.861,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-c0360daa",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-25 | HR-41-FO-7216 | odo=414011.0 | mechanic=Ramesh | DEF pump overheat ho raha tha, weld kiya. Next check 10k km pe.",
+      "score": 0.8602,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0002"
+}

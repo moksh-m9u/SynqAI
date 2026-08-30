@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0002",
+  "draft": {
+    "message_id": "MSG-SUR-0002",
+    "ticket_id": "SUR-0002",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown, a replacement vehicle (Reg: PB74TA4257) has been dispatched from our Ludhiana hub.\nThe vehicle is currently en route to Chandigarh with an estimated arrival time of approximately 2.9 hours.\nThis adjustment ensures we remain within the agreed 36-hour door-to-door delivery window for your shipment.\nWe will continue to monitor the transit and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "",
+      "replacement": "PB74TA4257",
+      "hub": "Ludhiana",
+      "eta_hours": 2.9,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-54689688d5a9",
+    "thread_id": "tkt-sur-0002"
+  }
+}

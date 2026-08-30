@@ -1,0 +1,325 @@
+{
+  "node": "select_vehicle",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0020",
+  "ticket_id": "TKT-0020",
+  "selection": {
+    "ticket_id": "TKT-0020",
+    "chosen": "HR24VR5371",
+    "pool_size": 9,
+    "eliminations": [
+      {
+        "candidate": "HR16SP9238",
+        "hub": "Gurgaon",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "HR68TS2638",
+        "hub": "Gurgaon",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR85RH4608",
+        "hub": "Gurgaon",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR39BZ6168",
+        "hub": "Gurgaon",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR15HP2193",
+        "hub": "Gurgaon",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "RJ43DD3546",
+        "hub": "Jaipur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "RJ34GX8933",
+        "hub": "Jaipur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "RJ29ZS5978",
+        "hub": "Jaipur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR41FO7216",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR53AN9031",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR21SN1520",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR49VN6344",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR13MS1444",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR79ZT4613",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR14LS3426",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR77LN6419",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "HR10TK9005",
+        "hub": "Ambala",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH71DC7565",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH40BH2290",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH42HD4155",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH74TG3504",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH81AQ4130",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH15XO9785",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH76PU4919",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH26LC5002",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "CH46GN6279",
+        "hub": "Chandigarh",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB31NP8886",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB53DC7224",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB19SW4978",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB68LJ4728",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB79EX8744",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB22DV8062",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB47HL3939",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB42BW8144",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB84TB2343",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB59PM4997",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB43VC3573",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "PB47CH2654",
+        "hub": "Ludhiana",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP29HF3900",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP52IC5573",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP41IF2771",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP38FZ9486",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP29WG2052",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP21YH6085",
+        "hub": "Lucknow",
+        "rule_id": "R_NCR_BS6_WINTER",
+        "reason": "bs_stage=BS4 not route-permitted on NCR winter route (need BS6)"
+      },
+      {
+        "candidate": "UP33PG6813",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_ORIGIN_50KM",
+      "R_NCR_BS6_WINTER",
+      "R_SHAKTI_36H"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NCR_BS6_WINTER",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Gurgaon",
+      "selected HR24VR5371 (year=2023, bs=BS6, heater=True, cap=28.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Gurgaon",
+    "chosen_year": 2023
+  },
+  "langsmith_trace": "01a051ac-a3a6-7bb1-abb4-9ea600d8e061"
+}

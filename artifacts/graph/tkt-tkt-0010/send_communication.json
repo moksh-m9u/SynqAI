@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0010",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0010",
+    "ticket_id": "TKT-0010",
+    "recipient": "Apex Chemicals",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Ludhiana Route\n\nDear Apex Chemicals Team,\n\nPlease be advised that the vehicle with registration UP54XZ6139 has experienced a breakdown and is being replaced.\nA replacement vehicle, registration UP17GN7381, has been dispatched from our Kanpur hub to continue the Kanpur to Ludhiana route.\nThe estimated time of arrival for the shipment is approximately 21.3 hours from the time of dispatch.\nWe are monitoring the situation closely to ensure minimal disruption to your logistics schedule.\nPlease let us know if you require any further details regarding this update.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-02-22 18:00:00"
+  }
+}

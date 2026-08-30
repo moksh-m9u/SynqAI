@@ -1,0 +1,44 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0020",
+  "draft": {
+    "message_id": "MSG-TKT-0020",
+    "ticket_id": "TKT-0020",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment\n\nDear Shakti Cement Team,\n\nPlease be advised that vehicle HR16SP9238 experienced a mechanical breakdown and has been replaced by HR24VR5371.\nThe replacement vehicle has been dispatched from our Gurgaon hub and is currently en route to Kanpur.\nThe estimated arrival time is approximately 12.8 hours, which remains within our standard 36-hour door-to-door service window.\nWe will continue to monitor the shipment closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NCR_BS6_WINTER",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "HR16SP9238",
+      "replacement": "HR24VR5371",
+      "hub": "Gurgaon",
+      "eta_hours": 12.8,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_NCR_BS6_WINTER",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0020"
+  }
+}

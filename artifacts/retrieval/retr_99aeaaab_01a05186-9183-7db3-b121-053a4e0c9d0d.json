@@ -1,0 +1,56 @@
+{
+  "query": "Vertex Retail radiator leak breakdown replacement PB-59-PM-4997",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-95f35715",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-22 | PB31NP8886 | odo=245993.0 | mechanic=Guddu | radiator gear slip kar raha tha, repair kiya. Next check 5k km pe.",
+      "score": 0.8697,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-46c92e67",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-25 | DL-47-HM-4986 | odo=110456.0 | mechanic=Ramesh | radiator gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8636,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-5fcfd8be",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-07 | HR-77-LN-6419 | odo=392834.0 | mechanic=Vicky | gearbox leak ho raha tha, repair kiya. Next check 10k km pe.",
+      "score": 0.8565,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-48ebc7ba",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-24 | DL-64-IB-1058 | odo=346028.0 | mechanic=Vicky | radiator awaaz aa rahi thi, naya lagwaya. Next check 10k km pe.",
+      "score": 0.8514,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cb472102",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-03 | pb68lj4728 | odo=236946.0 | mechanic=Vicky | DEF pump pickup kam ho gayi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8509,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-c0d94060",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-18 | HR-63-TT-4697 | odo=95545.0 | mechanic=Vicky | wheel bearing leak ho raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.849,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05186-9183-7db3-b121-053a4e0c9d0d",
+  "thread_id": "tkt-tkt-0008"
+}

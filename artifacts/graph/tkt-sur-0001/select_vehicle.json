@@ -1,0 +1,34 @@
+{
+  "node": "select_vehicle",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0001",
+  "ticket_id": "SUR-0001",
+  "selection": {
+    "ticket_id": "SUR-0001",
+    "chosen": null,
+    "pool_size": 100,
+    "eliminations": [],
+    "applied_rules": [
+      "R_NEAREST_HUB",
+      "R_ORION_2020"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "NO eligible replacement vehicle — work order dispatches roadside assistance on the broken vehicle"
+    ],
+    "candidate_hub": "",
+    "chosen_year": null
+  },
+  "langsmith_trace": "01a0518e-bd67-7b41-8305-4d0888fc7799"
+}

@@ -1,0 +1,21 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0014",
+  "work_order": {
+    "work_order_id": "WO-TKT-0014",
+    "ticket_id": "TKT-0014",
+    "vehicle_reg": "HR73CY1771",
+    "created_at": "2026-03-07 06:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020"
+      }
+    ]
+  }
+}

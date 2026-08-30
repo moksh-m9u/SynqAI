@@ -1,0 +1,69 @@
+[
+  {
+    "canonical_name": "Shakti Cement",
+    "aliases": [
+      "shakti cement",
+      "shakti",
+      "shakticement",
+      "shakti cement (hold)"
+    ],
+    "provenance": {
+      "source": "app.knowledge.entities",
+      "basis": "alias table"
+    }
+  },
+  {
+    "canonical_name": "Vertex Retail",
+    "aliases": [
+      "vertex retail",
+      "vertex",
+      "vertexretail"
+    ],
+    "provenance": {
+      "source": "app.knowledge.entities",
+      "basis": "alias table"
+    }
+  },
+  {
+    "canonical_name": "Apex Chemicals",
+    "aliases": [
+      "apex chemicals",
+      "apex",
+      "apexchem",
+      "apex chemicals (rotation)"
+    ],
+    "provenance": {
+      "source": "app.knowledge.entities",
+      "basis": "alias table"
+    }
+  },
+  {
+    "canonical_name": "Orion Pharma",
+    "aliases": [
+      "orion pharma",
+      "orion",
+      "orionpharma",
+      "orion pharma (age-2020+)"
+    ],
+    "provenance": {
+      "source": "app.knowledge.entities",
+      "basis": "alias table"
+    }
+  },
+  {
+    "canonical_name": "Internal",
+    "aliases": [
+      "internal",
+      "meridian freight",
+      "meridian pvt ltd",
+      "mfl",
+      "meridian",
+      "synq",
+      ""
+    ],
+    "provenance": {
+      "source": "app.knowledge.entities",
+      "basis": "alias table"
+    }
+  }
+]

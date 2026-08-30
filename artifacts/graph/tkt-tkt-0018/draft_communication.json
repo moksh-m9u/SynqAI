@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0018",
+  "draft": {
+    "message_id": "MSG-TKT-0018",
+    "ticket_id": "TKT-0018",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle UK76OD5061, we have dispatched replacement vehicle UK29NF9548 from the Rudrapur hub to ensure your shipment continues on schedule. The new vehicle is currently en route to Ludhiana with an estimated arrival time of approximately 13.1 hours. We are monitoring the journey closely and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UK76OD5061",
+      "replacement": "UK29NF9548",
+      "hub": "Rudrapur",
+      "eta_hours": 13.1,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0018"
+  }
+}

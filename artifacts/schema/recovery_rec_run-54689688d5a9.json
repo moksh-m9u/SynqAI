@@ -1,0 +1,46 @@
+{
+  "run_id": "run-54689688d5a9",
+  "thread_id": "",
+  "original": {
+    "tkt_no": "SUR-0003",
+    "breakdown_when": "2026-09-01T09:05:00",
+    "truck": "HR-XX-BAD",
+    "far_from_base_km": "unknown",
+    "driver": "",
+    "from_hub": "",
+    "to_city": "",
+    "symptom": "",
+    "priority": "",
+    "account": "Vertex Retail",
+    "raw": {}
+  },
+  "method": "llm_mapping",
+  "actions": [
+    "llm key mapping attempted for unknowns=['from_hub', 'to_city', 'raw']"
+  ],
+  "mapping": {
+    "tkt_no": "ticket_id",
+    "breakdown_when": "created_at",
+    "truck": "vehicle",
+    "far_from_base_km": "km_from_origin_hub",
+    "driver": "driver_id",
+    "from_hub": "origin_hub",
+    "to_city": "destination",
+    "symptom": "issue",
+    "priority": "severity",
+    "account": "client",
+    "raw": "_unknown"
+  },
+  "normalized": {
+    "ticket_id": "SUR-0003",
+    "created_at": "2026-09-01T09:05:00",
+    "vehicle": "HR-XX-BAD",
+    "km_from_origin_hub": "unknown",
+    "driver_id": null,
+    "origin_hub": "",
+    "destination": "",
+    "issue": "",
+    "severity": "",
+    "client": "Vertex Retail"
+  }
+}

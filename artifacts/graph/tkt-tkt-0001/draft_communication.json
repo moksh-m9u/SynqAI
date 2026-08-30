@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0001",
+  "draft": {
+    "message_id": "MSG-TKT-0001",
+    "ticket_id": "TKT-0001",
+    "recipient": "Apex Chemicals",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Apex Chemicals Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Apex Chemicals Shipment\n\nDear Apex Chemicals Team,\n\nPlease be advised that the vehicle with registration UP37UP7482 experienced a mechanical breakdown during transit.\nA replacement vehicle, registration UP53YM5558, has been dispatched from our Lucknow hub to continue the route to Ludhiana.\nThe estimated time of arrival for the shipment is approximately 21.6 hours from the time of dispatch.\nWe apologize for the delay and will keep you updated on the progress.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UP37UP7482",
+      "replacement": "UP53YM5558",
+      "hub": "Lucknow",
+      "eta_hours": 21.6,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_APEX_ROTATION"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0001"
+  }
+}

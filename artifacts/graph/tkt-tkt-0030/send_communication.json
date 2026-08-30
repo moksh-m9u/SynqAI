@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0030",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0030",
+    "ticket_id": "TKT-0030",
+    "recipient": "Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown of vehicle UK76OD5061, a replacement unit (UK27ZO9702) has been dispatched from our Rudrapur hub to continue the route to Ludhiana. The new vehicle is estimated to arrive in approximately 13.1 hours, keeping the shipment within our standard 36-hour door-to-door delivery window. We will continue to monitor the transit closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-07-04 02:00:00"
+  }
+}

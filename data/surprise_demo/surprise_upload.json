@@ -1,0 +1,38 @@
+[
+  {
+    "tkt_no": "SUR-0001",
+    "breakdown_when": "2026-09-02T14:30:00",
+    "truck": "UP-40-IM-8494",
+    "far_from_base_km": 65,
+    "driver": "DRV-014",
+    "from_hub": "Meerut",
+    "to_city": "Delhi",
+    "symptom": "clutch slipping",
+    "priority": "HIGH",
+    "account": "Orion Pharma"
+  },
+  {
+    "tkt_no": "SUR-0002",
+    "breakdown_when": "2026-09-01T09:05:00",
+    "truck": "PB-13-AB-1234",
+    "far_from_base_km": 10,
+    "driver": "DRV-001",
+    "from_hub": "Ludhiana",
+    "to_city": "Chandigarh",
+    "symptom": "engine overheating",
+    "priority": "MEDIUM",
+    "account": "Shakti Cement"
+  },
+  {
+    "tkt_no": "SUR-0003",
+    "breakdown_when": "2026-09-01T09:05:00",
+    "truck": "HR-XX-BAD",
+    "far_from_base_km": "unknown",
+    "driver": "",
+    "from_hub": "",
+    "to_city": "",
+    "symptom": "",
+    "priority": "",
+    "account": "Vertex Retail"
+  }
+]

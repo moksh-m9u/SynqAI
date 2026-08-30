@@ -1,0 +1,14 @@
+{
+  "run_id": "run-4616427b29a9",
+  "dedup_reported": 3,
+  "quarantined": [
+    {
+      "ticket_id": "TKT-9102",
+      "reason": "created_at not a parseable date; vehicle registration invalid/unknown: 'hr??unknown'; origin_hub empty; destination empty; issue empty"
+    },
+    {
+      "ticket_id": "TKT-9101",
+      "reason": "vehicle registration invalid/unknown: ''"
+    }
+  ]
+}

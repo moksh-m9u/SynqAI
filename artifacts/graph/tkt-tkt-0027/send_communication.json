@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0027",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0027",
+    "ticket_id": "TKT-0027",
+    "recipient": "Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that vehicle UP40IM3144 has experienced a breakdown and has been replaced by vehicle UP33PG6813. The replacement vehicle has been dispatched from our Lucknow hub to continue the Lucknow to Lucknow route. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any questions.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-08-11 19:00:00"
+  }
+}

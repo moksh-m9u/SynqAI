@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0022",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0022",
+    "ticket_id": "TKT-0022",
+    "recipient": "Vertex Retail",
+    "body": "Subject: Update: Replacement Vehicle Dispatch for Vertex Retail (Jaipur to Ludhiana)\n\nDear Vertex Retail Team,\n\nFollowing a breakdown of vehicle RJ66RW8007, a replacement unit (RJ58AM5345) has been dispatched from our Jaipur hub to complete the Jaipur to Ludhiana route.\n\nDue to the delay, the estimated arrival is after today's 18:00 gate close. Per our standing arrangement, the vehicle will be held at the last halt and delivered with the morning gate at 08:00.\n\nThis will be recorded as a scheduled morning delivery, not a failed attempt.\n\nRegards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-05-23 00:00:00"
+  }
+}

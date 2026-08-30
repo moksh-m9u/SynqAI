@@ -1,0 +1,3291 @@
+{
+  "generated_by": "app.knowledge.entities.build_vehicle_registry",
+  "precedence": [
+    "1. fleet_master row WITH vehicle_id is canonical",
+    "2. fleet_master wins over email/hub claims for vehicle attributes",
+    "3. maintenance_log wins over yard-check odometer claims"
+  ],
+  "conflicts_resolved": [
+    {
+      "plate": "CH42HD4155",
+      "attribute": "year",
+      "values": [
+        2018,
+        2019
+      ],
+      "winner": 2018,
+      "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+    },
+    {
+      "plate": "RJ34GX8933",
+      "attribute": "year",
+      "values": [
+        2017,
+        2018
+      ],
+      "winner": 2017,
+      "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+    },
+    {
+      "plate": "UP40IM3144",
+      "attribute": "year",
+      "values": [
+        2021,
+        2022
+      ],
+      "winner": 2021,
+      "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+    }
+  ],
+  "vehicles": [
+    {
+      "canonical_reg": "UP17GN7381",
+      "vehicle_id": "MF-068",
+      "model": "Tata LPT 3118",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP17GN7381"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-068",
+            "registration_number": "UP17GN7381",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ43DD3546",
+      "vehicle_id": "MF-041",
+      "model": "BharatBenz 2823R",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "RJ43DD3546"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-041",
+            "registration_number": "RJ43DD3546",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP13DI3925",
+      "vehicle_id": "MF-051",
+      "model": "BharatBenz 2823R",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP13DI3925"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-051",
+            "registration_number": "UP13DI3925",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB31NP8886",
+      "vehicle_id": "MF-031",
+      "model": "Eicher Pro 6028",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "PB31NP8886"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-031",
+            "registration_number": "PB31NP8886",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL30AN8381",
+      "vehicle_id": "MF-100",
+      "model": "Eicher Pro 6028",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "DL30AN8381"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-100",
+            "registration_number": "DL30AN8381",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Delhi",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH71DC7565",
+      "vehicle_id": "MF-095",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "CH71DC7565"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-095",
+            "registration_number": "CH71DC7565",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR73CY1771",
+      "vehicle_id": "MF-014",
+      "model": "Tata LPT 3118",
+      "year": 2024,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR73CY1771"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-014",
+            "registration_number": "HR73CY1771",
+            "year": 2024,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL41GG9786",
+      "vehicle_id": "MF-029",
+      "model": "Ashok Leyland 3520",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "DL41GG9786",
+        "dl-41-gg-9786"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-029",
+            "registration_number": "DL41GG9786",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Delhi",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "dl-41-gg-9786",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": null,
+            "home_hub": "Delhi",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP21YH6085",
+      "vehicle_id": "MF-059",
+      "model": "Ashok Leyland 3520",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "UP21YH6085",
+        "up-21-yh-6085"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-059",
+            "registration_number": "UP21YH6085",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Lucknow",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "up-21-yh-6085",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": null,
+            "home_hub": "Lucknow",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH40BH2290",
+      "vehicle_id": "MF-020",
+      "model": "Eicher Pro 6028",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "CH40BH2290",
+        "CH 40 BH 2290"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-020",
+            "registration_number": "CH40BH2290",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "CH 40 BH 2290",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK16VU2612",
+      "vehicle_id": "MF-028",
+      "model": "Eicher Pro 6028",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UK16VU2612"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-028",
+            "registration_number": "UK16VU2612",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR41FO7216",
+      "vehicle_id": "MF-010",
+      "model": "Ashok Leyland 3520",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR-41-FO-7216",
+        "HR41FO7216"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "HR-41-FO-7216",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": null,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-010",
+            "registration_number": "HR41FO7216",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR70ZZ3780",
+      "vehicle_id": "MF-058",
+      "model": "Tata LPT 3118",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR70ZZ3780"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-058",
+            "registration_number": "HR70ZZ3780",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP18VK6143",
+      "vehicle_id": "MF-054",
+      "model": "Tata LPT 3118",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UP18VK6143"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-054",
+            "registration_number": "UP18VK6143",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL47HM4986",
+      "vehicle_id": "MF-088",
+      "model": "BharatBenz 2823R",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "DL47HM4986",
+        "DL 47 HM 4986"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-088",
+            "registration_number": "DL47HM4986",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "DL 47 HM 4986",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR53AN9031",
+      "vehicle_id": "MF-081",
+      "model": "Eicher Pro 6028",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR53AN9031",
+        "HR-53-AN-9031"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-081",
+            "registration_number": "HR53AN9031",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "HR-53-AN-9031",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": null,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP29HF3900",
+      "vehicle_id": "MF-047",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UP29HF3900"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-047",
+            "registration_number": "UP29HF3900",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR16SP9238",
+      "vehicle_id": "MF-034",
+      "model": "Ashok Leyland 3520",
+      "year": 2024,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "hr-16-sp-9238",
+        "HR16SP9238"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "hr-16-sp-9238",
+            "year": 2024,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-034",
+            "registration_number": "HR16SP9238",
+            "year": 2024,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR13HG1333",
+      "vehicle_id": "MF-076",
+      "model": "Ashok Leyland 3520",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "HR 13 HG 1333",
+        "HR13HG1333"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "HR 13 HG 1333",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": null,
+            "home_hub": "Gurgaon",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-076",
+            "registration_number": "HR13HG1333",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP52IC5573",
+      "vehicle_id": "MF-050",
+      "model": "Eicher Pro 6028",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP52IC5573"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-050",
+            "registration_number": "UP52IC5573",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH42HD4155",
+      "vehicle_id": "MF-090",
+      "model": "Tata LPT 3118",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "ch42hd4155",
+        "CH42HD4155"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "ch42hd4155",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-090",
+            "registration_number": "CH42HD4155",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins",
+        "conflicts": [
+          {
+            "attribute": "year",
+            "values": [
+              2018,
+              2019
+            ],
+            "winner": 2018,
+            "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+          }
+        ]
+      }
+    },
+    {
+      "canonical_reg": "HR68TS2638",
+      "vehicle_id": "MF-038",
+      "model": "Ashok Leyland 3520",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR68TS2638"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-038",
+            "registration_number": "HR68TS2638",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP86CM7252",
+      "vehicle_id": "MF-015",
+      "model": "Eicher Pro 6028",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP 86 CM 7252",
+        "UP86CM7252"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "UP 86 CM 7252",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-015",
+            "registration_number": "UP86CM7252",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB53DC7224",
+      "vehicle_id": "MF-005",
+      "model": "BharatBenz 2823R",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "PB53DC7224"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-005",
+            "registration_number": "PB53DC7224",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH74TG3504",
+      "vehicle_id": "MF-018",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "CH74TG3504"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-018",
+            "registration_number": "CH74TG3504",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ57LG5374",
+      "vehicle_id": "MF-009",
+      "model": "Tata LPT 3118",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "RJ57LG5374"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-009",
+            "registration_number": "RJ57LG5374",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK81YH8800",
+      "vehicle_id": "MF-087",
+      "model": "Eicher Pro 6028",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UK81YH8800"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-087",
+            "registration_number": "UK81YH8800",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR21SN1520",
+      "vehicle_id": "MF-002",
+      "model": "Tata LPT 3118",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR21SN1520"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-002",
+            "registration_number": "HR21SN1520",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB18BK2160",
+      "vehicle_id": "MF-025",
+      "model": "Ashok Leyland 3520",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "PB18BK2160"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-025",
+            "registration_number": "PB18BK2160",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ludhiana",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ66RW8007",
+      "vehicle_id": "MF-044",
+      "model": "Tata LPT 3118",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "RJ66RW8007"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-044",
+            "registration_number": "RJ66RW8007",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Jaipur",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP33PG6813",
+      "vehicle_id": "MF-085",
+      "model": "BharatBenz 2823R",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "up33pg6813",
+        "UP33PG6813"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "up33pg6813",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-085",
+            "registration_number": "UP33PG6813",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR59KV7624",
+      "vehicle_id": "MF-071",
+      "model": "Ashok Leyland 3520",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR59KV7624"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-071",
+            "registration_number": "HR59KV7624",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Gurgaon",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB81RI8019",
+      "vehicle_id": "MF-013",
+      "model": "Eicher Pro 6028",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "PB81RI8019"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-013",
+            "registration_number": "PB81RI8019",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ludhiana",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK41CO2604",
+      "vehicle_id": "MF-030",
+      "model": "Tata LPT 3118",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "uk41co2604",
+        "UK41CO2604"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "uk41co2604",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": null,
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-030",
+            "registration_number": "UK41CO2604",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP41IF2771",
+      "vehicle_id": "MF-048",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "UP41IF2771"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-048",
+            "registration_number": "UP41IF2771",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB19SW4978",
+      "vehicle_id": "MF-079",
+      "model": "BharatBenz 2823R",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "PB19SW4978"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-079",
+            "registration_number": "PB19SW4978",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL13XI5012",
+      "vehicle_id": "MF-001",
+      "model": "Ashok Leyland 3520",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "DL13XI5012"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-001",
+            "registration_number": "DL13XI5012",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH81AQ4130",
+      "vehicle_id": "MF-086",
+      "model": "Ashok Leyland 3520",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "CH81AQ4130"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-086",
+            "registration_number": "CH81AQ4130",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH85NJ1986",
+      "vehicle_id": "MF-098",
+      "model": "Tata LPT 3118",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH85NJ1986"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-098",
+            "registration_number": "CH85NJ1986",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR49VN6344",
+      "vehicle_id": "MF-055",
+      "model": "BharatBenz 2823R",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR-49-VN-6344",
+        "HR49VN6344"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "HR-49-VN-6344",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": null,
+            "home_hub": "Ambala",
+            "capacity": null,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-055",
+            "registration_number": "HR49VN6344",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR55GV5088",
+      "vehicle_id": "MF-046",
+      "model": "Tata LPT 3118",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR55GV5088"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-046",
+            "registration_number": "HR55GV5088",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ68AX5315",
+      "vehicle_id": "MF-017",
+      "model": "Ashok Leyland 3520",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "RJ68AX5315"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-017",
+            "registration_number": "RJ68AX5315",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Jaipur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP71AL5892",
+      "vehicle_id": "MF-069",
+      "model": "Eicher Pro 6028",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "UP71AL5892"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-069",
+            "registration_number": "UP71AL5892",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ34GX8933",
+      "vehicle_id": "MF-091",
+      "model": "BharatBenz 2823R",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "RJ34GX8933",
+        "RJ 34 GX 8933"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-091",
+            "registration_number": "RJ34GX8933",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "RJ 34 GX 8933",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins",
+        "conflicts": [
+          {
+            "attribute": "year",
+            "values": [
+              2017,
+              2018
+            ],
+            "winner": 2017,
+            "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+          }
+        ]
+      }
+    },
+    {
+      "canonical_reg": "UK69NX5397",
+      "vehicle_id": "MF-083",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UK69NX5397",
+        "UK-69-NX-5397"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-083",
+            "registration_number": "UK69NX5397",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "UK-69-NX-5397",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": null,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL82ZB6688",
+      "vehicle_id": "MF-080",
+      "model": "Eicher Pro 6028",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "DL82ZB6688"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-080",
+            "registration_number": "DL82ZB6688",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR13MS1444",
+      "vehicle_id": "MF-072",
+      "model": "Eicher Pro 6028",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR13MS1444"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-072",
+            "registration_number": "HR13MS1444",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB68LJ4728",
+      "vehicle_id": "MF-049",
+      "model": "Tata LPT 3118",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "PB68LJ4728"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-049",
+            "registration_number": "PB68LJ4728",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB79EX8744",
+      "vehicle_id": "MF-026",
+      "model": "Eicher Pro 6028",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "PB79EX8744",
+        "pb-79-ex-8744"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-026",
+            "registration_number": "PB79EX8744",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": null,
+            "registration_number": "pb-79-ex-8744",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP38FZ9486",
+      "vehicle_id": "MF-062",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP38FZ9486"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-062",
+            "registration_number": "UP38FZ9486",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Kanpur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR79ZT4613",
+      "vehicle_id": "MF-070",
+      "model": "Ashok Leyland 3520",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "hr79zt4613",
+        "HR79ZT4613"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "hr79zt4613",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-070",
+            "registration_number": "HR79ZT4613",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ58AM5345",
+      "vehicle_id": "MF-032",
+      "model": "Eicher Pro 6028",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "RJ58AM5345"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-032",
+            "registration_number": "RJ58AM5345",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Jaipur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH40IK6238",
+      "vehicle_id": "MF-066",
+      "model": "Tata LPT 3118",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH40IK6238"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-066",
+            "registration_number": "CH40IK6238",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Chandigarh",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB22DV8062",
+      "vehicle_id": "MF-027",
+      "model": "Eicher Pro 6028",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "PB22DV8062"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-027",
+            "registration_number": "PB22DV8062",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB47HL3939",
+      "vehicle_id": "MF-092",
+      "model": "Tata LPT 3118",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "PB47HL3939"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-092",
+            "registration_number": "PB47HL3939",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR47UT6925",
+      "vehicle_id": "MF-007",
+      "model": "Ashok Leyland 3520",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "HR47UT6925"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-007",
+            "registration_number": "HR47UT6925",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL11SJ8690",
+      "vehicle_id": "MF-094",
+      "model": "Eicher Pro 6028",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "DL11SJ8690"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-094",
+            "registration_number": "DL11SJ8690",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Delhi",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR26EV8787",
+      "vehicle_id": "MF-021",
+      "model": "Ashok Leyland 3520",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR26EV8787"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-021",
+            "registration_number": "HR26EV8787",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL64IB1058",
+      "vehicle_id": "MF-043",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "DL64IB1058"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-043",
+            "registration_number": "DL64IB1058",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB42BW8144",
+      "vehicle_id": "MF-053",
+      "model": "Ashok Leyland 3520",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "PB42BW8144"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-053",
+            "registration_number": "PB42BW8144",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR14LS3426",
+      "vehicle_id": "MF-045",
+      "model": "Ashok Leyland 3520",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR14LS3426"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-045",
+            "registration_number": "HR14LS3426",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK12XR1853",
+      "vehicle_id": "MF-075",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UK12XR1853"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-075",
+            "registration_number": "UK12XR1853",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH67HY8613",
+      "vehicle_id": "MF-084",
+      "model": "Eicher Pro 6028",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "CH67HY8613"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-084",
+            "registration_number": "CH67HY8613",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Chandigarh",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK27ZO9702",
+      "vehicle_id": "MF-063",
+      "model": "BharatBenz 2823R",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "UK27ZO9702"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-063",
+            "registration_number": "UK27ZO9702",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP40IM3144",
+      "vehicle_id": "MF-037",
+      "model": "BharatBenz 2823R",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP-40-IM-3144",
+        "UP40IM3144"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": null,
+            "registration_number": "UP-40-IM-3144",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": null,
+            "home_hub": "Lucknow",
+            "capacity": null,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          },
+          {
+            "vehicle_id": "MF-037",
+            "registration_number": "UP40IM3144",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins",
+        "conflicts": [
+          {
+            "attribute": "year",
+            "values": [
+              2021,
+              2022
+            ],
+            "winner": 2021,
+            "rationale": "canonical row (vehicle_id present) wins; losing value preserved in provenance"
+          }
+        ]
+      }
+    },
+    {
+      "canonical_reg": "HR85RH4608",
+      "vehicle_id": "MF-024",
+      "model": "Tata LPT 3118",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "HR85RH4608"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-024",
+            "registration_number": "HR85RH4608",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Gurgaon",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB84TB2343",
+      "vehicle_id": "MF-036",
+      "model": "BharatBenz 2823R",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "PB84TB2343"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-036",
+            "registration_number": "PB84TB2343",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ45BB5786",
+      "vehicle_id": "MF-093",
+      "model": "Ashok Leyland 3520",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "RJ45BB5786"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-093",
+            "registration_number": "RJ45BB5786",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP29WG2052",
+      "vehicle_id": "MF-067",
+      "model": "Eicher Pro 6028",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "UP29WG2052"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-067",
+            "registration_number": "UP29WG2052",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB59PM4997",
+      "vehicle_id": "MF-061",
+      "model": "Tata LPT 3118",
+      "year": 2015,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "PB59PM4997"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-061",
+            "registration_number": "PB59PM4997",
+            "year": 2015,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK76OD5061",
+      "vehicle_id": "MF-023",
+      "model": "Tata LPT 3118",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UK76OD5061"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-023",
+            "registration_number": "UK76OD5061",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB43VC3573",
+      "vehicle_id": "MF-099",
+      "model": "Ashok Leyland 3520",
+      "year": 2016,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "PB43VC3573"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-099",
+            "registration_number": "PB43VC3573",
+            "year": 2016,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ludhiana",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK29NF9548",
+      "vehicle_id": "MF-082",
+      "model": "BharatBenz 2823R",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UK29NF9548"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-082",
+            "registration_number": "UK29NF9548",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR63TT4697",
+      "vehicle_id": "MF-097",
+      "model": "Eicher Pro 6028",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "HR63TT4697"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-097",
+            "registration_number": "HR63TT4697",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB74TA4257",
+      "vehicle_id": "MF-003",
+      "model": "Eicher Pro 6028",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "PB74TA4257"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-003",
+            "registration_number": "PB74TA4257",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ludhiana",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP53YM5558",
+      "vehicle_id": "MF-074",
+      "model": "Eicher Pro 6028",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP53YM5558"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-074",
+            "registration_number": "UP53YM5558",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP37UP7482",
+      "vehicle_id": "MF-012",
+      "model": "Eicher Pro 6028",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "UP37UP7482"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-012",
+            "registration_number": "UP37UP7482",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Lucknow",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH10YZ3615",
+      "vehicle_id": "MF-004",
+      "model": "Eicher Pro 6028",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH10YZ3615"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-004",
+            "registration_number": "CH10YZ3615",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Chandigarh",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK29GJ4566",
+      "vehicle_id": "MF-033",
+      "model": "Tata LPT 3118",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UK29GJ4566"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-033",
+            "registration_number": "UK29GJ4566",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL30JD1420",
+      "vehicle_id": "MF-078",
+      "model": "Eicher Pro 6028",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "DL30JD1420"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-078",
+            "registration_number": "DL30JD1420",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Delhi",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB53GV5325",
+      "vehicle_id": "MF-042",
+      "model": "Eicher Pro 6028",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "PB53GV5325"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-042",
+            "registration_number": "PB53GV5325",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ludhiana",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP58VX3851",
+      "vehicle_id": "MF-056",
+      "model": "BharatBenz 2823R",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP58VX3851"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-056",
+            "registration_number": "UP58VX3851",
+            "year": 2020,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH15XO9785",
+      "vehicle_id": "MF-006",
+      "model": "Eicher Pro 6028",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "CH15XO9785"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-006",
+            "registration_number": "CH15XO9785",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR39BZ6168",
+      "vehicle_id": "MF-011",
+      "model": "BharatBenz 2823R",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR39BZ6168"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-011",
+            "registration_number": "HR39BZ6168",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR64RO3607",
+      "vehicle_id": "MF-064",
+      "model": "Eicher Pro 6028",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "HR64RO3607"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-064",
+            "registration_number": "HR64RO3607",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Ambala",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH76PU4919",
+      "vehicle_id": "MF-065",
+      "model": "Eicher Pro 6028",
+      "year": 2017,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "CH76PU4919"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-065",
+            "registration_number": "CH76PU4919",
+            "year": 2017,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP54XZ6139",
+      "vehicle_id": "MF-052",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP54XZ6139"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-052",
+            "registration_number": "UP54XZ6139",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH26LC5002",
+      "vehicle_id": "MF-039",
+      "model": "BharatBenz 2823R",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH26LC5002"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-039",
+            "registration_number": "CH26LC5002",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Chandigarh",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR77LN6419",
+      "vehicle_id": "MF-089",
+      "model": "Eicher Pro 6028",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR77LN6419"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-089",
+            "registration_number": "HR77LN6419",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR15HP2193",
+      "vehicle_id": "MF-060",
+      "model": "Eicher Pro 6028",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "HR15HP2193"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-060",
+            "registration_number": "HR15HP2193",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Gurgaon",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR24VR5371",
+      "vehicle_id": "MF-016",
+      "model": "BharatBenz 2823R",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "HR24VR5371"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-016",
+            "registration_number": "HR24VR5371",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Gurgaon",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "CH46GN6279",
+      "vehicle_id": "MF-057",
+      "model": "Eicher Pro 6028",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH46GN6279"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-057",
+            "registration_number": "CH46GN6279",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Chandigarh",
+            "capacity": 21.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK33BI7211",
+      "vehicle_id": "MF-073",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "UK33BI7211"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-073",
+            "registration_number": "UK33BI7211",
+            "year": 2018,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 28.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "RJ29ZS5978",
+      "vehicle_id": "MF-096",
+      "model": "Ashok Leyland 3520",
+      "year": 2014,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "RJ29ZS5978"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-096",
+            "registration_number": "RJ29ZS5978",
+            "year": 2014,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Jaipur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL82GO5198",
+      "vehicle_id": "MF-077",
+      "model": "BharatBenz 2823R",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "DL82GO5198"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-077",
+            "registration_number": "DL82GO5198",
+            "year": 2023,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Delhi",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UK79WJ9666",
+      "vehicle_id": "MF-040",
+      "model": "BharatBenz 2823R",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Rudrapur",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UK79WJ9666"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-040",
+            "registration_number": "UK79WJ9666",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Rudrapur",
+            "capacity": 16.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "UP37RY4295",
+      "vehicle_id": "MF-022",
+      "model": "BharatBenz 2823R",
+      "year": 2022,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "UP37RY4295"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-022",
+            "registration_number": "UP37RY4295",
+            "year": 2022,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Kanpur",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "PB47CH2654",
+      "vehicle_id": "MF-008",
+      "model": "BharatBenz 2823R",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "PB47CH2654"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-008",
+            "registration_number": "PB47CH2654",
+            "year": 2019,
+            "bs_stage": "BS4",
+            "engine_heater": "Yes",
+            "home_hub": "Ludhiana",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "HR10TK9005",
+      "vehicle_id": "MF-019",
+      "model": "Tata LPT 3118",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ambala",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "HR10TK9005"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-019",
+            "registration_number": "HR10TK9005",
+            "year": 2012,
+            "bs_stage": "BS4",
+            "engine_heater": "No",
+            "home_hub": "Ambala",
+            "capacity": 25.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    },
+    {
+      "canonical_reg": "DL33CT2113",
+      "vehicle_id": "MF-035",
+      "model": "Ashok Leyland 3520",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Delhi",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "DL33CT2113"
+      ],
+      "provenance": {
+        "rows": [
+          {
+            "vehicle_id": "MF-035",
+            "registration_number": "DL33CT2113",
+            "year": 2021,
+            "bs_stage": "BS6",
+            "engine_heater": "Yes",
+            "home_hub": "Delhi",
+            "capacity": 31.0,
+            "status": "Active",
+            "source": "fleet_master.csv"
+          }
+        ],
+        "resolution": "row_with_vehicle_id_wins"
+      }
+    }
+  ]
+}

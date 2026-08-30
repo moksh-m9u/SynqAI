@@ -1,0 +1,56 @@
+{
+  "query": "Shakti Cement brake failure warning breakdown replacement pb84tb2343",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-e3a133c4",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-22 | RJ45BB5786 | odo=242342.0 | mechanic=Guddu | brake pad start hone me dikkat thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8684,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-13adfadb",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-03 | PB84TB2343 | odo=228971.0 | mechanic=Anand | gearbox vibration zyada tha, weld kiya. Next check 15k km pe.",
+      "score": 0.8683,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-9e3b6f37",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-29 | HR59KV7624 | odo=286486.0 | mechanic=Vicky | brake pad start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8681,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-614d2d69",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-10 | RJ34GX8933 | odo=382693.0 | mechanic=Vicky | brake pad start hone me dikkat thi, repair kiya. Next check 5k km pe.",
+      "score": 0.8654,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-a4271997",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-24 | HR64RO3607 | odo=246172.0 | mechanic=Guddu | brake pad smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8647,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-3b35a946",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-19 | PB 31 NP 8886 | odo=188404.0 | mechanic=Salim bhai | brake drum vibration zyada tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8639,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0012"
+}

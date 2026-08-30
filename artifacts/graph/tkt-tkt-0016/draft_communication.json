@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0016",
+  "draft": {
+    "message_id": "MSG-TKT-0016",
+    "ticket_id": "TKT-0016",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that a replacement vehicle (Reg: RJ45BB5786) has been dispatched from our Jaipur hub following a breakdown of the original unit (Reg: HR39BZ6168). The new vehicle is currently en route on the Gurgaon to Delhi corridor. We estimate an arrival in approximately 0.8 hours, ensuring we remain within the agreed 36-hour door-to-door delivery window. Please let us know if you require any further details.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "HR39BZ6168",
+      "replacement": "RJ45BB5786",
+      "hub": "Jaipur",
+      "eta_hours": 0.8,
+      "applied_rules": [
+        "R_NEAREST_HUB",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0016"
+  }
+}

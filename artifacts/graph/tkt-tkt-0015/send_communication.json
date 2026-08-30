@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0015",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0015",
+    "ticket_id": "TKT-0015",
+    "recipient": "Apex Chemicals",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Jaipur\n\nDear Apex Chemicals Team,\n\nFollowing a mechanical breakdown of vehicle CH74TG3504, a replacement unit (CH67HY8613) has been dispatched from our Chandigarh hub. The new vehicle is currently en route to Jaipur with an estimated arrival time of approximately 14.0 hours. We are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-02-06 19:00:00"
+  }
+}

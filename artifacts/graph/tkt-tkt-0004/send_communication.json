@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0004",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0004",
+    "ticket_id": "TKT-0004",
+    "recipient": "Vertex Retail",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Delhi\n\nDear Vertex Retail Team,\n\nFollowing a mechanical breakdown of vehicle PB84TB2343, we have dispatched replacement vehicle PB53GV5325 from our Ludhiana hub. The new vehicle is currently en route to Delhi with an estimated arrival time of approximately 9.3 hours. We are monitoring the shipment closely to ensure minimal disruption to your delivery schedule. Please let us know if you require any further updates.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-04-23 09:00:00"
+  }
+}

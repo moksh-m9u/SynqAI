@@ -1,0 +1,50 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0007",
+  "draft": {
+    "message_id": "MSG-TKT-0007",
+    "ticket_id": "TKT-0007",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Delhi to Ludhiana Route",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Delhi to Ludhiana Route\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle DL33CT2113, a replacement unit (DL82GO5198) has been dispatched from our Delhi hub.\nThe new vehicle is currently en route to Ludhiana with an estimated arrival time of approximately 9.3 hours.\nWe are monitoring the shipment closely to ensure minimal disruption to your delivery schedule.\nPlease let us know if you require any further updates.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NCR_BS6_WINTER",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_24",
+        "ref": "R_NEW_DRIVER_NIGHT",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "DL33CT2113",
+      "replacement": "DL82GO5198",
+      "hub": "Delhi",
+      "eta_hours": 9.3,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_NCR_BS6_WINTER",
+        "R_ORION_2020",
+        "R_NEW_DRIVER_NIGHT"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0007"
+  }
+}

@@ -1,0 +1,439 @@
+{
+  "node": "select_vehicle",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0026",
+  "ticket_id": "TKT-0026",
+  "selection": {
+    "ticket_id": "TKT-0026",
+    "chosen": "CH85NJ1986",
+    "pool_size": 13,
+    "eliminations": [
+      {
+        "candidate": "CH71DC7565",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH40BH2290",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH42HD4155",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH74TG3504",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH81AQ4130",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "CH81AQ4130",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH40IK6238",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH67HY8613",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH15XO9785",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH76PU4919",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH26LC5002",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH46GN6279",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH71DC7565",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH40BH2290",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH42HD4155",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH74TG3504",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH81AQ4130",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "CH81AQ4130",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH40IK6238",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH67HY8613",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH15XO9785",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH76PU4919",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH26LC5002",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "CH46GN6279",
+        "hub": "Chandigarh",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR73CY1771",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR41FO7216",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR53AN9031",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR21SN1520",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2012 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR49VN6344",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR13MS1444",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR79ZT4613",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR14LS3426",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR77LN6419",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "HR10TK9005",
+        "hub": "Ambala",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2012 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB31NP8886",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2016 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB53DC7224",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB81RI8019",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB19SW4978",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB68LJ4728",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2016 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB79EX8744",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2016 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB22DV8062",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB47HL3939",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB42BW8144",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2012 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB84TB2343",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB59PM4997",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2015 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB43VC3573",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2016 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "PB74TA4257",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB47CH2654",
+        "hub": "Ludhiana",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "RJ43DD3546",
+        "hub": "Jaipur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "RJ34GX8933",
+        "hub": "Jaipur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2017 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ29ZS5978",
+        "hub": "Jaipur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2014 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP17GN7381",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP29HF3900",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP52IC5573",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2018 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP86CM7252",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP41IF2771",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP38FZ9486",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP29WG2052",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2019 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP13DI3925",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP21YH6085",
+        "hub": "Lucknow",
+        "rule_id": "R_ORION_2020",
+        "reason": "year 2016 < 2020 (Orion audit SOP)"
+      },
+      {
+        "candidate": "UP33PG6813",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP53YM5558",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_ORIGIN_50KM",
+      "R_ORION_2020"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Chandigarh",
+      "selected CH85NJ1986 (year=2020, bs=BS6, heater=False, cap=21.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Chandigarh",
+    "chosen_year": 2020
+  },
+  "langsmith_trace": "01a051ac-e4a6-78b0-be6d-169997b59a15"
+}

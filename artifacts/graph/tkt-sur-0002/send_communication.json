@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0002",
+  "comms_sent": {
+    "message_id": "MSG-SUR-0002",
+    "ticket_id": "SUR-0002",
+    "recipient": "Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown, a replacement vehicle (Reg: PB74TA4257) has been dispatched from our Ludhiana hub.\nThe vehicle is currently en route to Chandigarh with an estimated arrival time of approximately 2.9 hours.\nThis adjustment ensures we remain within the agreed 36-hour door-to-door delivery window for your shipment.\nWe will continue to monitor the transit and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-09-01 09:05:00"
+  }
+}

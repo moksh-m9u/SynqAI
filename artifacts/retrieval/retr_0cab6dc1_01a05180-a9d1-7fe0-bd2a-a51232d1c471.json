@@ -1,0 +1,56 @@
+{
+  "query": "Orion Pharma engine overheating breakdown replacement UP-71-AL-5892",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-65262dc2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-18 | HR-16-SP-9238 | odo=163890.0 | mechanic=Anand | AC compressor overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8571,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-4bc99f88",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-13 | DL-82-ZB-6688 | odo=410141.0 | mechanic=Anand | fuel injector issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8562,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e05d100b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-02 | UP-37-RY-4295 | odo=260778.0 | mechanic=Salim bhai | alternator overheat ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8554,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-4d27e733",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-29 | PB 79 EX 8744 | odo=265209.0 | mechanic=Harpreet | DEF pump smoke aa raha tha, repair kiya. Next check 10k km pe.",
+      "score": 0.8525,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-c0fbfd15",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-28 | UP54XZ6139 | odo=309997.0 | mechanic=Salim bhai | fan belt vibration zyada tha, repair kiya. Next check 10k km pe.",
+      "score": 0.852,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cfa74b6f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-29 | PB-79-EX-8744 | odo=415881.0 | mechanic=Salim bhai | fan belt vibration zyada tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8515,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05180-a9d1-7fe0-bd2a-a51232d1c471",
+  "thread_id": "tkt-tkt-0028"
+}

@@ -1,0 +1,56 @@
+{
+  "query": "Shakti Cement engine overheating breakdown replacement DL-41-GG-9786",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-c0360daa",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-25 | HR-41-FO-7216 | odo=414011.0 | mechanic=Ramesh | DEF pump overheat ho raha tha, weld kiya. Next check 10k km pe.",
+      "score": 0.8754,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-65262dc2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-18 | HR-16-SP-9238 | odo=163890.0 | mechanic=Anand | AC compressor overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8752,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-64f14932",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-22 | DL11SJ8690 | odo=268034.0 | mechanic=Harpreet | AC compressor awaaz aa rahi thi, replace kiya. Next check 15k km pe.",
+      "score": 0.8706,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-17b2115b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-07-30 | DL41GG9786 | odo=273343.0 | mechanic=Anand | oil seal vibration zyada tha, replace kiya. Next check 10k km pe.",
+      "score": 0.8672,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-ede5a941",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-19 | CH81AQ4130 | odo=374466.0 | mechanic=Ramesh | oil seal overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.867,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-e4459853",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-09 | PB68LJ4728 | odo=273714.0 | mechanic=Ramesh | AC compressor gear slip kar raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8639,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05186-a0a7-7972-95f2-93ff55541a09",
+  "thread_id": "tkt-tkt-0002"
+}

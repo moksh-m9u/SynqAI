@@ -1,0 +1,21 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0002",
+  "work_order": {
+    "work_order_id": "WO-SUR-0002",
+    "ticket_id": "SUR-0002",
+    "vehicle_reg": "PB74TA4257",
+    "created_at": "2026-09-01 09:05:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H"
+      }
+    ]
+  }
+}

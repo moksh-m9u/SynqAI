@@ -1,0 +1,17 @@
+{
+  "node": "create_work_order",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0004",
+  "work_order": {
+    "work_order_id": "WO-TKT-0004",
+    "ticket_id": "TKT-0004",
+    "vehicle_reg": "PB53GV5325",
+    "created_at": "2026-04-23 09:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB"
+      }
+    ]
+  }
+}

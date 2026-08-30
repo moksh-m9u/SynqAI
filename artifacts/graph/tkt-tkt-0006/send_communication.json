@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0006",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0006",
+    "ticket_id": "TKT-0006",
+    "recipient": "Orion Pharma",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Kanpur\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle PB31NP8886, a replacement unit (HR64RO3607) has been dispatched from the Ambala hub to ensure continuity of service. The shipment is currently en route from Ludhiana to Kanpur. We estimate an arrival time of approximately 21.3 hours from the point of dispatch. Please let us know if you require further details.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-06-18 08:00:00"
+  }
+}

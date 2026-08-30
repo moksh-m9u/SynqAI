@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0023",
+  "draft": {
+    "message_id": "MSG-TKT-0023",
+    "ticket_id": "TKT-0023",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown of vehicle UK29NF9548, a replacement unit (UK33BI7211) has been dispatched from our Rudrapur hub. The vehicle is currently en route to Delhi with an estimated arrival time of 7.0 hours. This adjustment keeps the shipment within our committed 36-hour door-to-door delivery window. We will continue to monitor the transit and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UK29NF9548",
+      "replacement": "UK33BI7211",
+      "hub": "Rudrapur",
+      "eta_hours": 7.0,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0023"
+  }
+}

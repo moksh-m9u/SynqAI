@@ -1,0 +1,52 @@
+{
+  "run_id": "run-4616427b29a9",
+  "thread_id": "",
+  "original": {
+    "ticket_id": "TKT-9102",
+    "created_at": "not-a-date",
+    "vehicle": "hr??unknown",
+    "driver_id": "DRV-999",
+    "origin_hub": "",
+    "km_from_origin_hub": 35,
+    "destination": "",
+    "issue": "",
+    "severity": "",
+    "client": "Vertex Retail",
+    "status": "OPEN",
+    "resolution_note": "",
+    "raw": {}
+  },
+  "method": "llm_mapping",
+  "actions": [
+    "llm key mapping attempted for unknowns=['raw']"
+  ],
+  "mapping": {
+    "ticket_id": "ticket_id",
+    "created_at": "created_at",
+    "vehicle": "vehicle",
+    "driver_id": "driver_id",
+    "origin_hub": "origin_hub",
+    "km_from_origin_hub": "km_from_origin_hub",
+    "destination": "destination",
+    "issue": "issue",
+    "severity": "severity",
+    "client": "client",
+    "status": "status",
+    "resolution_note": "resolution_note",
+    "raw": "_unknown"
+  },
+  "normalized": {
+    "ticket_id": "TKT-9102",
+    "created_at": "not-a-date",
+    "vehicle": "hr??unknown",
+    "driver_id": "DRV-999",
+    "origin_hub": "",
+    "km_from_origin_hub": 35,
+    "destination": "",
+    "issue": "",
+    "severity": "",
+    "client": "Vertex Retail",
+    "status": "OPEN",
+    "resolution_note": ""
+  }
+}

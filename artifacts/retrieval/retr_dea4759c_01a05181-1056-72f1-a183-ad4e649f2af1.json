@@ -1,0 +1,56 @@
+{
+  "query": "Vertex Retail clutch slipping breakdown replacement PB-84-TB-2343",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-dee6d0d1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-31 | PB-47-HL-3939 | odo=339483.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8798,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-4bc35e1f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-21 | PB-31-NP-8886 | odo=85200.0 | mechanic=Ramesh | clutch plate issue reported by driver, replaced. Road test OK.",
+      "score": 0.8755,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-cced816b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | HR59KV7624 | odo=313983.0 | mechanic=Vicky | clutch plate gear slip kar raha tha, naya lagwaya. Next check 5k km pe.",
+      "score": 0.8644,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-0c86bf7d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-26 | UK-29-GJ-4566 | odo=291967.0 | mechanic=Anand | clutch plate issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8633,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-bbfd8df1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-24 | HR68TS2638 | odo=414415.0 | mechanic=Salim bhai | clutch plate gear slip kar raha tha, weld kiya. Next check 10k km pe.",
+      "score": 0.8628,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-985d587a",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-26 | pb42bw8144 | odo=156011.0 | mechanic=Harpreet | clutch plate issue reported by driver, replaced. Road test OK.",
+      "score": 0.8584,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a05181-1056-72f1-a183-ad4e649f2af1",
+  "thread_id": "tkt-tkt-0004"
+}

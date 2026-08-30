@@ -1,0 +1,14 @@
+{
+  "Delhi": {"lat": 28.61, "lon": 77.21},
+  "Gurgaon": {"lat": 28.46, "lon": 77.03},
+  "Faridabad": {"lat": 28.41, "lon": 77.30},
+  "Noida": {"lat": 28.57, "lon": 77.32},
+  "Chandigarh": {"lat": 30.73, "lon": 76.78},
+  "Ambala": {"lat": 30.38, "lon": 76.78},
+  "Ludhiana": {"lat": 30.90, "lon": 75.85},
+  "Jaipur": {"lat": 26.92, "lon": 75.79},
+  "Kanpur": {"lat": 26.45, "lon": 80.33},
+  "Lucknow": {"lat": 26.85, "lon": 80.95},
+  "Rudrapur": {"lat": 28.97, "lon": 79.41},
+  "Nainital": {"lat": 29.38, "lon": 79.45}
+}

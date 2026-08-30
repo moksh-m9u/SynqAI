@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0011",
+  "draft": {
+    "message_id": "MSG-TKT-0011",
+    "ticket_id": "TKT-0011",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle HR85RH4608, we have dispatched a replacement unit, HR16SP9238, from our Gurgaon hub. The vehicle is currently en route to Ludhiana with an estimated arrival time of approximately 9.5 hours. We are monitoring the journey closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "HR85RH4608",
+      "replacement": "HR16SP9238",
+      "hub": "Gurgaon",
+      "eta_hours": 9.5,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0011"
+  }
+}

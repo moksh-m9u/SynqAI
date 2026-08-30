@@ -1,0 +1,56 @@
+{
+  "query": "who is rajesh",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "dispatcher_009",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: You just gave me a phone number on a recorded interview, Rajender ji.\n\nRAJENDER: (laughs) So cut it out of the transcript. You see, this is why the rules live in my head. The head knows what not to say. The paper doesn't.",
+      "score": 0.8405,
+      "rule_candidate": true
+    },
+    {
+      "chunk_id": "dispatcher_000",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "MERIDIAN FREIGHT PRIVATE LIMITED\nKnowledge capture interview: Rajender Pal Yadav, Senior Dispatch Manager\n14 years at Meridian. Retiring end of next month.\nRecorded at Gurgaon hub. Transcribed verbatim, light edits for clarity.\n\n---",
+      "score": 0.8142,
+      "rule_candidate": true
+    },
+    {
+      "chunk_id": "email_thread_25_internal_jugaad",
+      "source": "emails/thread_25_internal_jugaad.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_25_internal_jugaad\nSubject: Roadside fix follow up\nDate: 1900-01-01 00:00:00\nRajender ji,\n\nGuddu ne kal raat wali gaadi jugaad se chalu kar di thi. Reminder set kiya hai, permanent repair within 7 days, tab tak home region ke bahar nahi bhejenge.\n\nWorkshop Gurgaon",
+      "score": 0.8123,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "email_thread_24_internal_nightroster",
+      "source": "emails/thread_24_internal_nightroster.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_24_internal_nightroster\nSubject: Night run pairing\nDate: 1900-01-01 00:00:00\nRajender ji,\n\nIshaan Mann (DRV-011) joined recently and was slotted solo for the Kanpur night run. As per your rule I have paired him and moved the departure. For urgent roster issues reach the night coordinator Ravi directly on his personal number ***MASKED***.\n\nSandeep",
+      "score": 0.806,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "dispatcher_011",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Thank you, Rajender ji.\n\nRAJENDER: Send the machine to me for one week before I go. Let us see if it can learn 14 years in 7 days. (laughs)\n\n--- END OF TRANSCRIPT ---",
+      "score": 0.8036,
+      "rule_candidate": true
+    },
+    {
+      "chunk_id": "dispatcher_008",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Anything about drivers?\n\nRAJENDER: New drivers, less than six months with us, never go solo on a night run. Pair them or give them day dispatches. This is not about skill, some of the new boys drive better than the old ones. It is that they don't know our roads, our dhabas, which stretch has the police check, whom to call when something feels wrong at 2 am. Six months of days and paired nights, then they earn the night solo. Ekdum pakka rule. Last month only I had to stop a booking, new boy, joined in March, someone had put him alone on a Kanpur night run. Nahi chalega. I called Sandeep and told him, put Ravi with him or move it to morning. Ravi's number is ***MASKED*** if you ever need the pairing sorted directly, he coordinates the night roster.",
+      "score": 0.7955,
+      "rule_candidate": true
+    }
+  ],
+  "run_id": "dashboard",
+  "thread_id": "dashboard"
+}

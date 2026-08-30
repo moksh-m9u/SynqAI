@@ -1,0 +1,280 @@
+{
+  "node": "enrich",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0012",
+  "ticket_id": "TKT-0012",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "PB84TB2343",
+      "vehicle_id": "MF-036",
+      "model": "BharatBenz 2823R",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "PB84TB2343"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-052",
+      "home_hub": "Ambala",
+      "joining_date": "2021-04-24",
+      "tenure_days": 1807,
+      "pii_masked": true
+    },
+    "client": "Shakti Cement",
+    "client_source": "Shakti Cement",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-04-03",
+          "odometer_km": 228971.0,
+          "mechanic": "Anand",
+          "notes": "gearbox vibration zyada tha, weld kiya. Next check 15k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153806867925481628",
+        "date": "2018-09-27T17:17:59.255077",
+        "route": "Mumbai_Vasai_CP (Maharashtra)->Bhiwandi_Mankoli_GW (Maharashtra)",
+        "client": "Orion Pharma",
+        "status": "COMPLETED",
+        "billed_amount": 50385.0
+      },
+      {
+        "trip_id": "trip-153694550441508076",
+        "date": "2018-09-14T17:18:24.415312",
+        "route": "Arrah_Katira_D (Bihar)->Arwal_Rozapar_D (Bihar)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 53840.0
+      },
+      {
+        "trip_id": "trip-153854647315210531",
+        "date": "2018-10-03T06:01:13.152351",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Mumbai_Jogeshwri_L (Maharashtra)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 21213.0
+      }
+    ],
+    "trip_summary": "102 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=47.0 <= 50 -> replacement from Ludhiana hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 47.0,
+          "origin_hub": "Ludhiana"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=47.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 47.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_SHAKTI_36H",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Shakti loads planned to 36h door-to-door (contract 48h is legacy)",
+        "citation": [
+          "dispatcher_interview threads/thread_01 threads/thread_02"
+        ],
+        "evidence": {
+          "client": "Shakti Cement"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 1807d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 1807,
+          "night": true,
+          "driver_id": "DRV-052"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_SHAKTI_36H"
+    ],
+    "eta": {
+      "base_hours": 21.6,
+      "padding_frac": 0.0,
+      "estimated_hours": 21.6,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 670.2,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=PB84TB2343",
+        "entity": "VEHICLE_PB84TB2343",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-052",
+        "entity": "DRIVER_DRV-052",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0012",
+        "entity": "CLIENT_Shakti_Cement",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=PB84TB2343",
+        "entity": "VEHICLE_PB84TB2343",
+        "document_type": "maintenance_history",
+        "records": 1
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "entity": "RULE_R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0012",
+      "created_at": "2026-04-05 20:00:00",
+      "vehicle": "pb84tb2343",
+      "driver_id": "DRV-052",
+      "origin_hub": "Ludhiana",
+      "km_from_origin_hub": 47.0,
+      "destination": "Lucknow",
+      "issue": "brake failure warning",
+      "severity": "HIGH",
+      "client": "Shakti Cement",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0012",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0012"
+  },
+  "langsmith_trace": "01a051ad-0f7a-7eb1-be4e-cf108c265fe4"
+}

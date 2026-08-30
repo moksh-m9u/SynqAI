@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0009",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0009",
+    "ticket_id": "TKT-0009",
+    "recipient": "Apex Chemicals",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur\n\nDear Apex Chemicals Team,\n\nPlease be advised that vehicle CH40IK6238 experienced a mechanical breakdown during transit.\nA replacement vehicle, registration CH10YZ3615, has been dispatched from our Chandigarh hub to ensure continuity of service.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 10.3 hours.\nWe apologize for the inconvenience and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-04-25 18:00:00"
+  }
+}

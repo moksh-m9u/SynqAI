@@ -1,0 +1,56 @@
+{
+  "query": "Orion Pharma radiator leak breakdown replacement up86cm7252",
+  "filters": {},
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-46c92e67",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-25 | DL-47-HM-4986 | odo=110456.0 | mechanic=Ramesh | radiator gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8702,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-95f35715",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-22 | PB31NP8886 | odo=245993.0 | mechanic=Guddu | radiator gear slip kar raha tha, repair kiya. Next check 5k km pe.",
+      "score": 0.8671,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-7d857982",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-26 | DL47HM4986 | odo=368847.0 | mechanic=Ramesh | alternator leak ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.862,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-50539cd6",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-16 | HR15HP2193 | odo=286148.0 | mechanic=Anand | radiator issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8613,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-48ebc7ba",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-24 | DL-64-IB-1058 | odo=346028.0 | mechanic=Vicky | radiator awaaz aa rahi thi, naya lagwaya. Next check 10k km pe.",
+      "score": 0.8609,
+      "rule_candidate": false
+    },
+    {
+      "chunk_id": "maint_MNT-44da0cfc",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-08-15 | UP29WG2052 | odo=83974.0 | mechanic=Salim bhai | radiator issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8582,
+      "rule_candidate": false
+    }
+  ],
+  "run_id": "01a0517f-8a36-7381-8c17-b86b0e78fc0b",
+  "thread_id": "tkt-tkt-0017"
+}

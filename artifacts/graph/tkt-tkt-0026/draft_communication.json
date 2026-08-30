@@ -1,0 +1,38 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0026",
+  "draft": {
+    "message_id": "MSG-TKT-0026",
+    "ticket_id": "TKT-0026",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur\n\nDear Orion Pharma Team,\n\nWe are writing to inform you that a replacement vehicle (Reg: CH85NJ1986) has been dispatched from our Chandigarh hub following a breakdown of the original vehicle (Reg: CH81AQ4130). The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 10.3 hours. We apologize for the inconvenience and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "CH81AQ4130",
+      "replacement": "CH85NJ1986",
+      "hub": "Chandigarh",
+      "eta_hours": 10.3,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "run-4616427b29a9",
+    "thread_id": "tkt-tkt-0026"
+  }
+}

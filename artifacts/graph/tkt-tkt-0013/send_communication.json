@@ -1,0 +1,13 @@
+{
+  "node": "send_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0013",
+  "comms_sent": {
+    "message_id": "MSG-TKT-0013",
+    "ticket_id": "TKT-0013",
+    "recipient": "Orion Pharma",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle HR14LS3426, we have dispatched a replacement unit, HR63TT4697, from our Ambala hub. The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.6 hours. We are monitoring the journey closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-06-30 15:00:00"
+  }
+}

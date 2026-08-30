@@ -1,0 +1,13 @@
+{
+  "node": "draft_communication",
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0019",
+  "draft": {
+    "message_id": null,
+    "ticket_id": "TKT-0019",
+    "status": "NO_COMMS",
+    "context_summary": {
+      "note": "Internal/client-less ticket — no external client communication drafted."
+    }
+  }
+}

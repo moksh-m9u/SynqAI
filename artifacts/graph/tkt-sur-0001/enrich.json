@@ -1,0 +1,200 @@
+{
+  "node": "enrich",
+  "run_id": "run-54689688d5a9",
+  "thread_id": "tkt-sur-0001",
+  "ticket_id": "SUR-0001",
+  "context": {
+    "vehicle": null,
+    "notes": [
+      "vehicle not found in fleet_master — insufficient information"
+    ],
+    "driver": {
+      "driver_id": "DRV-014",
+      "home_hub": "Rudrapur",
+      "joining_date": "2022-06-18",
+      "tenure_days": 1537,
+      "pii_masked": true
+    },
+    "client": "Orion Pharma",
+    "client_source": "Orion Pharma",
+    "maintenance": {
+      "records": [],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [],
+    "trip_summary": "0 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": true,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=65.0 <= 50 -> replacement from Meerut hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 65.0,
+          "origin_hub": "Meerut"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=65.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 65.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=9 winter=False touches_ncr=True -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 9,
+          "touches_ncr": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=9 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 9,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=9 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 9,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_ORION_2020",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Orion: only 2020 or newer vehicles, newest preferred",
+        "citation": [
+          "dispatcher_interview threads/thread_17 threads/thread_18"
+        ],
+        "evidence": {
+          "client": "Orion Pharma"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 1537d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 1537,
+          "night": false,
+          "driver_id": "DRV-014"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_NEAREST_HUB",
+      "R_ORION_2020"
+    ],
+    "eta": {
+      "base_hours": null,
+      "padding_frac": 0.0,
+      "estimated_hours": null,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": null,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=UP40IM8494",
+        "finding": "no matching record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-014",
+        "entity": "DRIVER_DRV-014",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "SUR-0001",
+        "entity": "CLIENT_Orion_Pharma",
+        "document_type": "ticket"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "entity": "RULE_R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "entity": "RULE_R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "SUR-0001",
+      "created_at": "2026-09-02 14:30:00",
+      "vehicle": "UP-40-IM-8494",
+      "driver_id": "DRV-014",
+      "origin_hub": "Meerut",
+      "km_from_origin_hub": 65.0,
+      "destination": "Delhi",
+      "issue": "clutch slipping",
+      "severity": "HIGH",
+      "client": "Orion Pharma",
+      "status": "OPEN",
+      "resolution_note": "",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "SUR-0001",
+    "run_id": "run-54689688d5a9",
+    "thread_id": "tkt-sur-0001"
+  },
+  "langsmith_trace": "01a0518e-7aca-7a22-b9a8-4c50149c72b6"
+}
