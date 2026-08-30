@@ -1,0 +1,69 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1006",
+  "at": "2026-08-30T11:01:04.090049+00:00",
+  "timing_ms": 6.6,
+  "ticket_id": "TKT-1006",
+  "selection": {
+    "ticket_id": "TKT-1006",
+    "chosen": "RJ66RW8007",
+    "pool_size": 8,
+    "eliminations": [
+      {
+        "candidate": "RJ57LG5374",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ57LG5374",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_NEAREST_HUB"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Jaipur",
+      "selected RJ66RW8007 (year=2020, bs=BS6, heater=True, cap=21.0)",
+      "priority=nearest-eligible-hub"
+    ],
+    "candidate_hub": "Jaipur",
+    "chosen_year": 2020
+  },
+  "langsmith_trace": "01a05254-7dd2-7ae2-a923-0fdeed0009e0"
+}

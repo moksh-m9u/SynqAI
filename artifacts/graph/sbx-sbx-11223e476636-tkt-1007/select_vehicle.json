@@ -1,0 +1,31 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1007",
+  "at": "2026-08-30T11:01:06.181257+00:00",
+  "timing_ms": 0.7,
+  "ticket_id": "TKT-1007",
+  "selection": {
+    "ticket_id": "TKT-1007",
+    "chosen": null,
+    "pool_size": 100,
+    "eliminations": [],
+    "applied_rules": [
+      "R_ORIGIN_50KM"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "ALERT: origin hub has no eligible vehicle; expanding to nearest hub (documented deviation R_ORIGIN_50KM)",
+      "NO eligible replacement vehicle — work order dispatches roadside assistance on the broken vehicle"
+    ],
+    "candidate_hub": "",
+    "chosen_year": null
+  },
+  "langsmith_trace": "01a05254-8604-7bb0-a777-b5ec2150fcb2"
+}

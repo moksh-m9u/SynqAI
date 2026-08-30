@@ -1,0 +1,72 @@
+{
+  "query": "Internal cash collection documents missing breakdown replacement GJ-07-AB-4455",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-cb472102",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-03 | pb68lj4728 | odo=236946.0 | mechanic=Vicky | DEF pump pickup kam ho gayi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8111,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-cb447a6d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-28 | RJ57LG5374 | odo=193848.0 | mechanic=Guddu | DEF pump smoke aa raha tha, replace kiya. Next check 10k km pe.",
+      "score": 0.8052,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_30_internal_misc",
+      "source": "emails/thread_30_internal_misc.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_30_internal_misc\nSubject: GPS device replacement list\nDate: 1900-01-01 00:00:00\nSir,\n\nPlease advise on the above.\n\nHub team\n------------------------------------------------------------\nFrom: dispatch@meridianfreight.example.in\nTo: hub@meridianfreight.example.in\nDate: Sat, 06 Jun 2026 00:36 +0530\nSubject: RE: GPS device replacement list\n\nProceed as per last quarter's process.\n\nRajender Pal Yadav",
+      "score": 0.8046,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_34_internal_misc",
+      "source": "emails/thread_34_internal_misc.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_34_internal_misc\nSubject: Fuel card limits revision\nDate: 1900-01-01 00:00:00\nSir,\n\nPlease advise on the above.\n\nHub team\n------------------------------------------------------------\nFrom: dispatch@meridianfreight.example.in\nTo: hub@meridianfreight.example.in\nDate: Sun, 21 Jun 2026 20:25 +0530\nSubject: RE: Fuel card limits revision\n\nProceed as per last quarter's process.\n\nRajender Pal Yadav",
+      "score": 0.7973,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-82322463",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-07-19 | HR 41 FO 7216 | odo=396572.0 | mechanic=Vicky | DEF pump pickup kam ho gayi thi, naya lagwaya. Next check 15k km pe.",
+      "score": 0.7963,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-593e7d0c",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-23 | RJ43DD3546 | odo=68107.0 | mechanic=Harpreet | DEF pump issue reported by driver, replaced. Road test OK.",
+      "score": 0.796,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 225.7,
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1005"
+}

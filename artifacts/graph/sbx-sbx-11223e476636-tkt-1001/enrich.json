@@ -1,0 +1,158 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1001",
+  "at": "2026-08-30T11:00:58.731649+00:00",
+  "timing_ms": 0.1,
+  "ticket_id": "TKT-1001",
+  "context": {
+    "vehicle": null,
+    "notes": [
+      "vehicle not found in fleet_master — insufficient information",
+      "driver DRV-061 not in roster — insufficient information"
+    ],
+    "driver": null,
+    "client": "Nova Electronics",
+    "client_source": "Nova Electronics",
+    "maintenance": {
+      "records": [],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [],
+    "trip_summary": "0 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=42.0 <= 50 -> replacement from Jaipur hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 42.0,
+          "origin_hub": "Jaipur"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=42.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 42.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=10 winter=True touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 10,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=10 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 10,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=10 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 10,
+          "hill": false
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM"
+    ],
+    "eta": {
+      "base_hours": null,
+      "padding_frac": 0.0,
+      "estimated_hours": null,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": null,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=RJ14EV2201",
+        "finding": "no matching record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-1001",
+        "entity": "CLIENT_Nova_Electronics",
+        "document_type": "ticket"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-1001",
+      "created_at": "2026-10-18 09:15:00",
+      "vehicle": "RJ14EV2201",
+      "driver_id": "DRV-061",
+      "origin_hub": "Jaipur",
+      "km_from_origin_hub": 42.0,
+      "destination": "Ahmedabad",
+      "issue": "battery dropped below safety buffer",
+      "severity": "HIGH",
+      "client": "Nova Electronics",
+      "status": "OPEN",
+      "resolution_note": "",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-1001",
+    "run_id": "sbx-11223e476636",
+    "thread_id": "sbx-sbx-11223e476636-tkt-1001"
+  },
+  "langsmith_trace": "01a05254-68ea-77e1-a2bd-b3ed9ebc2cc5"
+}

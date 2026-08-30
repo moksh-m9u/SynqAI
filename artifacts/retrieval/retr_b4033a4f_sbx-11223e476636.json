@@ -1,0 +1,72 @@
+{
+  "query": "Bharat Foods reefer temperature logger malfunction breakdown replacement GJ01RF9911",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-34b73b61",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-02 | RJ34GX8933 | odo=362619.0 | mechanic=Vicky | air filter overheat ho raha tha, replace kiya. Next check 10k km pe.",
+      "score": 0.848,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-ab511681",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-28 | PB 68 LJ 4728 | odo=79322.0 | mechanic=Anand | fuel injector overheat ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8453,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_19_orion_ops",
+      "source": "emails/thread_19_orion_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_19_orion_ops\nSubject: Temperature log format\nDate: 1900-01-01 00:00:00\nPlease share temperature logs in the agreed format with each delivery.\n\nDr. Sneha Kulkarni\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: scm@orionpharma.example.in\nDate: Tue, 04 Aug 2026 23:19 +0530\nSubject: RE: Temperature log format\n\nFormat updated as requested from next dispatch.\n\nSandeep Malhotra",
+      "score": 0.8408,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-c27877f2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-08 | RJ57LG5374 | odo=190518.0 | mechanic=Guddu | air filter pickup kam ho gayi thi, weld kiya. Next check 15k km pe.",
+      "score": 0.8403,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_20_orion_ops",
+      "source": "emails/thread_20_orion_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_20_orion_ops\nSubject: Temperature log format\nDate: 1900-01-01 00:00:00\nPlease share temperature logs in the agreed format with each delivery.\n\nDr. Sneha Kulkarni\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: scm@orionpharma.example.in\nDate: Mon, 08 Jun 2026 21:56 +0530\nSubject: RE: Temperature log format\n\nFormat updated as requested from next dispatch.\n\nSandeep Malhotra",
+      "score": 0.8382,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-228b4a3f",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-30 | hr13hg1333 | odo=198211.0 | mechanic=Salim bhai | radiator pickup kam ho gayi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8345,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 261.3,
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1003"
+}

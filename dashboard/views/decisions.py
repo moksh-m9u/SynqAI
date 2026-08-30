@@ -98,7 +98,10 @@ def _run(mode: str, collection: str, top_k: int) -> None:
 def _render(res: dict) -> None:
     rec = res["recommendation"]
     outcome = rec.get("outcome", "ADVICE")
-    _hero(outcome, rec.get("rationale") or rec.get("answer", ""), res.get("wall_ms", 0))
+    if res.get("mode") == "question":
+        _answer_hero(rec)
+    else:
+        _hero(outcome, rec.get("rationale") or rec.get("answer", ""), res.get("wall_ms", 0))
 
     tab_steps, tab_ctx, tab_tree, tab_todos, tab_json = st.tabs(
         ["Steps", "Retrieved context", "Decision tree", "Todo list", "Trace JSON"])
@@ -124,6 +127,23 @@ def _render(res: dict) -> None:
 
     with tab_json:
         json_viewer(res, "dce_trace", expanded=False)
+
+
+def _answer_hero(rec: dict) -> None:
+    st.success(f"**{rec.get('answer', '')}**")
+    used = rec.get("citations") or []
+    mode = rec.get("mode", "")
+    dbg = rec.get("llm_debug") or {}
+    if used:
+        refs = ", ".join(f"[{u['ref']}] {u.get('source', '?')}" for u in used)
+        st.caption(f"Cited: {refs}")
+    cap = f"Mode: {mode} · grounded in {rec.get('grounded_in', 0)} chunks"
+    if dbg.get("timing_ms") is not None:
+        cap += f" · LLM answered in {dbg['timing_ms']:.0f} ms"
+    if dbg.get("tokens"):
+        cap += f" · {dbg['tokens'].get('prompt')}→{dbg['tokens'].get('completion')} tokens"
+    st.caption(cap)
+    st.divider()
 
 
 def _hero(outcome: str, rationale: str, wall_ms: int) -> None:

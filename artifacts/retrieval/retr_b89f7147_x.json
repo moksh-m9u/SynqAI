@@ -1,0 +1,72 @@
+{
+  "query": "A Nova Electronics truck is delayed by three hours during Diwali week. What should happen?",
+  "collection": "merged",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "dispatcher_004",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Tell me about the clients. Who is difficult?\n\nRAJENDER: Difficult is the wrong word. They all have a real rulebook and a paper rulebook. Shakti Cement's contract says 48 hour delivery window. Forget the contract. If a Shakti load crosses 36 hours, their plant head calls our MD directly, on his personal number, and then the MD calls me, and my evening is finished. So in my head Shakti is a 36 hour client. Plan everything to 36. The extra 12 hours in the contract is for God, not for us.\n\nVertex Retail, opposite problem. Their contract says nothing about delivery time of day. But their warehouse at Ludhiana stops accepting after 6 pm. Not 6:15. The gate man will not open. So if a Vertex truck is going to reach after 6, don't let it reach after 6. Hold it at the last halt, deliver next morning at 8 when the gate opens, and inform their coordinator the previous evening. And listen, this is important: it is never marked as a failed delivery. It is a scheduled morning delivery. Mark it failed and Vertex's system generates a penalty note automatically and then two finance teams fight for a month over 4,000 rupees.\n\nApex Chemicals. (pauses) They track our number plates. I am not joking. If a truck has any issue on an Apex run, a breakdown, a late arrival, anything, that same truck does not go back to Apex on the very next dispatch. Send a different vehicle at least once in between. Their gate register has plate numbers going back years and if the same \"problem truck\" shows up next time, their stores manager makes it a whole thing. It costs us nothing to rotate. So rotate.\n\nOrion Pharma, only one rule but it is absolute: their loads never wait at a hub overnight unrefrigerated, and their consignments always get the newest available vehicle, 2020 or later. Pharma audit requirement, they check the RC copy. Send a 2016 truck and the load is rejected at the gate, full trip wasted.",
+      "score": 0.8479,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_09_vertex_gate",
+      "source": "emails/thread_09_vertex_gate.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_09_vertex_gate\nSubject: Vehicle UP29HF3900 turned back at gate\nDate: 1900-01-01 00:00:00\nSandeep,\n\nYour vehicle UP29HF3900 reached our Ludhiana WH at 6:40 pm yesterday. Gate closes 6 pm sharp, no exceptions, so it was not unloaded. Kindly do not report this as attempted delivery.\n\nMeenal Kapoor\nVertex Retail\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: logistics@vertexretail.example.in\nDate: Thu, 25 Jun 2026 00:34 +0530\nSubject: RE: Vehicle UP29HF3900 turned back at gate\n\nMeenal ji, vehicle was held at the last halt overnight and delivered at 8:05 am today. As per our standing arrangement this is recorded as a scheduled morning delivery, not a failed attempt. Your coordinator was informed yesterday evening.\n\nSandeep Malhotra",
+      "score": 0.8469,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8447,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "dispatcher_002",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Start with routes. What do you know that the system doesn't?\n\nRAJENDER: The system thinks a truck is a truck. It is not. First thing, and this one is non-negotiable: October to February, no BS4 vehicle goes on any Delhi NCR route. Any route that touches Delhi, Gurgaon, Faridabad, Noida. Winter mein pollution restrictions lag jaati hain, GRAP whatever they call it now, and a BS4 truck can get stopped at the border, challan, sometimes turned back fully loaded. We learned this the expensive way in 2022. Two trucks held at Kundli for a day and a half. Shakti Cement ka load tha. Never again. BS6 only on Delhi routes in winter, I don't care if the BS4 truck is parked twenty meters from the loading dock and the BS6 is in Jaipur.",
+      "score": 0.8435,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_01_shakti_sla",
+      "source": "emails/thread_01_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8434,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e27ea03d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-01-05 | DL30JD1420 | odo=247509.0 | mechanic=Guddu | battery issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8424,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 15584.4,
+  "run_id": "",
+  "thread_id": ""
+}

@@ -1,0 +1,45 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1006",
+  "at": "2026-08-30T11:01:04.784352+00:00",
+  "timing_ms": 688.9,
+  "draft": {
+    "message_id": "MSG-TKT-1006",
+    "ticket_id": "TKT-1006",
+    "recipient": "Nova Electronics",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Nova Electronics Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Nova Electronics Shipment\n\nDear Nova Electronics Team,\n\nFollowing a mechanical breakdown, a replacement vehicle (Reg: RJ66RW8007) has been dispatched from our Jaipur hub to continue your shipment to Ahmedabad. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any immediate questions regarding this update.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "",
+      "replacement": "RJ66RW8007",
+      "hub": "Jaipur",
+      "eta_hours": null,
+      "applied_rules": [
+        "R_NEAREST_HUB"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-11223e476636",
+    "thread_id": "sbx-sbx-11223e476636-tkt-1006"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Nova Electronics\nBroken vehicle reg: \nReplacement vehicle reg: RJ66RW8007\nDispatch hub: Jaipur\nRoute: Jaipur → Ahmedabad\nETA detail: We are estimating the delivery window from route distance; a confirmed ETA will follow.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Nova Electronics Shipment\n\nDear Nova Electronics Team,\n\nFollowing a mechanical breakdown, a replacement vehicle (Reg: RJ66RW8007) has been dispatched from our Jaipur hub to continue your shipment to Ahmedabad. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any immediate questions regarding this update.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 675.2,
+    "tokens": {
+      "prompt": 131,
+      "completion": 99
+    }
+  }
+}

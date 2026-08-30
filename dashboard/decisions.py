@@ -15,6 +15,7 @@ byte-for-byte what the pipeline would do.
 from __future__ import annotations
 
 import time
+import re
 from typing import Any
 
 from app.ingest.loaders import load_tickets
@@ -353,18 +354,20 @@ def answer_question(question: str, *, collection: str = "merged",
           {"question": question}, relevant, t0)
 
     t0 = time.perf_counter()
-    answer, grounded = _ground_answer(question, hits)
+    log("step 4/4 reason — synthesise a grounded answer from the retrieved chunks")
+    answer, meta = _answer_question_llm(question, hits, relevant, log)
     todos = [{"do": f"Follow rule {r['id']} before dispatching: {r['condition'][:120]}",
               "why": "extracted dispatcher knowledge"} for r in relevant[:3]]
     todos += [{"do": "Verify vehicle availability at the relevant hub before committing",
                "why": "fleet moves dispatch-time"},
               {"do": "Log the decision and its citations to the audit trail",
                "why": "exactly-once / traceability"}]
-    rec = {"outcome": "ADVICE", "answer": answer,
-           "grounded_in": grounded, "relevant_rules": [r["id"] for r in relevant],
+    rec = {"outcome": "ADVICE", "answer": answer, "grounded_in": meta.get("grounded_in", 0),
+           "citations": meta.get("used_refs", []), "relevant_rules": [r["id"] for r in relevant],
+           "llm_debug": meta.get("llm_debug"), "mode": meta.get("mode"),
            "wall_ms": round((time.perf_counter() - started) * 1000)}
     _step(steps, "recommend", "Ground the answer and plan actions",
-          "Extractive answer from retrieved chunks + operator todos",
+          "LLM synthesis over the retrieved chunks (citations validated against the retrieved set)",
           {"question": question}, rec, t0)
 
     return {"mode": "question", "ticket_id": None, "identifier": _topic(question),
@@ -395,22 +398,78 @@ def _relevant_rules(question: str) -> list[dict[str, Any]]:
     return sorted(out, key=lambda r: -r["relevance"])[:5]
 
 
-def _ground_answer(question: str, hits: list[dict[str, Any]]) -> tuple[str, int]:
+def _answer_question_llm(question: str, hits: list[dict[str, Any]],
+                         relevant: list[dict[str, Any]], log=None) -> tuple[str, dict[str, Any]]:
+    """Real RAG answer: LLM synthesises from the retrieved chunks, citations are
+    validated against what was actually retrieved, PII-masked afterwards. Falls
+    back to an honest extractive echo if the LLM is unavailable."""
     if not hits:
         return ("No supporting knowledge found yet — index the relevant document "
-                "in Knowledge Upload, then re-ask.", 0)
-    top = hits[:3]
-    best = top[0].get("score") or 0.0
-    claims = []
-    for h in top:
+                "in Knowledge Upload, then re-ask.", {"mode": "no-context", "used_refs": [],
+                                                     "grounded_in": 0, "llm_debug": None})
+
+    blocks = []
+    used = []
+    for i, h in enumerate(hits[:6], 1):
         text = (h.get("text") or "").strip()
-        claims.append(text[:240])
+        blocks.append(f"[{i}] {h.get('source', '?')} (score {(h.get('score') or 0):.2f}) | {text[:900]}")
+        used.append({"ref": i, "chunk_id": h.get("chunk_id"), "source": h.get("source"),
+                     "score": h.get("score")})
+    rules_txt = "\n".join(
+        f"@{r['id']} ({r.get('severity','?')}): {r.get('condition','')} -> {r.get('action','')}"
+        for r in relevant[:5])
+    meta: dict[str, Any] = {"mode": "qwen_groq", "used_refs": [], "grounded_in": len(hits),
+                            "llm_debug": None}
+
+    from app.config import LLM_MODEL_ID
+    from app.ingest.masking import mask
+    from app.utils import build_llm
+
+    llm = build_llm(max_tokens=600, temperature=0.0)
+    if llm is not None:
+        prompt = (
+            "You are Meridian Freight's senior dispatcher advising a duty controller. "
+            "Answer the question using ONLY the numbered knowledge references. Cite inline as [1], [2] "
+            "for every reference you rely on. If the references do not mention the client or situation, "
+            "open with 'No direct policy for <X> was found', then give the closest applicable guidance "
+            "using the @RULES block. Never invent client policies, numbers or KPIs. 2-6 sentences, "
+            "imperative 'what to do' tone, no hedging. Never include personal data. Do not use emojis.\n\n"
+            "KNOWLEDGE:\n" + "\n".join(blocks) +
+            "\n\nDISPATCH RULES:\n" + (rules_txt or "(none relevant)") +
+            f"\n\nQUESTION: {question}\nANSWER:"
+        )
+        import time as _t
+        t0 = _t.perf_counter()
+        try:
+            resp = llm.invoke(prompt)
+            raw = resp.content if hasattr(resp, "content") else str(resp)
+            token_meta = getattr(resp, "usage_metadata", None) or {}
+            meta["llm_debug"] = {"model": LLM_MODEL_ID, "timing_ms": round((_t.perf_counter() - t0) * 1000, 1),
+                                 "tokens": {"prompt": token_meta.get("input_tokens"),
+                                            "completion": token_meta.get("output_tokens")}}
+            if log:
+                log(f"llm answer in {meta['llm_debug']['timing_ms']} ms")
+            answer = mask(raw.strip()) if raw else ""
+        except Exception as exc:
+            if log:
+                log(f"llm unavailable ({exc}) -> extractive fallback")
+            answer = ""
+        if answer and len(answer) > 40:
+            cited = sorted({int(n) for n in re.findall(r"\[(\d+)\]", answer)})
+            meta["used_refs"] = [u for u in used if u["ref"] in cited]
+            meta["llm_debug"] = {**meta["llm_debug"], "prompt": prompt, "llm_output": raw}
+            return answer, meta
+        meta["mode"] = "extractive_fallback"
+        if log:
+            log("fallback: extractive echo of the top chunks")
+
+    best = hits[0].get("score") or 0.0
     if best < 0.45:
-        return ("Low-confidence answer — the closest chunk scores {:.2f}, which is below the "
-                "0.45 retrieval floor. Treat this as unverified context.".format(best), 1)
-    ans = ("Based on the retrieved knowledge:\n\n· " + "\n· ".join(claims) +
-           "\n\nCross-check against the flagged rules before dispatching.")
-    return ans, len(hits)
+        return (f"Low-confidence context — the closest chunk scores {best:.2f}, below the 0.45 retrieval "
+                "floor. Treat as unverified; no policy-specific answer is attempted.", meta)
+    lines = ["\n".join((h.get("text") or "").strip().splitlines()[:4]) for h in hits[:3]]
+    return ("Based on the retrieved knowledge (extractive echo — no LLM available):\n\n· "
+            + "\n· ".join(l[:260] + ("…" if len(l) > 260 else "") for l in lines), meta)
 
 
 # ------------------------------------------------------------ scenario helper
