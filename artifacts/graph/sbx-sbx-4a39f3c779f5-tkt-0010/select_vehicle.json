@@ -1,0 +1,93 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0010",
+  "at": "2026-08-30T09:54:54.704704+00:00",
+  "timing_ms": 3.5,
+  "ticket_id": "TKT-0010",
+  "selection": {
+    "ticket_id": "TKT-0010",
+    "chosen": "UP17GN7381",
+    "pool_size": 12,
+    "eliminations": [
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_APEX_ROTATION",
+        "reason": "problem vehicle must rotate off Apex"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "UP54XZ6139",
+        "hub": "Kanpur",
+        "rule_id": "R_APEX_ROTATION",
+        "reason": "problem vehicle must rotate off Apex"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP33PG6813",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR73CY1771",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_ORIGIN_50KM",
+      "R_APEX_ROTATION"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Kanpur",
+      "selected UP17GN7381 (year=2023, bs=BS6, heater=False, cap=31.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Kanpur",
+    "chosen_year": 2023
+  },
+  "langsmith_trace": "01a05217-ec6c-79e2-bfa0-9559a5f73157"
+}

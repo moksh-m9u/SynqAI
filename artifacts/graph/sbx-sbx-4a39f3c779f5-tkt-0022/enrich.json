@@ -1,0 +1,282 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0022",
+  "at": "2026-08-30T09:54:59.429545+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0022",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "RJ66RW8007",
+      "vehicle_id": "MF-044",
+      "model": "Tata LPT 3118",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Jaipur",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "RJ66RW8007"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-030",
+      "home_hub": "Gurgaon",
+      "joining_date": "2022-07-05",
+      "tenure_days": 1418,
+      "pii_masked": true
+    },
+    "client": "Vertex Retail",
+    "client_source": "Vertex Retail",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-06-06",
+          "odometer_km": 203883.0,
+          "mechanic": "Ramesh",
+          "notes": "silencer issue reported by driver, cleaned and refitted. Road test OK."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153764884852668465",
+        "date": "2018-09-22T20:40:48.526917",
+        "route": "Berhampore_Central_I_2 (West Bengal)->Morgram_Kntgorya_D (West Bengal)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 29777.0
+      },
+      {
+        "trip_id": "trip-153716244626538085",
+        "date": "2018-09-17T05:34:06.265640",
+        "route": "Bangalore_Nelmngla_H (Karnataka)->Bengaluru_Peenya_L (Karnataka)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 16326.0
+      },
+      {
+        "trip_id": "trip-153813739931798970",
+        "date": "2018-09-28T12:23:19.318224",
+        "route": "Chennai_Chrompet_L (Tamil Nadu)->MAA_Poonamallee_HB (Tamil Nadu)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 47855.0
+      }
+    ],
+    "trip_summary": "100 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=27.0 <= 50 -> replacement from Jaipur hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0,
+          "origin_hub": "Jaipur"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=27.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_VERTEX_6PM_GATE",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Vertex Ludhiana gate closes 18:00 sharp; later arrivals held overnight as scheduled morning delivery",
+        "citation": [
+          "dispatcher_interview threads/thread_09 threads/thread_10 threads/thread_11"
+        ],
+        "evidence": {
+          "destination": "Ludhiana"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 1418d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 1418,
+          "night": true,
+          "driver_id": "DRV-030"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_VERTEX_6PM_GATE"
+    ],
+    "eta": {
+      "base_hours": 14.3,
+      "padding_frac": 0.0,
+      "estimated_hours": 14.3,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": true
+    },
+    "route_distance_est_km": 442.6,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=RJ66RW8007",
+        "entity": "VEHICLE_RJ66RW8007",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-030",
+        "entity": "DRIVER_DRV-030",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0022",
+        "entity": "CLIENT_Vertex_Retail",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=RJ66RW8007",
+        "entity": "VEHICLE_RJ66RW8007",
+        "document_type": "maintenance_history",
+        "records": 1
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_09 threads/thread_10 threads/thread_11",
+        "ref": "R_VERTEX_6PM_GATE",
+        "entity": "RULE_R_VERTEX_6PM_GATE",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0022",
+      "created_at": "2026-05-23 00:00:00",
+      "vehicle": "rj66rw8007",
+      "driver_id": "DRV-030",
+      "origin_hub": "Jaipur",
+      "km_from_origin_hub": 27.0,
+      "destination": "Ludhiana",
+      "issue": "engine overheating",
+      "severity": "MEDIUM",
+      "client": "Vertex Retail",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0022",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0022"
+  },
+  "langsmith_trace": "01a05217-fee3-76e1-8437-4ae5cba4e9d6"
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "sbx-4a39f3c779f5",
+  "kind": "sandbox",
+  "started": "2026-08-30T09:54:31.251986+00:00",
+  "finished": "2026-08-30T09:55:24.619681+00:00",
+  "records": 35,
+  "work_orders": 30,
+  "quarantined": 5,
+  "quarantine_reasons": [
+    "duplicate of TKT-0020",
+    "created_at not a parseable date; vehicle registration invalid/unknown: 'hr??unknown'; origin_hub empty; destination empty; issue empty",
+    "duplicate of TKT-0009",
+    "duplicate of TKT-0024",
+    "vehicle registration invalid/unknown: ''"
+  ],
+  "total_execution_ms": 53368,
+  "approve": "hold"
+}

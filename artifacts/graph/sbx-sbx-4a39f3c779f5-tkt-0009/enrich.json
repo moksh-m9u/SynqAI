@@ -1,0 +1,306 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0009",
+  "at": "2026-08-30T09:54:49.057027+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0009",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "CH40IK6238",
+      "vehicle_id": "MF-066",
+      "model": "Tata LPT 3118",
+      "year": 2020,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 21.0,
+      "status": "Active",
+      "aliases": [
+        "CH40IK6238"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-031",
+      "home_hub": "Kanpur",
+      "joining_date": "2017-10-31",
+      "tenure_days": 3098,
+      "pii_masked": true
+    },
+    "client": "Apex Chemicals",
+    "client_source": "Apex Chemicals",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-03-24",
+          "odometer_km": 301939.0,
+          "mechanic": "Guddu",
+          "notes": "AC compressor issue reported by driver, repaired and tested. Road test OK."
+        },
+        {
+          "date": "2026-08-14",
+          "odometer_km": 361424.0,
+          "mechanic": "Salim bhai",
+          "notes": "fan belt start hone me dikkat thi, naya lagwaya. Next check 15k km pe."
+        },
+        {
+          "date": "2025-03-18",
+          "odometer_km": 230105.0,
+          "mechanic": "Guddu",
+          "notes": "AC compressor smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": "2025-03-18",
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": [
+          {
+            "date": "2025-03-18",
+            "mechanic": "Guddu",
+            "notes": "AC compressor smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+          }
+        ]
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153714359894207097",
+        "date": "2018-09-17T00:19:58.942475",
+        "route": "Sivaganga_Wardno3_D (Tamil Nadu)->Thiruvadanai_RamnadRD_D (Tamil Nadu)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 21873.0
+      },
+      {
+        "trip_id": "trip-153773983094386480",
+        "date": "2018-09-23T21:57:10.944129",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Lonavala_NngrgnRd_D (Maharashtra)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 8795.0
+      },
+      {
+        "trip_id": "trip-153766909482090675",
+        "date": "2018-09-23T02:18:14.821180",
+        "route": "Mysore_Yadvgiri_IP (Karnataka)->Krishnarajngr_JublieRD_D (Karnataka)",
+        "client": "Orion Pharma",
+        "status": "COMPLETED",
+        "billed_amount": 25466.0
+      }
+    ],
+    "trip_summary": "112 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": true,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=10.0 <= 50 -> replacement from Chandigarh hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 10.0,
+          "origin_hub": "Chandigarh"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=10.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 10.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=True -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=True -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": true
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": "2025-03-18",
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": [
+            {
+              "date": "2025-03-18",
+              "mechanic": "Guddu",
+              "notes": "AC compressor smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+            }
+          ]
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_APEX_ROTATION",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Apex: the problem vehicle is not returned on the next Apex dispatch",
+        "citation": [
+          "dispatcher_interview threads/thread_13 threads/thread_14"
+        ],
+        "evidence": {
+          "client": "Apex Chemicals"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 3098d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 3098,
+          "night": true,
+          "driver_id": "DRV-031"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_APEX_ROTATION"
+    ],
+    "eta": {
+      "base_hours": 10.3,
+      "padding_frac": 0.0,
+      "estimated_hours": 10.3,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 320.3,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=CH40IK6238",
+        "entity": "VEHICLE_CH40IK6238",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-031",
+        "entity": "DRIVER_DRV-031",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0009",
+        "entity": "CLIENT_Apex_Chemicals",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=CH40IK6238",
+        "entity": "VEHICLE_CH40IK6238",
+        "document_type": "maintenance_history",
+        "records": 3
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "entity": "RULE_R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0009",
+      "created_at": "2026-04-25 18:00:00",
+      "vehicle": "CH40IK6238",
+      "driver_id": "DRV-031",
+      "origin_hub": "Chandigarh",
+      "km_from_origin_hub": 10.0,
+      "destination": "Rudrapur",
+      "issue": "suspension damage",
+      "severity": "LOW",
+      "client": "Apex Chemicals",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0009",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0009"
+  },
+  "langsmith_trace": "01a05217-d65f-7042-a057-8605d7c2799c"
+}

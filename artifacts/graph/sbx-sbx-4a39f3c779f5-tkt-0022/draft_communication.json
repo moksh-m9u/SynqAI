@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0022",
+  "at": "2026-08-30T09:55:00.907761+00:00",
+  "timing_ms": 869.5,
+  "draft": {
+    "message_id": "MSG-TKT-0022",
+    "ticket_id": "TKT-0022",
+    "recipient": "Vertex Retail",
+    "subject": "Subject: Update: Replacement Vehicle Dispatch for Vertex Retail (Jaipur to Ludhiana)",
+    "body": "Subject: Update: Replacement Vehicle Dispatch for Vertex Retail (Jaipur to Ludhiana)\n\nDear Vertex Retail Team,\n\nFollowing a breakdown of vehicle RJ66RW8007, a replacement unit (RJ58AM5345) has been dispatched from our Jaipur hub to complete the Jaipur to Ludhiana route.\n\nDue to the delay, the estimated arrival is after today's 18:00 gate close. Per our standing arrangement, the vehicle will be held at the last halt and delivered with the morning gate at 08:00.\n\nThis will be recorded as a scheduled morning delivery, not a failed attempt.\n\nRegards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_09 threads/thread_10 threads/thread_11",
+        "ref": "R_VERTEX_6PM_GATE",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "RJ66RW8007",
+      "replacement": "RJ58AM5345",
+      "hub": "Jaipur",
+      "eta_hours": 14.3,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_VERTEX_6PM_GATE"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0022"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Vertex Retail\nBroken vehicle reg: RJ66RW8007\nReplacement vehicle reg: RJ58AM5345\nDispatch hub: Jaipur\nRoute: Jaipur → Ludhiana\nETA detail: Estimated arrival after today's 18:00 gate close, so per our standing arrangement the vehicle will be held at the last halt and delivered with the morning gate at 08:00 — recorded as a scheduled morning delivery, not a failed attempt.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatch for Vertex Retail (Jaipur to Ludhiana)\n\nDear Vertex Retail Team,\n\nFollowing a breakdown of vehicle RJ66RW8007, a replacement unit (RJ58AM5345) has been dispatched from our Jaipur hub to complete the Jaipur to Ludhiana route.\n\nDue to the delay, the estimated arrival is after today's 18:00 gate close. Per our standing arrangement, the vehicle will be held at the last halt and delivered with the morning gate at 08:00.\n\nThis will be recorded as a scheduled morning delivery, not a failed attempt.\n\nRegards,\nMeridian Freight Dispatch",
+    "timing_ms": 854.7,
+    "tokens": {
+      "prompt": 178,
+      "completion": 146
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0021",
+  "at": "2026-08-30T09:55:19.300535+00:00",
+  "timing_ms": 719.0,
+  "draft": {
+    "message_id": "MSG-TKT-0021",
+    "ticket_id": "TKT-0021",
+    "recipient": "Apex Chemicals",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Rudrapur Route",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Rudrapur Route\n\nDear Apex Chemicals Team,\n\nFollowing the breakdown of vehicle UP37RY4295, a replacement unit (UP71AL5892) has been dispatched from our Kanpur hub.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.5 hours.\nWe are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\nPlease let us know if you have any immediate concerns regarding this adjustment.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UP37RY4295",
+      "replacement": "UP71AL5892",
+      "hub": "Kanpur",
+      "eta_hours": 9.5,
+      "applied_rules": [
+        "R_NEAREST_HUB",
+        "R_APEX_ROTATION"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0021"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Apex Chemicals\nBroken vehicle reg: UP37RY4295\nReplacement vehicle reg: UP71AL5892\nDispatch hub: Kanpur\nRoute: Kanpur → Rudrapur\nETA detail: Estimated arrival in about 9.5 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Kanpur to Rudrapur Route\n\nDear Apex Chemicals Team,\n\nFollowing the breakdown of vehicle UP37RY4295, a replacement unit (UP71AL5892) has been dispatched from our Kanpur hub.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.5 hours.\nWe are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\nPlease let us know if you have any immediate concerns regarding this adjustment.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 706.2,
+    "tokens": {
+      "prompt": 134,
+      "completion": 129
+    }
+  }
+}

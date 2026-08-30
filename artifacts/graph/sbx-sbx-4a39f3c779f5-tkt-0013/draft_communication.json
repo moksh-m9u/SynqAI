@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0013",
+  "at": "2026-08-30T09:55:12.984532+00:00",
+  "timing_ms": 687.0,
+  "draft": {
+    "message_id": "MSG-TKT-0013",
+    "ticket_id": "TKT-0013",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle HR14LS3426, we have dispatched a replacement unit, HR63TT4697, from our Ambala hub. The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.6 hours. We are monitoring the journey closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "HR14LS3426",
+      "replacement": "HR63TT4697",
+      "hub": "Ambala",
+      "eta_hours": 9.6,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0013"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Orion Pharma\nBroken vehicle reg: HR14LS3426\nReplacement vehicle reg: HR63TT4697\nDispatch hub: Ambala\nRoute: Ambala → Rudrapur\nETA detail: Estimated arrival in about 9.6 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle HR14LS3426, we have dispatched a replacement unit, HR63TT4697, from our Ambala hub. The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.6 hours. We are monitoring the journey closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 673.1,
+    "tokens": {
+      "prompt": 133,
+      "completion": 109
+    }
+  }
+}

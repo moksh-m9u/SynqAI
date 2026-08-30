@@ -1,0 +1,306 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0029",
+  "at": "2026-08-30T09:54:55.480784+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0029",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "UP53YM5558",
+      "vehicle_id": "MF-074",
+      "model": "Eicher Pro 6028",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP53YM5558"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-042",
+      "home_hub": "Delhi",
+      "joining_date": "2019-10-19",
+      "tenure_days": 2386,
+      "pii_masked": true
+    },
+    "client": "Apex Chemicals",
+    "client_source": "Apex Chemicals",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2025-12-06",
+          "odometer_km": 237161.0,
+          "mechanic": "Salim bhai",
+          "notes": "front tyre start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe."
+        },
+        {
+          "date": "2025-04-29",
+          "odometer_km": 399302.0,
+          "mechanic": "Ramesh",
+          "notes": "oil seal pickup kam ho gayi thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe."
+        },
+        {
+          "date": "2025-08-31",
+          "odometer_km": 375015.0,
+          "mechanic": "Harpreet",
+          "notes": "alternator leak ho raha tha, weld kiya. Next check 10k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": "2025-12-06",
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": [
+          {
+            "date": "2025-12-06",
+            "mechanic": "Salim bhai",
+            "notes": "front tyre start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe."
+          }
+        ]
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153701164425684494",
+        "date": "2018-09-15T11:40:44.257209",
+        "route": "Ahmedabad_East_H_1 (Gujarat)->Gurgaon_Bilaspur_HB (Haryana)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 13145.0
+      },
+      {
+        "trip_id": "trip-153853713485408677",
+        "date": "2018-10-03T03:25:34.854328",
+        "route": "Bengaluru_Bomsndra_HB (Karnataka)->Bengaluru_Hoodi_IP (Karnataka)",
+        "client": "Orion Pharma",
+        "status": "COMPLETED",
+        "billed_amount": 39304.0
+      },
+      {
+        "trip_id": "trip-153848013304109710",
+        "date": "2018-10-02T11:35:33.041348",
+        "route": "Chandigarh_Mehmdpur_H (Punjab)->Jalandhar_DPC (Punjab)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 59973.0
+      }
+    ],
+    "trip_summary": "96 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=586.0 <= 50 -> replacement from Lucknow hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 586.0,
+          "origin_hub": "Lucknow"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=586.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 586.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=5 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 5,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": "2025-12-06",
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": [
+            {
+              "date": "2025-12-06",
+              "mechanic": "Salim bhai",
+              "notes": "front tyre start hone me dikkat thi, band kiya jugaad se, permanent fix baaki hai. Next check 5k km pe."
+            }
+          ]
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_APEX_ROTATION",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Apex: the problem vehicle is not returned on the next Apex dispatch",
+        "citation": [
+          "dispatcher_interview threads/thread_13 threads/thread_14"
+        ],
+        "evidence": {
+          "client": "Apex Chemicals"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 2386d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 2386,
+          "night": true,
+          "driver_id": "DRV-042"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_NEAREST_HUB",
+      "R_APEX_ROTATION"
+    ],
+    "eta": {
+      "base_hours": 21.6,
+      "padding_frac": 0.0,
+      "estimated_hours": 21.6,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 670.2,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=UP53YM5558",
+        "entity": "VEHICLE_UP53YM5558",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-042",
+        "entity": "DRIVER_DRV-042",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0029",
+        "entity": "CLIENT_Apex_Chemicals",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=UP53YM5558",
+        "entity": "VEHICLE_UP53YM5558",
+        "document_type": "maintenance_history",
+        "records": 3
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "entity": "RULE_R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "entity": "RULE_R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0029",
+      "created_at": "2026-05-01 21:00:00",
+      "vehicle": "UP53YM5558",
+      "driver_id": "DRV-042",
+      "origin_hub": "Lucknow",
+      "km_from_origin_hub": 586.0,
+      "destination": "Ludhiana",
+      "issue": "radiator leak",
+      "severity": "HIGH",
+      "client": "Apex Chemicals",
+      "status": "CLOSED",
+      "resolution_note": "Towed to hub workshop.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0029",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0029"
+  },
+  "langsmith_trace": "01a05217-ef77-7a00-8eaf-0255bd5d8e2f"
+}
