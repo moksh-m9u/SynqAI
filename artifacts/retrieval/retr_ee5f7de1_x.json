@@ -1,0 +1,72 @@
+{
+  "query": "Can you tell me about What things should we follow during winter for Shakti",
+  "collection": "merged",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8321,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_05_shakti_ops",
+      "source": "emails/thread_05_shakti_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_05_shakti_ops\nSubject: Diwali season volumes\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Sat, 02 May 2026 19:04 +0530\nSubject: RE: Diwali season volumes\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
+      "score": 0.8317,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_01_shakti_sla",
+      "source": "emails/thread_01_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8292,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "dispatcher_010",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Last question. If the new system remembers only three things?\n\nRAJENDER: Only three. Then: Shakti is 36 hours no matter what the paper says. Grounded means grounded, overdue service does not move. And within 50 of origin, origin sends. Everything else you can learn by making the mistake once. Those three, the mistake is too expensive to be the teacher.",
+      "score": 0.8252,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_08_shakti_ops",
+      "source": "emails/thread_08_shakti_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_08_shakti_ops\nSubject: Additional tarpaulin requirement\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Fri, 26 Jun 2026 13:35 +0530\nSubject: RE: Additional tarpaulin requirement\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
+      "score": 0.802,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "dispatcher_003",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: And the hill routes?\n\nRAJENDER: Rudrapur, and anything going up toward Nainital side from there. November to February, two rules. The vehicle must have an engine heater, because a cold start at four in the morning in December at that altitude, without a heater, you are gambling. And second, I never send a vehicle on a hill route if it has had any brake work in the last thirty days. Any brake work. Pad, drum, anything. If the brake job was done wrong you find out on a flat road with a hard stop and an embarrassed phone call. On a ghat road you find out in the newspaper. Thirty days of flat running first, then hills.",
+      "score": 0.7997,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 803.7,
+  "run_id": "",
+  "thread_id": ""
+}

@@ -1,0 +1,32 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1001",
+  "at": "2026-08-30T11:00:59.582965+00:00",
+  "timing_ms": 3.4,
+  "ticket_id": "TKT-1001",
+  "selection": {
+    "ticket_id": "TKT-1001",
+    "chosen": "RJ58AM5345",
+    "pool_size": 8,
+    "eliminations": [],
+    "applied_rules": [
+      "R_ORIGIN_50KM"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Jaipur",
+      "selected RJ58AM5345 (year=2023, bs=BS6, heater=True, cap=31.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Jaipur",
+    "chosen_year": 2023
+  },
+  "langsmith_trace": "01a05254-6c3b-7713-9e8d-2a3b37aca342"
+}

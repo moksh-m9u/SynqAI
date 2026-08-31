@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0009",
+  "at": "2026-08-30T08:45:33.055370+00:00",
+  "timing_ms": 2.5,
   "ticket_id": "TKT-0009",
   "selection": {
     "ticket_id": "TKT-0009",
@@ -63,5 +65,5 @@
     "candidate_hub": "Chandigarh",
     "chosen_year": 2022
   },
-  "langsmith_trace": "01a051ac-9ec5-76d2-b4e5-a0f8f6890f55"
+  "langsmith_trace": "01a051d8-6bfc-79e3-978a-03555843f350"
 }

@@ -1,0 +1,72 @@
+{
+  "query": "Nova Electronics battery dropped below safety buffer breakdown replacement RJ14EV2201",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-d8ec8fdd",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-18 | PB53DC7224 | odo=137680.0 | mechanic=Vicky | battery issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8588,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-76e34f74",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-21 | DL-82-ZB-6688 | odo=270803.0 | mechanic=Salim bhai | battery pickup kam ho gayi thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8537,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e27ea03d",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-01-05 | DL30JD1420 | odo=247509.0 | mechanic=Guddu | battery issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8501,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-afa08092",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-24 | UP29HF3900 | odo=63720.0 | mechanic=Salim bhai | battery smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8443,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-3c410a14",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-05-02 | HR55GV5088 | odo=65664.0 | mechanic=Harpreet | battery issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8443,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-795390e8",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-01-02 | UK79WJ9666 | odo=351972.0 | mechanic=Ramesh | battery issue reported by driver, replaced. Road test OK.",
+      "score": 0.8416,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 193.4,
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1004"
+}

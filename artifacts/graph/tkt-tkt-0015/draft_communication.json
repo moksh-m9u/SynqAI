@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0015",
+  "at": "2026-08-30T08:45:47.504660+00:00",
+  "timing_ms": 2856.5,
   "draft": {
     "message_id": "MSG-TKT-0015",
     "ticket_id": "TKT-0015",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0015"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Apex Chemicals\nBroken vehicle reg: CH74TG3504\nReplacement vehicle reg: CH67HY8613\nDispatch hub: Chandigarh\nRoute: Chandigarh → Jaipur\nETA detail: Estimated arrival in about 14.0 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Jaipur\n\nDear Apex Chemicals Team,\n\nFollowing a mechanical breakdown of vehicle CH74TG3504, a replacement unit (CH67HY8613) has been dispatched from our Chandigarh hub. The new vehicle is currently en route to Jaipur with an estimated arrival time of approximately 14.0 hours. We are monitoring the shipment closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 2844.4,
+    "tokens": {
+      "prompt": 136,
+      "completion": 114
+    }
   }
 }

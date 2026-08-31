@@ -1,0 +1,19 @@
+{
+  "node": "create_work_order",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0024",
+  "at": "2026-08-30T09:55:05.198324+00:00",
+  "timing_ms": 2.3,
+  "work_order": {
+    "work_order_id": "WO-TKT-0024",
+    "ticket_id": "TKT-0024",
+    "vehicle_reg": "PB74TA4257",
+    "created_at": "2026-04-08 08:00:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB"
+      }
+    ]
+  }
+}

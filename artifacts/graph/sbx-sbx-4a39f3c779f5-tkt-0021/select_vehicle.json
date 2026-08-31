@@ -1,0 +1,291 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0021",
+  "at": "2026-08-30T09:55:18.577151+00:00",
+  "timing_ms": 4.5,
+  "ticket_id": "TKT-0021",
+  "selection": {
+    "ticket_id": "TKT-0021",
+    "chosen": "UP71AL5892",
+    "pool_size": 12,
+    "eliminations": [
+      {
+        "candidate": "UP17GN7381",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP86CM7252",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_APEX_ROTATION",
+        "reason": "problem vehicle must rotate off Apex"
+      },
+      {
+        "candidate": "UP13DI3925",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP33PG6813",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP53YM5558",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR73CY1771",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR63TT4697",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR64RO3607",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH85NJ1986",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH40IK6238",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH67HY8613",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB18BK2160",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB81RI8019",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB74TA4257",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB53GV5325",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP17GN7381",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP86CM7252",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "candidate is the broken vehicle itself"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP37RY4295",
+        "hub": "Kanpur",
+        "rule_id": "R_APEX_ROTATION",
+        "reason": "problem vehicle must rotate off Apex"
+      },
+      {
+        "candidate": "UP13DI3925",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP33PG6813",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "UP53YM5558",
+        "hub": "Lucknow",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR73CY1771",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR63TT4697",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "HR64RO3607",
+        "hub": "Ambala",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH85NJ1986",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH40IK6238",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH67HY8613",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "CH10YZ3615",
+        "hub": "Chandigarh",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB18BK2160",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB81RI8019",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB74TA4257",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "PB53GV5325",
+        "hub": "Ludhiana",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_NEAREST_HUB",
+      "R_APEX_ROTATION"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Kanpur",
+      "selected UP71AL5892 (year=2023, bs=BS6, heater=False, cap=28.0)",
+      "priority=nearest-eligible-hub"
+    ],
+    "candidate_hub": "Kanpur",
+    "chosen_year": 2023
+  },
+  "langsmith_trace": "01a05218-49ab-7133-a59a-e18eca02bd37"
+}

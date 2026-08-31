@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0001",
+  "at": "2026-08-30T08:45:57.235393+00:00",
+  "timing_ms": 2.1,
   "ticket_id": "TKT-0001",
   "selection": {
     "ticket_id": "TKT-0001",
@@ -135,5 +137,5 @@
     "candidate_hub": "Lucknow",
     "chosen_year": 2023
   },
-  "langsmith_trace": "01a051ac-dddc-7860-adf5-ea57f98544ee"
+  "langsmith_trace": "01a051d8-ca70-76c2-9c95-5ce9c8900dec"
 }

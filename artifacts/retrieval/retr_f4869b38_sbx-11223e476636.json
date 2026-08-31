@@ -1,0 +1,72 @@
+{
+  "query": "Nova Electronics client escalation for delayed arrival breakdown replacement RJ33HF1209",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-94179e18",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-08 | RJ-45-BB-5786 | odo=386133.0 | mechanic=Guddu | RADIATOR AWAAZ AA RAHI THI, REPAIR KIYA. NEXT CHECK 5K KM PE.",
+      "score": 0.8348,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-afa08092",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-24 | UP29HF3900 | odo=63720.0 | mechanic=Salim bhai | battery smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8282,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-b387b1a1",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-02 | RJ58AM5345 | odo=180494.0 | mechanic=Guddu | gearbox pickup kam ho gayi thi, weld kiya. Next check 10k km pe.",
+      "score": 0.8278,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-76e34f74",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-21 | DL-82-ZB-6688 | odo=270803.0 | mechanic=Salim bhai | battery pickup kam ho gayi thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.8273,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-614d2d69",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-04-10 | RJ34GX8933 | odo=382693.0 | mechanic=Vicky | brake pad start hone me dikkat thi, repair kiya. Next check 5k km pe.",
+      "score": 0.8264,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-5cf8bba2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-08-10 | PB43VC3573 | odo=341011.0 | mechanic=Anand | gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8247,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 216.9,
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1006"
+}

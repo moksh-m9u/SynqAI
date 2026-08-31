@@ -75,20 +75,17 @@ def test_schema_recovery_aliases():
 
 # ---------------------------------------------------------------- outbox exactly-once
 def test_outbox_exactly_once(tmp_path):
-    from app.pipeline.outbox import Outbox, _append
+    from app.pipeline.outbox import Outbox
     db = tmp_path / "state.sqlite"
-    out = tmp_path / "wo.jsonl"
-    from unittest.mock import patch
-    import app.pipeline.outbox as ob
-    with patch.object(ob, "WORK_ORDERS_OUT", out):
-        o = Outbox(db)
-        wo = {"work_order_id": "WO-1", "ticket_id": "T1", "vehicle_reg": "UP86CM7252",
-              "created_at": "2026-01-01 00:00:00", "citations": []}
-        first = o.write_work_order(wo, "run-1")
-        second = o.write_work_order(dict(wo, vehicle_reg="OTHER"), "run-2")
-        assert first["vehicle_reg"] == "UP86CM7252"
-        assert second["vehicle_reg"] == "UP86CM7252"  # idempotent: no double write
-        assert len([l for l in out.read_text().splitlines() if l.strip()]) == 1
+    out = tmp_path / "work_orders.jsonl"
+    o = Outbox(db, outputs_dir=tmp_path)
+    wo = {"work_order_id": "WO-1", "ticket_id": "T1", "vehicle_reg": "UP86CM7252",
+          "created_at": "2026-01-01 00:00:00", "citations": []}
+    first = o.write_work_order(wo, "run-1")
+    second = o.write_work_order(dict(wo, vehicle_reg="OTHER"), "run-2")
+    assert first["vehicle_reg"] == "UP86CM7252"
+    assert second["vehicle_reg"] == "UP86CM7252"  # idempotent: no double write
+    assert len([l for l in out.read_text().splitlines() if l.strip()]) == 1
 
 
 # ---------------------------------------------------------------- rule engine

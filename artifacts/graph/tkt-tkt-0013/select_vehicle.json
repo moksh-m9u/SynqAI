@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0013",
+  "at": "2026-08-30T08:46:06.409835+00:00",
+  "timing_ms": 3.1,
   "ticket_id": "TKT-0013",
   "selection": {
     "ticket_id": "TKT-0013",
@@ -447,5 +449,5 @@
     "candidate_hub": "Ambala",
     "chosen_year": 2023
   },
-  "langsmith_trace": "01a051ac-f759-74e0-aa30-689dcd30d7b6"
+  "langsmith_trace": "01a051d8-ee46-76c2-a515-1959ff21d310"
 }

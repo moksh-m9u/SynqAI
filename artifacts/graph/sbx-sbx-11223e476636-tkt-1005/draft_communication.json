@@ -1,0 +1,16 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1005",
+  "at": "2026-08-30T11:01:03.533555+00:00",
+  "timing_ms": 0.2,
+  "draft": {
+    "message_id": null,
+    "ticket_id": "TKT-1005",
+    "status": "NO_COMMS",
+    "context_summary": {
+      "note": "Internal/client-less ticket — no external client communication drafted."
+    }
+  },
+  "llm_debug": {}
+}

@@ -1,0 +1,122 @@
+{
+  "node": "retrieve",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0020",
+  "at": "2026-08-30T09:54:50.840484+00:00",
+  "timing_ms": 455.8,
+  "ticket_id": "TKT-0020",
+  "retrieval": {
+    "query": "Shakti Cement clutch slipping breakdown replacement HR16SP9238",
+    "hits": [
+      {
+        "chunk_id": "email_thread_01_shakti_sla",
+        "source": "emails/thread_01_shakti_sla.txt",
+        "document_type": "email_thread",
+        "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+        "score": 0.8999,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "email_thread_02_shakti_sla",
+        "source": "emails/thread_02_shakti_sla.txt",
+        "document_type": "email_thread",
+        "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+        "score": 0.8974,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "dispatcher_004",
+        "source": "dispatcher_interview.txt",
+        "document_type": "transcript",
+        "text": "INTERVIEWER: Tell me about the clients. Who is difficult?\n\nRAJENDER: Difficult is the wrong word. They all have a real rulebook and a paper rulebook. Shakti Cement's contract says 48 hour delivery window. Forget the contract. If a Shakti load crosses 36 hours, their plant head calls our MD directly, on his personal number, and then the MD calls me, and my evening is finished. So in my head Shakti is a 36 hour client. Plan everything to 36. The extra 12 hours in the contract is for God, not for us.\n\nVertex Retail, opposite problem. Their contract says nothing about delivery time of day. But their warehouse at Ludhiana stops accepting after 6 pm. Not 6:15. The gate man will not open. So if a Vertex truck is going to reach after 6, don't let it reach after 6. Hold it at the last halt, deliver next morning at 8 when the gate opens, and inform their coordinator the previous evening. And listen, this is important: it is never marked as a failed delivery. It is a scheduled morning delivery. Mark it failed and Vertex's system generates a penalty note automatically and then two finance teams fight for a month over 4,000 rupees.\n\nApex Chemicals. (pauses) They track our number plates. I am not joking. If a truck has any issue on an Apex run, a breakdown, a late arrival, anything, that same truck does not go back to Apex on the very next dispatch. Send a different vehicle at least once in between. Their gate register has plate numbers going back years and if the same \"problem truck\" shows up next time, their stores manager makes it a whole thing. It costs us nothing to rotate. So rotate.\n\nOrion Pharma, only one rule but it is absolute: their loads never wait at a hub overnight unrefrigerated, and their consignments always get the newest available vehicle, 2020 or later. Pharma audit requirement, they check the RC copy. Send a 2016 truck and the load is rejected at the gate, full trip wasted.",
+        "score": 0.8592,
+        "rule_candidate": true,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "email_thread_03_shakti_ops",
+        "source": "emails/thread_03_shakti_ops.txt",
+        "document_type": "email_thread",
+        "text": "Thread: thread_03_shakti_ops\nSubject: Rate revision Q3\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Sun, 09 Aug 2026 14:52 +0530\nSubject: RE: Rate revision Q3\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
+        "score": 0.849,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-bbfd8df1",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2025-12-24 | HR68TS2638 | odo=414415.0 | mechanic=Salim bhai | clutch plate gear slip kar raha tha, weld kiya. Next check 10k km pe.",
+        "score": 0.9034,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-45ce734e",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2026-06-21 | HR16SP9238 | odo=294586.0 | mechanic=Anand | battery gear slip kar raha tha, replace kiya. Next check 5k km pe.",
+        "score": 0.8856,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-cced816b",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2025-11-06 | HR59KV7624 | odo=313983.0 | mechanic=Vicky | clutch plate gear slip kar raha tha, naya lagwaya. Next check 5k km pe.",
+        "score": 0.8773,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-e4459853",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2025-10-09 | PB68LJ4728 | odo=273714.0 | mechanic=Ramesh | AC compressor gear slip kar raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+        "score": 0.8744,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-1adee351",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2026-07-29 | HR77LN6419 | odo=273716.0 | mechanic=Ramesh | steering pump gear slip kar raha tha, weld kiya. Next check 15k km pe.",
+        "score": 0.8726,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      },
+      {
+        "chunk_id": "maint_MNT-8768cb85",
+        "source": "maintenance_log.xlsx",
+        "document_type": "maintenance_record",
+        "text": "2025-09-26 | UP41IF2771 | odo=123347.0 | mechanic=Harpreet | clutch plate start hone me dikkat thi, repair kiya. Next check 15k km pe.",
+        "score": 0.8723,
+        "rule_candidate": false,
+        "language": "",
+        "token_count": null
+      }
+    ],
+    "top_refs": [
+      "dispatcher_interview.txt",
+      "emails/thread_01_shakti_sla.txt",
+      "emails/thread_02_shakti_sla.txt",
+      "emails/thread_03_shakti_ops.txt",
+      "maintenance_log.xlsx"
+    ],
+    "grounded": true,
+    "langsmith_trace": "01a05217-db90-7230-9863-c12dc9e35df1"
+  }
+}

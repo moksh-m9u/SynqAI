@@ -1,0 +1,295 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-8bd43cff27fb",
+  "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0027",
+  "at": "2026-08-30T09:27:27.063883+00:00",
+  "timing_ms": 7.6,
+  "ticket_id": "TKT-0027",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "UP40IM3144",
+      "vehicle_id": "MF-037",
+      "model": "BharatBenz 2823R",
+      "year": 2021,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Lucknow",
+      "capacity_tonnes": 16.0,
+      "status": "Active",
+      "aliases": [
+        "UP-40-IM-3144",
+        "UP40IM3144"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-020",
+      "home_hub": "Rudrapur",
+      "joining_date": "2025-09-26",
+      "tenure_days": 319,
+      "pii_masked": true
+    },
+    "client": "Shakti Cement",
+    "client_source": "Shakti Cement",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2025-12-01",
+          "odometer_km": 343003.0,
+          "mechanic": "Harpreet",
+          "notes": "wheel bearing gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": "2025-12-01",
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": [
+          {
+            "date": "2025-12-01",
+            "mechanic": "Harpreet",
+            "notes": "wheel bearing gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe."
+          }
+        ]
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153785568771352461",
+        "date": "2018-09-25T06:08:07.713909",
+        "route": "FBD_Balabhgarh_DPC (Haryana)->Delhi_Airport_H (Delhi)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 68705.0
+      },
+      {
+        "trip_id": "trip-153791395316895268",
+        "date": "2018-09-25T22:19:13.169203",
+        "route": "Bassi_DmodrNGR_D (Rajasthan)->Dausa_IndraCln_D (Rajasthan)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 34750.0
+      },
+      {
+        "trip_id": "trip-153687610300263144",
+        "date": "2018-09-13T22:01:43.003030",
+        "route": "Tiruchi (Tamil Nadu)->Tiruchi_Samyaprm_D (Tamil Nadu)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 35738.0
+      }
+    ],
+    "trip_summary": "88 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=20.0 <= 50 -> replacement from Lucknow hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 20.0,
+          "origin_hub": "Lucknow"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=20.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 20.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": "2025-12-01",
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": [
+            {
+              "date": "2025-12-01",
+              "mechanic": "Harpreet",
+              "notes": "wheel bearing gear slip kar raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe."
+            }
+          ]
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_SHAKTI_36H",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Shakti loads planned to 36h door-to-door (contract 48h is legacy)",
+        "citation": [
+          "dispatcher_interview threads/thread_01 threads/thread_02"
+        ],
+        "evidence": {
+          "client": "Shakti Cement"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 319d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 319,
+          "night": true,
+          "driver_id": "DRV-020"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_SHAKTI_36H"
+    ],
+    "eta": {
+      "base_hours": null,
+      "padding_frac": 0.0,
+      "estimated_hours": null,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 0.0,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=UP40IM3144",
+        "entity": "VEHICLE_UP40IM3144",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-020",
+        "entity": "DRIVER_DRV-020",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0027",
+        "entity": "CLIENT_Shakti_Cement",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=UP40IM3144",
+        "entity": "VEHICLE_UP40IM3144",
+        "document_type": "maintenance_history",
+        "records": 1
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "entity": "RULE_R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0027",
+      "created_at": "2026-08-11 19:00:00",
+      "vehicle": "UP-40-IM-3144",
+      "driver_id": "DRV-020",
+      "origin_hub": "Lucknow",
+      "km_from_origin_hub": 20.0,
+      "destination": "Lucknow",
+      "issue": "fuel line leak",
+      "severity": "HIGH",
+      "client": "Shakti Cement",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0027",
+    "run_id": "sbx-8bd43cff27fb",
+    "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0027"
+  },
+  "langsmith_trace": "01a051fe-c84f-7741-9654-43394c083c72"
+}

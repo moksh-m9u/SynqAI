@@ -1,0 +1,19 @@
+{
+  "node": "create_work_order",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1001",
+  "at": "2026-08-30T11:00:59.584959+00:00",
+  "timing_ms": 0.7,
+  "work_order": {
+    "work_order_id": "WO-TKT-1001",
+    "ticket_id": "TKT-1001",
+    "vehicle_reg": "RJ58AM5345",
+    "created_at": "2026-10-18 09:15:00",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM"
+      }
+    ]
+  }
+}

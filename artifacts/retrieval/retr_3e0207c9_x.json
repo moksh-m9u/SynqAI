@@ -1,0 +1,72 @@
+{
+  "query": "fuel line leak Lucknow Lucknow Shakti Cement",
+  "collection": "merged",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-1faa8a01",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-11-06 | RJ43DD3546 | odo=162479.0 | mechanic=Salim bhai | DEF pump smoke aa raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8611,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-ede5a941",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-19 | CH81AQ4130 | odo=374466.0 | mechanic=Ramesh | oil seal overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8602,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-ab511681",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-28 | PB 68 LJ 4728 | odo=79322.0 | mechanic=Anand | fuel injector overheat ho raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8583,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-d939a0f5",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-06-22 | UP86CM7252 | odo=286910.0 | mechanic=Vicky | leaf spring leak ho raha tha, replace kiya. Next check 15k km pe.",
+      "score": 0.8552,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-c748db43",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-08-10 | ch74tg3504 | odo=71120.0 | mechanic=Ramesh | turbo leak ho raha tha, naya lagwaya. Next check 15k km pe.",
+      "score": 0.8536,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-ab28c1d8",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-28 | HR21SN1520 | odo=192879.0 | mechanic=Ramesh | AC compressor leak ho raha tha, weld kiya. Next check 15k km pe.",
+      "score": 0.8521,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 17740.9,
+  "run_id": "",
+  "thread_id": ""
+}

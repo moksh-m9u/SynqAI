@@ -1,0 +1,72 @@
+{
+  "query": "This EV truck has only 12% battery left. Is it eligible?",
+  "collection": "merged",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-807f7649",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-07-30 | DL11SJ8690 | odo=265123.0 | mechanic=Salim bhai | battery pickup kam ho gayi thi, repair kiya. Next check 10k km pe.",
+      "score": 0.8809,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-76e34f74",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-03-21 | DL-82-ZB-6688 | odo=270803.0 | mechanic=Salim bhai | battery pickup kam ho gayi thi, band kiya jugaad se, permanent fix baaki hai. Next check 10k km pe.",
+      "score": 0.869,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e937e973",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-19 | DL82GO5198 | odo=125064.0 | mechanic=Ramesh | BATTERY PICKUP KAM HO GAYI THI, WELD KIYA. NEXT CHECK 10K KM PE.",
+      "score": 0.8642,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-b7d1c5ac",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-09-06 | UP37UP7482 | odo=90009.0 | mechanic=Anand | battery pickup kam ho gayi thi, clean karke wapas lagaya. Next check 10k km pe.",
+      "score": 0.8639,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-aeba62ee",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-07-03 | HR-79-ZT-4613 | odo=291390.0 | mechanic=Guddu | battery issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8572,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-795390e8",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-01-02 | UK79WJ9666 | odo=351972.0 | mechanic=Ramesh | battery issue reported by driver, replaced. Road test OK.",
+      "score": 0.8553,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 743.5,
+  "run_id": "",
+  "thread_id": ""
+}

@@ -1,0 +1,271 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0024",
+  "at": "2026-08-30T09:55:04.676281+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0024",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "PB42BW8144",
+      "vehicle_id": "MF-053",
+      "model": "Ashok Leyland 3520",
+      "year": 2012,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Ludhiana",
+      "capacity_tonnes": 25.0,
+      "status": "Active",
+      "aliases": [
+        "PB42BW8144"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-045",
+      "home_hub": "Lucknow",
+      "joining_date": "2023-08-03",
+      "tenure_days": 979,
+      "pii_masked": true
+    },
+    "client": "Internal",
+    "client_source": "Internal",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2025-09-05",
+          "odometer_km": 317567.0,
+          "mechanic": "Guddu",
+          "notes": "brake pad issue reported by driver, replaced under warranty. Road test OK."
+        },
+        {
+          "date": "2025-06-26",
+          "odometer_km": 156011.0,
+          "mechanic": "Harpreet",
+          "notes": "clutch plate issue reported by driver, replaced. Road test OK."
+        }
+      ],
+      "brake_work_dates": [
+        "2025-09-05"
+      ],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153671240266732246",
+        "date": "2018-09-12T00:33:22.667576",
+        "route": "Bengaluru_KGAirprt_HB (Karnataka)->Bengaluru_Bomsndra_HB (Karnataka)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 90720.0
+      },
+      {
+        "trip_id": "trip-153707206961355460",
+        "date": "2018-09-16T04:27:49.613968",
+        "route": "Jalandhar_DPC (Punjab)->Phagwara_Lovely_D (Punjab)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 33799.0
+      },
+      {
+        "trip_id": "trip-153704754231905595",
+        "date": "2018-09-15T21:39:02.319378",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Pune_Tathawde_H (Maharashtra)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 60854.0
+      }
+    ],
+    "trip_summary": "92 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=324.0 <= 50 -> replacement from Ludhiana hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 324.0,
+          "origin_hub": "Ludhiana"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=324.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 324.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 winter=False touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=4 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 4,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 979d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 979,
+          "night": false,
+          "driver_id": "DRV-045"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_NEAREST_HUB"
+    ],
+    "eta": {
+      "base_hours": 21.3,
+      "padding_frac": 0.0,
+      "estimated_hours": 21.3,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 660.0,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=PB42BW8144",
+        "entity": "VEHICLE_PB42BW8144",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-045",
+        "entity": "DRIVER_DRV-045",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0024",
+        "entity": "CLIENT_Internal",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=PB42BW8144",
+        "entity": "VEHICLE_PB42BW8144",
+        "document_type": "maintenance_history",
+        "records": 2
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "entity": "RULE_R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0024",
+      "created_at": "2026-04-08 08:00:00",
+      "vehicle": "PB42BW8144",
+      "driver_id": "DRV-045",
+      "origin_hub": "Ludhiana",
+      "km_from_origin_hub": 324.0,
+      "destination": "Kanpur",
+      "issue": "brake failure warning",
+      "severity": "MEDIUM",
+      "client": "Internal",
+      "status": "CLOSED",
+      "resolution_note": "Towed to hub workshop.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0024",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0024"
+  },
+  "langsmith_trace": "01a05218-1362-7d32-b378-1a9863990353"
+}

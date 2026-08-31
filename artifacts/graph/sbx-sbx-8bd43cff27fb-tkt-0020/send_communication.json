@@ -1,0 +1,15 @@
+{
+  "node": "send_communication",
+  "run_id": "sbx-8bd43cff27fb",
+  "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0020",
+  "at": "2026-08-30T09:27:49.812798+00:00",
+  "timing_ms": 0.7,
+  "comms_sent": {
+    "message_id": "MSG-TKT-0020",
+    "ticket_id": "TKT-0020",
+    "recipient": "Shakti Cement",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment\n\nDear Shakti Cement Team,\n\nPlease be advised that vehicle HR16SP9238 experienced a mechanical breakdown and has been replaced by HR24VR5371.\nThe replacement vehicle has been dispatched from our Gurgaon hub and is currently en route to Kanpur.\nThe estimated arrival time is approximately 12.8 hours, which remains within our standard 36-hour door-to-door service window.\nWe will continue to monitor the shipment closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "approved_by": "Approver(auto)",
+    "sent_at": "2026-02-21 04:00:00"
+  }
+}

@@ -2,6 +2,8 @@
   "node": "create_work_order",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0020",
+  "at": "2026-08-30T08:45:34.300278+00:00",
+  "timing_ms": 0.4,
   "work_order": {
     "work_order_id": "WO-TKT-0020",
     "ticket_id": "TKT-0020",

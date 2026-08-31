@@ -1,0 +1,42 @@
+{
+  "query": "spare tyre policy",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-dfb82783",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-02-20 | UK79WJ9666 | odo=383663.0 | mechanic=Vicky | front tyre overheat ho raha tha, replace kiya. Next check 5k km pe.",
+      "score": 0.8737,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-7df4b1c2",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-05-17 | pb43vc3573 | odo=293849.0 | mechanic=Harpreet | rear tyre smoke aa raha tha, band kiya jugaad se, permanent fix baaki hai. Next check 15k km pe.",
+      "score": 0.8712,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-5316ee1b",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-12-28 | UP-52-IC-5573 | odo=179981.0 | mechanic=Vicky | front tyre issue reported by driver, cleaned and refitted. Road test OK.",
+      "score": 0.8643,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 16165.3,
+  "run_id": "api",
+  "thread_id": "api"
+}

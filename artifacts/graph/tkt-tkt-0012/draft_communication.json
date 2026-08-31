@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0012",
+  "at": "2026-08-30T08:46:16.018893+00:00",
+  "timing_ms": 2864.2,
   "draft": {
     "message_id": "MSG-TKT-0012",
     "ticket_id": "TKT-0012",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0012"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Shakti Cement\nBroken vehicle reg: PB84TB2343\nReplacement vehicle reg: PB18BK2160\nDispatch hub: Ludhiana\nRoute: Ludhiana → Lucknow\nETA detail: Estimated arrival in about 21.6 hours — planned to the 36-hour door-to-door window we operate for Shakti dispatches.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown, we have dispatched a replacement vehicle (Reg: PB18BK2160) from our Ludhiana hub to continue your route to Lucknow. The original vehicle (Reg: PB84TB2343) has been secured and is undergoing inspection. The new ETA is approximately 21.6 hours, which remains within our committed 36-hour door-to-door window. We will provide further updates as the shipment progresses.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 2852.1,
+    "tokens": {
+      "prompt": 158,
+      "completion": 128
+    }
   }
 }

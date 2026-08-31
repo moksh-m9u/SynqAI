@@ -1,0 +1,7 @@
+{"work_order_id": "WO-TKT-1001", "ticket_id": "TKT-1001", "vehicle_reg": "RJ58AM5345", "created_at": "2026-10-18 09:15:00", "citations": [{"source": "dispatcher_interview", "ref": "R_ORIGIN_50KM"}]}
+{"work_order_id": "WO-TKT-1002", "ticket_id": "TKT-1002", "vehicle_reg": "RJ45BB5786", "created_at": "2026-11-07 05:40:00", "citations": [{"source": "dispatcher_interview", "ref": "R_ORIGIN_50KM"}]}
+{"work_order_id": "WO-TKT-1003", "ticket_id": "TKT-1003", "vehicle_reg": "GJ01RF9911", "created_at": "2026-09-02 14:10:00", "citations": [{"source": "dispatcher_interview", "ref": "R_NEAREST_HUB"}]}
+{"work_order_id": "WO-TKT-1004", "ticket_id": "TKT-1004", "vehicle_reg": "RJ57LG5374", "created_at": "2026-10-23 16:30:00", "citations": [{"source": "dispatcher_interview", "ref": "R_ORIGIN_50KM"}]}
+{"work_order_id": "WO-TKT-1005", "ticket_id": "TKT-1005", "vehicle_reg": "GJ-07-AB-4455", "created_at": "2026-08-29 11:45:00", "citations": [{"source": "dispatcher_interview", "ref": "R_ORIGIN_50KM"}]}
+{"work_order_id": "WO-TKT-1006", "ticket_id": "TKT-1006", "vehicle_reg": "RJ66RW8007", "created_at": "2026-10-26 07:55:00", "citations": [{"source": "dispatcher_interview", "ref": "R_NEAREST_HUB"}]}
+{"work_order_id": "WO-TKT-1007", "ticket_id": "TKT-1007", "vehicle_reg": "GJ44TY8810", "created_at": "2026-09-14 21:20:00", "citations": [{"source": "dispatcher_interview", "ref": "R_ORIGIN_50KM"}]}

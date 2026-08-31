@@ -1,0 +1,57 @@
+{
+  "node": "select_vehicle",
+  "run_id": "sbx-11223e476636",
+  "thread_id": "sbx-sbx-11223e476636-tkt-1004",
+  "at": "2026-08-30T11:01:02.311194+00:00",
+  "timing_ms": 4.6,
+  "ticket_id": "TKT-1004",
+  "selection": {
+    "ticket_id": "TKT-1004",
+    "chosen": "RJ57LG5374",
+    "pool_size": 8,
+    "eliminations": [
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ58AM5345",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      },
+      {
+        "candidate": "RJ45BB5786",
+        "hub": "Jaipur",
+        "rule_id": "R_DELIVERY_ELIGIBLE",
+        "reason": "already assigned to a work order in this queue run"
+      }
+    ],
+    "applied_rules": [
+      "R_ORIGIN_50KM"
+    ],
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "notes": [
+      "candidate hub: Jaipur",
+      "selected RJ57LG5374 (year=2022, bs=BS6, heater=False, cap=21.0)",
+      "priority=origin-within-50km"
+    ],
+    "candidate_hub": "Jaipur",
+    "chosen_year": 2022
+  },
+  "langsmith_trace": "01a05254-76e2-76e2-a12d-fd4437ffa4cb"
+}

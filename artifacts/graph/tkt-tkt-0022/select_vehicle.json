@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0022",
+  "at": "2026-08-30T08:45:43.362812+00:00",
+  "timing_ms": 11.4,
   "ticket_id": "TKT-0022",
   "selection": {
     "ticket_id": "TKT-0022",
@@ -93,5 +95,5 @@
     "candidate_hub": "Jaipur",
     "chosen_year": 2023
   },
-  "langsmith_trace": "01a051ac-c4ad-76b3-98ec-b07271b1f3e7"
+  "langsmith_trace": "01a051d8-9436-7aa2-bf93-be31d255b4e9"
 }

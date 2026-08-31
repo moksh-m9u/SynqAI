@@ -1,0 +1,11 @@
+{
+  "query": "which vehicle can replace a broken truck for shakti cement near delhi tomorrow?",
+  "collection": "synqai_userkb",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [],
+  "timing_ms": 18988.3,
+  "run_id": "dashboard",
+  "thread_id": "playground"
+}

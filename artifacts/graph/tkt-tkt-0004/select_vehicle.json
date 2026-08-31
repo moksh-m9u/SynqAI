@@ -2,6 +2,8 @@
   "node": "select_vehicle",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0004",
+  "at": "2026-08-30T08:46:16.614859+00:00",
+  "timing_ms": 3.9,
   "ticket_id": "TKT-0004",
   "selection": {
     "ticket_id": "TKT-0004",
@@ -243,5 +245,5 @@
     "candidate_hub": "Ludhiana",
     "chosen_year": 2020
   },
-  "langsmith_trace": "01a051ad-1e06-73a3-b9e7-8ff783ef725b"
+  "langsmith_trace": "01a051d9-1622-7f51-b7e2-6f50cb8589d5"
 }

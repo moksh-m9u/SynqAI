@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0030",
+  "at": "2026-08-30T09:55:22.275902+00:00",
+  "timing_ms": 779.5,
+  "draft": {
+    "message_id": "MSG-TKT-0030",
+    "ticket_id": "TKT-0030",
+    "recipient": "Shakti Cement",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown of vehicle UK76OD5061, a replacement unit (UK27ZO9702) has been dispatched from our Rudrapur hub to continue the route to Ludhiana. The new vehicle is estimated to arrive in approximately 13.1 hours, keeping the shipment within our standard 36-hour door-to-door delivery window. We will continue to monitor the transit closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UK76OD5061",
+      "replacement": "UK27ZO9702",
+      "hub": "Rudrapur",
+      "eta_hours": 13.1,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_SHAKTI_36H"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0030"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Shakti Cement\nBroken vehicle reg: UK76OD5061\nReplacement vehicle reg: UK27ZO9702\nDispatch hub: Rudrapur\nRoute: Rudrapur → Ludhiana\nETA detail: Estimated arrival in about 13.1 hours — planned to the 36-hour door-to-door window we operate for Shakti dispatches.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement Shipment\n\nDear Shakti Cement Team,\n\nFollowing a mechanical breakdown of vehicle UK76OD5061, a replacement unit (UK27ZO9702) has been dispatched from our Rudrapur hub to continue the route to Ludhiana. The new vehicle is estimated to arrive in approximately 13.1 hours, keeping the shipment within our standard 36-hour door-to-door delivery window. We will continue to monitor the transit closely and provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 766.4,
+    "tokens": {
+      "prompt": 159,
+      "completion": 127
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0029",
+  "at": "2026-08-30T09:54:56.885739+00:00",
+  "timing_ms": 916.6,
+  "draft": {
+    "message_id": "MSG-TKT-0029",
+    "ticket_id": "TKT-0029",
+    "recipient": "Apex Chemicals",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Apex Chemicals Shipment",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Apex Chemicals Shipment\n\nDear Apex Chemicals Team,\n\nPlease be advised that the vehicle registered as UP53YM5558 experienced a mechanical breakdown en route.\nA replacement vehicle, registered as UP13DI3925, has been dispatched from our Lucknow hub to continue the journey to Ludhiana.\nThe estimated time of arrival for the shipment is approximately 21.6 hours from the time of dispatch.\nWe apologize for the inconvenience and will keep you updated on the progress.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "UP53YM5558",
+      "replacement": "UP13DI3925",
+      "hub": "Lucknow",
+      "eta_hours": 21.6,
+      "applied_rules": [
+        "R_NEAREST_HUB",
+        "R_APEX_ROTATION"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0029"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Apex Chemicals\nBroken vehicle reg: UP53YM5558\nReplacement vehicle reg: UP13DI3925\nDispatch hub: Lucknow\nRoute: Lucknow → Ludhiana\nETA detail: Estimated arrival in about 21.6 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Apex Chemicals Shipment\n\nDear Apex Chemicals Team,\n\nPlease be advised that the vehicle registered as UP53YM5558 experienced a mechanical breakdown en route.\nA replacement vehicle, registered as UP13DI3925, has been dispatched from our Lucknow hub to continue the journey to Ludhiana.\nThe estimated time of arrival for the shipment is approximately 21.6 hours from the time of dispatch.\nWe apologize for the inconvenience and will keep you updated on the progress.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 903.7,
+    "tokens": {
+      "prompt": 135,
+      "completion": 126
+    }
+  }
+}

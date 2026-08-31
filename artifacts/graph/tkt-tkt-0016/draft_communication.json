@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0016",
+  "at": "2026-08-30T08:46:12.594653+00:00",
+  "timing_ms": 2836.6,
   "draft": {
     "message_id": "MSG-TKT-0016",
     "ticket_id": "TKT-0016",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0016"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Shakti Cement\nBroken vehicle reg: HR39BZ6168\nReplacement vehicle reg: RJ45BB5786\nDispatch hub: Jaipur\nRoute: Gurgaon → Delhi\nETA detail: Estimated arrival in about 0.8 hours — planned to the 36-hour door-to-door window we operate for Shakti dispatches.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that a replacement vehicle (Reg: RJ45BB5786) has been dispatched from our Jaipur hub following a breakdown of the original unit (Reg: HR39BZ6168). The new vehicle is currently en route on the Gurgaon to Delhi corridor. We estimate an arrival in approximately 0.8 hours, ensuring we remain within the agreed 36-hour door-to-door delivery window. Please let us know if you require any further details.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 2824.3,
+    "tokens": {
+      "prompt": 156,
+      "completion": 137
+    }
   }
 }

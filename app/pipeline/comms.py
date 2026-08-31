@@ -71,7 +71,7 @@ NO_COMMS_COMMENT = "Internal/client-less ticket — no external client communica
 
 
 def draft_communication(ctx: dict[str, Any], selection: dict[str, Any], run_id: str = "",
-                        thread_id: str = "") -> dict[str, Any] | None:
+                        thread_id: str = "", debug: dict[str, Any] | None = None) -> dict[str, Any] | None:
     client = ctx.get("client", "")
     if client in ("Internal", "") and (ctx.get("client_source") or "").strip().lower() in ("internal", ""):
         return None
@@ -101,11 +101,27 @@ def draft_communication(ctx: dict[str, Any], selection: dict[str, Any], run_id: 
                 f"Client: {client}\nBroken vehicle reg: {reg}\nReplacement vehicle reg: {replacement}\n"
                 f"Dispatch hub: {hub}\nRoute: {route}\nETA detail: {_eta_txt(eta, client)}\n"
             )
-            resp = llm.invoke(prompt)
-            generated = resp.content if hasattr(resp, "content") else str(resp)
+            if debug is not None:
+                import time as _t
+                _t0 = _t.perf_counter()
+                resp = llm.invoke(prompt)
+                timing_ms = round((_t.perf_counter() - _t0) * 1000, 1)
+                token_meta = getattr(resp, "usage_metadata", None) or {}
+                debug.update({
+                    "mode": "qwen_groq", "model": LLM_MODEL_ID,
+                    "prompt": prompt, "llm_output": resp.content if hasattr(resp, "content") else str(resp),
+                    "timing_ms": timing_ms,
+                    "tokens": {"prompt": token_meta.get("input_tokens"), "completion": token_meta.get("output_tokens")},
+                })
+                generated = resp.content if hasattr(resp, "content") else str(resp)
+            else:
+                resp = llm.invoke(prompt)
+                generated = resp.content if hasattr(resp, "content") else str(resp)
             if generated and len(generated) > 60:
                 body = generated
-        except Exception:
+        except Exception as exc:
+            if debug is not None:
+                debug.update({"mode": "fallback", "error": str(exc)[:200], "timing_ms": None, "tokens": None})
             pass  # deterministic fallback stands
 
     body = mask(body)  # defense-in-depth: no personal data, ever

@@ -1,0 +1,72 @@
+{
+  "query": "which vehicle can carry a Shakti Cement load this winter from Delhi?",
+  "collection": "merged",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "email_thread_01_shakti_sla",
+      "source": "emails/thread_01_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_01_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Jaipur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Mon, 27 Jul 2026 16:09 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.868,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.8655,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "dispatcher_002",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Start with routes. What do you know that the system doesn't?\n\nRAJENDER: The system thinks a truck is a truck. It is not. First thing, and this one is non-negotiable: October to February, no BS4 vehicle goes on any Delhi NCR route. Any route that touches Delhi, Gurgaon, Faridabad, Noida. Winter mein pollution restrictions lag jaati hain, GRAP whatever they call it now, and a BS4 truck can get stopped at the border, challan, sometimes turned back fully loaded. We learned this the expensive way in 2022. Two trucks held at Kundli for a day and a half. Shakti Cement ka load tha. Never again. BS6 only on Delhi routes in winter, I don't care if the BS4 truck is parked twenty meters from the loading dock and the BS6 is in Jaipur.",
+      "score": 0.8474,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_05_shakti_ops",
+      "source": "emails/thread_05_shakti_ops.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_05_shakti_ops\nSubject: Diwali season volumes\nDate: 1900-01-01 00:00:00\nTeam,\n\nPlease confirm on the above at the earliest.\n\nPrakash Nair\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Sat, 02 May 2026 19:04 +0530\nSubject: RE: Diwali season volumes\n\nConfirmed from our side, Prakash ji. Will revert with details by EOD.\n\nSandeep Malhotra",
+      "score": 0.8345,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_17_orion_age",
+      "source": "emails/thread_17_orion_age.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_17_orion_age\nSubject: Load rejected at gate, vehicle HR15HP2193\nDate: 1900-01-01 00:00:00\nTeam,\n\nThe vehicle placed today is a 2019 model as per RC. Our audit SOP requires 2020 or later for all Orion consignments. Load was rejected at the gate. Please place a compliant vehicle tomorrow morning.\n\nDr. Sneha Kulkarni\nOrion Pharma\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: scm@orionpharma.example.in\nDate: Mon, 29 Jun 2026 14:15 +0530\nSubject: RE: Load rejected at gate\n\nDr. Kulkarni, regretted. A 2021 vehicle is being placed for tomorrow 9 am. Flag added in our system: Orion loads, 2020 or later only.\n\nSandeep Malhotra",
+      "score": 0.8326,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_18_orion_age",
+      "source": "emails/thread_18_orion_age.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_18_orion_age\nSubject: Load rejected at gate, vehicle UP41IF2771\nDate: 1900-01-01 00:00:00\nTeam,\n\nThe vehicle placed today is a 2019 model as per RC. Our audit SOP requires 2020 or later for all Orion consignments. Load was rejected at the gate. Please place a compliant vehicle tomorrow morning.\n\nDr. Sneha Kulkarni\nOrion Pharma\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: scm@orionpharma.example.in\nDate: Wed, 22 Jul 2026 21:49 +0530\nSubject: RE: Load rejected at gate\n\nDr. Kulkarni, regretted. A 2021 vehicle is being placed for tomorrow 9 am. Flag added in our system: Orion loads, 2020 or later only.\n\nSandeep Malhotra",
+      "score": 0.8289,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 17166.3,
+  "run_id": "",
+  "thread_id": ""
+}

@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0006",
+  "at": "2026-08-30T09:55:18.095151+00:00",
+  "timing_ms": 789.0,
+  "draft": {
+    "message_id": "MSG-TKT-0006",
+    "ticket_id": "TKT-0006",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Kanpur",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Kanpur\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle PB31NP8886, a replacement unit (HR64RO3607) has been dispatched from the Ambala hub to ensure continuity of service. The shipment is currently en route from Ludhiana to Kanpur. We estimate an arrival time of approximately 21.3 hours from the point of dispatch. Please let us know if you require further details.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "PB31NP8886",
+      "replacement": "HR64RO3607",
+      "hub": "Ambala",
+      "eta_hours": 21.3,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0006"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Orion Pharma\nBroken vehicle reg: PB31NP8886\nReplacement vehicle reg: HR64RO3607\nDispatch hub: Ambala\nRoute: Ludhiana → Kanpur\nETA detail: Estimated arrival in about 21.3 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Ludhiana to Kanpur\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle PB31NP8886, a replacement unit (HR64RO3607) has been dispatched from the Ambala hub to ensure continuity of service. The shipment is currently en route from Ludhiana to Kanpur. We estimate an arrival time of approximately 21.3 hours from the point of dispatch. Please let us know if you require further details.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 775.8,
+    "tokens": {
+      "prompt": 134,
+      "completion": 118
+    }
+  }
+}

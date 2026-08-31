@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0024",
+  "at": "2026-08-30T08:45:55.399739+00:00",
+  "timing_ms": 0.5,
   "draft": {
     "message_id": null,
     "ticket_id": "TKT-0024",
@@ -9,5 +11,6 @@
     "context_summary": {
       "note": "Internal/client-less ticket — no external client communication drafted."
     }
-  }
+  },
+  "llm_debug": {}
 }

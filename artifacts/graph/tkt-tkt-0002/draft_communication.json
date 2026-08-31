@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0002",
+  "at": "2026-08-30T08:46:34.178764+00:00",
+  "timing_ms": 695.4,
   "draft": {
     "message_id": "MSG-TKT-0002",
     "ticket_id": "TKT-0002",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0002"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Shakti Cement\nBroken vehicle reg: DL41GG9786\nReplacement vehicle reg: DL30AN8381\nDispatch hub: Delhi\nRoute: Delhi → Delhi\nETA detail: We are estimating the delivery window from route distance; a confirmed ETA will follow.\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Shakti Cement\n\nDear Shakti Cement Team,\n\nWe are writing to inform you that vehicle DL41GG9786 has experienced a breakdown and has been replaced by vehicle DL30AN8381. The replacement vehicle has been dispatched from our Delhi hub to continue the Delhi to Delhi route. We are currently estimating the delivery window based on route distance and will provide a confirmed ETA shortly. Please let us know if you have any questions.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 683.8,
+    "tokens": {
+      "prompt": 138,
+      "completion": 114
+    }
   }
 }

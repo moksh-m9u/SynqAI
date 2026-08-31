@@ -1,0 +1,16 @@
+{
+  "run_id": "chaos-1a8f69488d35",
+  "kind": "chaos",
+  "started": "2026-08-30T09:15:25.351906+00:00",
+  "finished": "2026-08-30T09:15:28.378371+00:00",
+  "records": 4,
+  "work_orders": 1,
+  "quarantined": 3,
+  "quarantine_reasons": [
+    "duplicate of TKT-0027",
+    "vehicle registration invalid/unknown: ''",
+    "created_at not a parseable date; vehicle registration invalid/unknown: None; origin_hub empty; destination empty; issue empty"
+  ],
+  "total_execution_ms": 3026,
+  "approve": "auto"
+}

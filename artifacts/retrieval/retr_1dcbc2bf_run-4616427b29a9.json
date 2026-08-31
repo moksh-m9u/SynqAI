@@ -1,0 +1,72 @@
+{
+  "query": "Orion Pharma turbo failure breakdown replacement uk76od5061",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "maint_MNT-1cbedcad",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-10-26 | UK76OD5061 | odo=350650.0 | mechanic=Ramesh | fuel injector vibration zyada tha, naya lagwaya. Next check 5k km pe.",
+      "score": 0.864,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-4bc99f88",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-03-13 | DL-82-ZB-6688 | odo=410141.0 | mechanic=Anand | fuel injector issue reported by driver, replaced under warranty. Road test OK.",
+      "score": 0.8549,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-e6c2d930",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-05-08 | PB 47 CH 2654 | odo=392724.0 | mechanic=Vicky | brake drum issue reported by driver, replaced. Road test OK.",
+      "score": 0.8509,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-a3edf7d6",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-06-10 | hr64ro3607 | odo=326554.0 | mechanic=Anand | turbo issue reported by driver, repaired and tested. Road test OK.",
+      "score": 0.8487,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-c6f472f3",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2025-08-17 | PB59PM4997 | odo=395628.0 | mechanic=Salim bhai | turbo issue reported by driver, temporary fix applied, needs permanent repair. Road test OK.",
+      "score": 0.8469,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "maint_MNT-43d99776",
+      "source": "maintenance_log.xlsx",
+      "document_type": "maintenance_record",
+      "text": "2026-04-03 | UK-41-CO-2604 | odo=69592.0 | mechanic=Ramesh | brake drum leak ho raha tha, repair kiya. Next check 15k km pe.",
+      "score": 0.8462,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 271.4,
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0018"
+}

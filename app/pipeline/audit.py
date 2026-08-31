@@ -7,22 +7,25 @@ file on disk always reflects the *latest* run and replays byte-for-byte."""
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 from app.config import AUDIT_DIR, AUDIT_OUT
 
-_OPENED = False
+_OPENED: set[Path] = set()
 
 
-def _rotate() -> None:
-    global _OPENED
-    if not _OPENED:
-        AUDIT_DIR.mkdir(parents=True, exist_ok=True)
-        AUDIT_OUT.write_text("", encoding="utf-8")
-        _OPENED = True
+def _rotate(path: Path) -> None:
+    if path not in _OPENED:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("", encoding="utf-8")
+        _OPENED.add(path)
 
 
-def audit(row: dict[str, Any]) -> None:
+def audit(row: dict[str, Any], audit_path: Path | str | None = None) -> None:
+    """Append one audit line. ``audit_path`` overrides the per-run audit file
+    (sandbox/chaos runs use an isolated workspace audit; baseline untouched)."""
+    path = Path(audit_path) if audit_path else AUDIT_OUT
     line = {
         "at": datetime.now(timezone.utc).isoformat(),
         "run_id": row.get("run_id", ""),
@@ -37,7 +40,7 @@ def audit(row: dict[str, Any]) -> None:
         "actor": row.get("actor", "system"),
         "detail": row.get("detail", {}),
     }
-    _rotate()
+    _rotate(path)
     import json
-    with open(AUDIT_OUT, "a", encoding="utf-8") as fh:
+    with open(path, "a", encoding="utf-8") as fh:
         fh.write(json.dumps(line, ensure_ascii=False, default=str) + "\n")

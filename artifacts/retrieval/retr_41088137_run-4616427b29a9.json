@@ -1,0 +1,52 @@
+{
+  "query": "Orion Pharma client dispatch rules",
+  "collection": "synqai_knowledge",
+  "filters": {},
+  "threshold": null,
+  "rerank": false,
+  "retrieved": [
+    {
+      "chunk_id": "dispatcher_004",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Tell me about the clients. Who is difficult?\n\nRAJENDER: Difficult is the wrong word. They all have a real rulebook and a paper rulebook. Shakti Cement's contract says 48 hour delivery window. Forget the contract. If a Shakti load crosses 36 hours, their plant head calls our MD directly, on his personal number, and then the MD calls me, and my evening is finished. So in my head Shakti is a 36 hour client. Plan everything to 36. The extra 12 hours in the contract is for God, not for us.\n\nVertex Retail, opposite problem. Their contract says nothing about delivery time of day. But their warehouse at Ludhiana stops accepting after 6 pm. Not 6:15. The gate man will not open. So if a Vertex truck is going to reach after 6, don't let it reach after 6. Hold it at the last halt, deliver next morning at 8 when the gate opens, and inform their coordinator the previous evening. And listen, this is important: it is never marked as a failed delivery. It is a scheduled morning delivery. Mark it failed and Vertex's system generates a penalty note automatically and then two finance teams fight for a month over 4,000 rupees.\n\nApex Chemicals. (pauses) They track our number plates. I am not joking. If a truck has any issue on an Apex run, a breakdown, a late arrival, anything, that same truck does not go back to Apex on the very next dispatch. Send a different vehicle at least once in between. Their gate register has plate numbers going back years and if the same \"problem truck\" shows up next time, their stores manager makes it a whole thing. It costs us nothing to rotate. So rotate.\n\nOrion Pharma, only one rule but it is absolute: their loads never wait at a hub overnight unrefrigerated, and their consignments always get the newest available vehicle, 2020 or later. Pharma audit requirement, they check the RC copy. Send a 2016 truck and the load is rejected at the gate, full trip wasted.",
+      "score": 0.869,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "dispatcher_001",
+      "source": "dispatcher_interview.txt",
+      "document_type": "transcript",
+      "text": "INTERVIEWER: Rajender ji, thank you for doing this. The idea is simple. Whatever is in your head about how dispatch actually works, we want it written down before you leave. Not the SOP document. The real rules.\n\nRAJENDER: (laughs) The SOP document. I wrote half of it in 2015 and nobody has read it since, including me. Fine. Ask.",
+      "score": 0.8613,
+      "rule_candidate": true,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_17_orion_age",
+      "source": "emails/thread_17_orion_age.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_17_orion_age\nSubject: Load rejected at gate, vehicle HR15HP2193\nDate: 1900-01-01 00:00:00\nTeam,\n\nThe vehicle placed today is a 2019 model as per RC. Our audit SOP requires 2020 or later for all Orion consignments. Load was rejected at the gate. Please place a compliant vehicle tomorrow morning.\n\nDr. Sneha Kulkarni\nOrion Pharma\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: scm@orionpharma.example.in\nDate: Mon, 29 Jun 2026 14:15 +0530\nSubject: RE: Load rejected at gate\n\nDr. Kulkarni, regretted. A 2021 vehicle is being placed for tomorrow 9 am. Flag added in our system: Orion loads, 2020 or later only.\n\nSandeep Malhotra",
+      "score": 0.8401,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    },
+    {
+      "chunk_id": "email_thread_02_shakti_sla",
+      "source": "emails/thread_02_shakti_sla.txt",
+      "document_type": "email_thread",
+      "text": "Thread: thread_02_shakti_sla\nSubject: Delivery window, this week's dispatches\nDate: 1900-01-01 00:00:00\nSandeep,\n\nReminder before the Kanpur loads go out: as agreed with your MD, our working window is 36 hours door to door. Please plan accordingly. The 48 hour line in the contract is legacy language, our plant scheduling runs on 36.\n\nRegards,\nPrakash Nair\nShakti Cement\n------------------------------------------------------------\nFrom: ops@meridianfreight.example.in\nTo: dispatch@shakticement.example.in\nDate: Wed, 17 Jun 2026 17:41 +0530\nSubject: RE: Delivery window, this week's dispatches\n\nNoted Prakash ji, all Shakti dispatches are planned to 36 hours internally. Contract stays as is on paper.\n\nSandeep Malhotra\nMeridian Freight",
+      "score": 0.838,
+      "rule_candidate": false,
+      "language": "",
+      "token_count": null
+    }
+  ],
+  "timing_ms": 225.1,
+  "run_id": "run-4616427b29a9",
+  "thread_id": "tkt-tkt-0011"
+}

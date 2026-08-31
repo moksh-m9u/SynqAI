@@ -1,0 +1,300 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0015",
+  "at": "2026-08-30T09:55:00.926772+00:00",
+  "timing_ms": 0.3,
+  "ticket_id": "TKT-0015",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "CH74TG3504",
+      "vehicle_id": "MF-018",
+      "model": "Ashok Leyland 3520",
+      "year": 2018,
+      "bs_stage": "BS4",
+      "engine_heater": false,
+      "home_hub": "Chandigarh",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "CH74TG3504"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-050",
+      "home_hub": "Rudrapur",
+      "joining_date": "2021-08-23",
+      "tenure_days": 1628,
+      "pii_masked": true
+    },
+    "client": "Apex Chemicals",
+    "client_source": "Apex Chemicals",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-01-29",
+          "odometer_km": 318139.0,
+          "mechanic": "Guddu",
+          "notes": "fan belt pickup kam ho gayi thi, clean karke wapas lagaya. Next check 10k km pe."
+        },
+        {
+          "date": "2025-08-10",
+          "odometer_km": 71120.0,
+          "mechanic": "Ramesh",
+          "notes": "turbo leak ho raha tha, naya lagwaya. Next check 15k km pe."
+        },
+        {
+          "date": "2025-06-09",
+          "odometer_km": 261794.0,
+          "mechanic": "Vicky",
+          "notes": "steering pump pickup kam ho gayi thi, naya lagwaya. Next check 5k km pe."
+        },
+        {
+          "date": "2026-08-17",
+          "odometer_km": 221329.0,
+          "mechanic": "Harpreet",
+          "notes": "gearbox start hone me dikkat thi, repair kiya. Next check 5k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153781397254521120",
+        "date": "2018-09-24T18:32:52.545605",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Mumbai Hub (Maharashtra)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 30546.0
+      },
+      {
+        "trip_id": "trip-153810723119899751",
+        "date": "2018-09-28T04:00:31.199291",
+        "route": "Bengaluru_Bomsndra_HB (Karnataka)->Bengaluru_Peenya_IP (Karnataka)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 25700.0
+      },
+      {
+        "trip_id": "trip-153713680966992871",
+        "date": "2018-09-16T22:26:49.670179",
+        "route": "Rudrapur_UdhamNgr_H (Uttarakhand)->Nainital_Sookhtal_D (Uttarakhand)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 60941.0
+      }
+    ],
+    "trip_summary": "113 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=38.0 <= 50 -> replacement from Chandigarh hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 38.0,
+          "origin_hub": "Chandigarh"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=38.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 38.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 winter=True touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_APEX_ROTATION",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Apex: the problem vehicle is not returned on the next Apex dispatch",
+        "citation": [
+          "dispatcher_interview threads/thread_13 threads/thread_14"
+        ],
+        "evidence": {
+          "client": "Apex Chemicals"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 1628d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 1628,
+          "night": true,
+          "driver_id": "DRV-050"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_APEX_ROTATION"
+    ],
+    "eta": {
+      "base_hours": 14.0,
+      "padding_frac": 0.0,
+      "estimated_hours": 14.0,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 434.5,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=CH74TG3504",
+        "entity": "VEHICLE_CH74TG3504",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-050",
+        "entity": "DRIVER_DRV-050",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0015",
+        "entity": "CLIENT_Apex_Chemicals",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=CH74TG3504",
+        "entity": "VEHICLE_CH74TG3504",
+        "document_type": "maintenance_history",
+        "records": 4
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "entity": "RULE_R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0015",
+      "created_at": "2026-02-06 19:00:00",
+      "vehicle": "CH-74-TG-3504",
+      "driver_id": "DRV-050",
+      "origin_hub": "Chandigarh",
+      "km_from_origin_hub": 38.0,
+      "destination": "Jaipur",
+      "issue": "clutch slipping",
+      "severity": "LOW",
+      "client": "Apex Chemicals",
+      "status": "CLOSED",
+      "resolution_note": "Towed to hub workshop.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0015",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0015"
+  },
+  "langsmith_trace": "01a05218-04bd-7c51-b351-523fd2664636"
+}

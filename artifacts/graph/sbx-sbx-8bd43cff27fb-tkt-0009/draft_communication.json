@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-8bd43cff27fb",
+  "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0009",
+  "at": "2026-08-30T09:27:48.346510+00:00",
+  "timing_ms": 764.0,
+  "draft": {
+    "message_id": "MSG-TKT-0009",
+    "ticket_id": "TKT-0009",
+    "recipient": "Apex Chemicals",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur\n\nDear Apex Chemicals Team,\n\nPlease be advised that vehicle CH40IK6238 experienced a mechanical breakdown during transit.\nA replacement vehicle, registration CH10YZ3615, has been dispatched from our Chandigarh hub to ensure continuity of service.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 10.3 hours.\nWe apologize for the inconvenience and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "CH40IK6238",
+      "replacement": "CH10YZ3615",
+      "hub": "Chandigarh",
+      "eta_hours": 10.3,
+      "applied_rules": [
+        "R_ORIGIN_50KM",
+        "R_APEX_ROTATION"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-8bd43cff27fb",
+    "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0009"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Apex Chemicals\nBroken vehicle reg: CH40IK6238\nReplacement vehicle reg: CH10YZ3615\nDispatch hub: Chandigarh\nRoute: Chandigarh → Rudrapur\nETA detail: Estimated arrival in about 10.3 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Chandigarh to Rudrapur\n\nDear Apex Chemicals Team,\n\nPlease be advised that vehicle CH40IK6238 experienced a mechanical breakdown during transit.\nA replacement vehicle, registration CH10YZ3615, has been dispatched from our Chandigarh hub to ensure continuity of service.\nThe new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 10.3 hours.\nWe apologize for the inconvenience and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 750.8,
+    "tokens": {
+      "prompt": 137,
+      "completion": 126
+    }
+  }
+}

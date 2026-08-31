@@ -1,0 +1,14 @@
+{
+  "run_id": "sbx-11223e476636",
+  "kind": "sandbox",
+  "started": "2026-08-30T11:00:58.724262+00:00",
+  "finished": "2026-08-30T11:01:06.191891+00:00",
+  "records": 8,
+  "work_orders": 7,
+  "quarantined": 1,
+  "quarantine_reasons": [
+    "created_at not a parseable date; vehicle registration invalid/unknown: 'RJ??EV'; origin_hub empty; issue empty"
+  ],
+  "total_execution_ms": 7468,
+  "approve": "hold"
+}

@@ -1,0 +1,300 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0010",
+  "at": "2026-08-30T09:54:54.148812+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0010",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "UP54XZ6139",
+      "vehicle_id": "MF-052",
+      "model": "Tata LPT 3118",
+      "year": 2019,
+      "bs_stage": "BS4",
+      "engine_heater": true,
+      "home_hub": "Kanpur",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "UP54XZ6139"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-012",
+      "home_hub": "Rudrapur",
+      "joining_date": "2020-02-27",
+      "tenure_days": 2187,
+      "pii_masked": true
+    },
+    "client": "Apex Chemicals",
+    "client_source": "Apex Chemicals",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2025-05-08",
+          "odometer_km": 328421.0,
+          "mechanic": "Harpreet",
+          "notes": "DEF pump gear slip kar raha tha, replace kiya. Next check 5k km pe."
+        },
+        {
+          "date": "2026-03-08",
+          "odometer_km": 188010.0,
+          "mechanic": "Vicky",
+          "notes": "gearbox issue reported by driver, cleaned and refitted. Road test OK."
+        },
+        {
+          "date": "2026-07-02",
+          "odometer_km": 375795.0,
+          "mechanic": "Ramesh",
+          "notes": "FUEL INJECTOR ISSUE REPORTED BY DRIVER, TEMPORARY FIX APPLIED, NEEDS PERMANENT REPAIR. ROAD TEST OK."
+        },
+        {
+          "date": "2025-11-28",
+          "odometer_km": 309997.0,
+          "mechanic": "Salim bhai",
+          "notes": "fan belt vibration zyada tha, repair kiya. Next check 10k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153785828510502348",
+        "date": "2018-09-25T06:51:25.105274",
+        "route": "Pune_Tathawde_H (Maharashtra)->Nanded_Aswningr_I (Maharashtra)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 33486.0
+      },
+      {
+        "trip_id": "trip-153747563964977949",
+        "date": "2018-09-20T20:33:59.650021",
+        "route": "Sonipat_Kundli_H (Haryana)->Gurgaon_Bilaspur_HB (Haryana)",
+        "client": "Orion Pharma",
+        "status": "COMPLETED",
+        "billed_amount": 70651.0
+      },
+      {
+        "trip_id": "trip-153800910169916856",
+        "date": "2018-09-27T00:45:01.699560",
+        "route": "Bhiwandi_Mankoli_HB (Maharashtra)->Mumbai_Jogeshwri_L (Maharashtra)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 67936.0
+      }
+    ],
+    "trip_summary": "94 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": false,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=27.0 <= 50 -> replacement from Kanpur hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0,
+          "origin_hub": "Kanpur"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=27.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 27.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 winter=True touches_ncr=False -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "touches_ncr": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_APEX_ROTATION",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Apex: the problem vehicle is not returned on the next Apex dispatch",
+        "citation": [
+          "dispatcher_interview threads/thread_13 threads/thread_14"
+        ],
+        "evidence": {
+          "client": "Apex Chemicals"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 2187d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 2187,
+          "night": true,
+          "driver_id": "DRV-012"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_APEX_ROTATION"
+    ],
+    "eta": {
+      "base_hours": 21.3,
+      "padding_frac": 0.0,
+      "estimated_hours": 21.3,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 660.0,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=UP54XZ6139",
+        "entity": "VEHICLE_UP54XZ6139",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-012",
+        "entity": "DRIVER_DRV-012",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0010",
+        "entity": "CLIENT_Apex_Chemicals",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=UP54XZ6139",
+        "entity": "VEHICLE_UP54XZ6139",
+        "document_type": "maintenance_history",
+        "records": 4
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_13 threads/thread_14",
+        "ref": "R_APEX_ROTATION",
+        "entity": "RULE_R_APEX_ROTATION",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0010",
+      "created_at": "2026-02-22 18:00:00",
+      "vehicle": "UP-54-XZ-6139",
+      "driver_id": "DRV-012",
+      "origin_hub": "Kanpur",
+      "km_from_origin_hub": 27.0,
+      "destination": "Ludhiana",
+      "issue": "gearbox jam",
+      "severity": "LOW",
+      "client": "Apex Chemicals",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0010",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0010"
+  },
+  "langsmith_trace": "01a05217-ea40-7902-a682-f4fad774eb45"
+}

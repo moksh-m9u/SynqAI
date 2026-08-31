@@ -16,14 +16,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from app.config import (ARTIFACTS_DIR, COMMS_PENDING_OUT, COMMS_SENT_OUT,
-                        QUARANTINE_OUT, WORK_ORDERS_OUT)
+from app.config import OUTPUTS_DIR
 from app.utils import read_jsonl
 
 
 class Outbox:
-    def __init__(self, state_db: Path):
+    """Exactly-once business-truth writers.
+
+    ``outputs_dir`` defaults to the canonical OUTPUTS_DIR. Sandbox/chaos runs pass
+    an isolated workspace dir so interactive runs never touch the demo baseline."""
+
+    def __init__(self, state_db: Path, outputs_dir: Path | str | None = None):
         self.db = sqlite3.connect(state_db)
+        self._out = Path(outputs_dir) if outputs_dir else OUTPUTS_DIR
         self.db.execute("""
             CREATE TABLE IF NOT EXISTS outbox_registry (
                 action TEXT NOT NULL,
@@ -37,9 +42,9 @@ class Outbox:
         self._load_existing()
 
     def _load_existing(self) -> None:
-        for action, path in (("work_order", WORK_ORDERS_OUT), ("comms_draft", COMMS_PENDING_OUT),
-                             ("comms_sent", COMMS_SENT_OUT), ("quarantine", QUARANTINE_OUT)):
-            for rec in read_jsonl(path):
+        for action, fname in (("work_order", "work_orders.jsonl"), ("comms_draft", "comms_pending.jsonl"),
+                              ("comms_sent", "comms_sent.jsonl"), ("quarantine", "quarantine.jsonl")):
+            for rec in read_jsonl(self._out / fname):
                 key = rec.get("ticket_id")
                 if key:
                     self.db.execute("INSERT OR IGNORE INTO outbox_registry (action, ticket_id, at) VALUES (?, ?, ?)",
@@ -60,40 +65,40 @@ class Outbox:
     def write_work_order(self, wo: dict[str, Any], run_id: str) -> dict[str, Any] | None:
         """Write one work order per unique valid ticket. Returns the record or None if duplicate."""
         if self.exists("work_order", wo["ticket_id"]):
-            existing = [r for r in read_jsonl(WORK_ORDERS_OUT) if r.get("ticket_id") == wo["ticket_id"]]
+            existing = [r for r in read_jsonl(self._out / "work_orders.jsonl") if r.get("ticket_id") == wo["ticket_id"]]
             return existing[0] if existing else wo
         need = {"work_order_id", "ticket_id", "vehicle_reg", "created_at", "citations"}
         assert need.issubset(wo), f"work order schema violated: missing {need - set(wo)}"
-        _append(WORK_ORDERS_OUT, wo)
+        _append(self._out / "work_orders.jsonl", wo)
         self.mark("work_order", wo["ticket_id"], run_id)
         return wo
 
     # ---------------------------------------------------------------- comms draft
     def write_comms_draft(self, draft: dict[str, Any], run_id: str) -> dict[str, Any] | None:
         if self.exists("comms_draft", draft["ticket_id"]):
-            existing = [r for r in read_jsonl(COMMS_PENDING_OUT) if r.get("ticket_id") == draft["ticket_id"]]
+            existing = [r for r in read_jsonl(self._out / "comms_pending.jsonl") if r.get("ticket_id") == draft["ticket_id"]]
             return existing[0] if existing else draft
-        _append(COMMS_PENDING_OUT, draft)
+        _append(self._out / "comms_pending.jsonl", draft)
         self.mark("comms_draft", draft["ticket_id"], run_id)
         return draft
 
     # ---------------------------------------------------------------- comms sent
     def write_comms_sent(self, msg: dict[str, Any], run_id: str) -> dict[str, Any] | None:
         if self.exists("comms_sent", msg["ticket_id"]):
-            existing = [r for r in read_jsonl(COMMS_SENT_OUT) if r.get("ticket_id") == msg["ticket_id"]]
+            existing = [r for r in read_jsonl(self._out / "comms_sent.jsonl") if r.get("ticket_id") == msg["ticket_id"]]
             return existing[0] if existing else msg
         need = {"message_id", "ticket_id", "recipient", "body", "approved_by", "sent_at"}
         assert need.issubset(msg), f"comms sent schema violated: missing {need - set(msg)}"
-        _append(COMMS_SENT_OUT, msg)
+        _append(self._out / "comms_sent.jsonl", msg)
         self.mark("comms_sent", msg["ticket_id"], run_id)
         return msg
 
     # ---------------------------------------------------------------- quarantine
     def write_quarantine(self, rec: dict[str, Any], run_id: str) -> dict[str, Any] | None:
         if self.exists("quarantine", rec["ticket_id"]):
-            existing = [r for r in read_jsonl(QUARANTINE_OUT) if r.get("ticket_id") == rec["ticket_id"]]
+            existing = [r for r in read_jsonl(self._out / "quarantine.jsonl") if r.get("ticket_id") == rec["ticket_id"]]
             return existing[0] if existing else rec
-        _append(QUARANTINE_OUT, rec)
+        _append(self._out / "quarantine.jsonl", rec)
         self.mark("quarantine", rec["ticket_id"], run_id)
         return rec
 

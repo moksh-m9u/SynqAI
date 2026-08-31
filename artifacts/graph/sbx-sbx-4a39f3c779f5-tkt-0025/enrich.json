@@ -1,0 +1,275 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0025",
+  "at": "2026-08-30T09:55:20.514079+00:00",
+  "timing_ms": 0.4,
+  "ticket_id": "TKT-0025",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "HR24VR5371",
+      "vehicle_id": "MF-016",
+      "model": "BharatBenz 2823R",
+      "year": 2023,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 28.0,
+      "status": "Active",
+      "aliases": [
+        "HR24VR5371"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-017",
+      "home_hub": "Delhi",
+      "joining_date": "2020-01-25",
+      "tenure_days": 2398,
+      "pii_masked": true
+    },
+    "client": "Internal",
+    "client_source": "Internal",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-05-26",
+          "odometer_km": 127642.0,
+          "mechanic": "Ramesh",
+          "notes": "DEF pump issue reported by driver, repaired and tested. Road test OK."
+        },
+        {
+          "date": "2026-07-11",
+          "odometer_km": 399690.0,
+          "mechanic": "Ramesh",
+          "notes": "gearbox awaaz aa rahi thi, repair kiya. Next check 10k km pe."
+        },
+        {
+          "date": "2026-07-19",
+          "odometer_km": 164117.0,
+          "mechanic": "Ramesh",
+          "notes": "turbo issue reported by driver, replaced. Road test OK."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153714842406053341",
+        "date": "2018-09-17T01:40:24.060799",
+        "route": "Porbandar_DC (Gujarat)->Bhanvad_Mainroad_D (Gujarat)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 27176.0
+      },
+      {
+        "trip_id": "trip-153825501956371899",
+        "date": "2018-09-29T21:03:39.563961",
+        "route": "Hassan_Pandrnga_I (Karnataka)->Channaraya_patna_D (Karnataka)",
+        "client": "Shakti Cement",
+        "status": "COMPLETED",
+        "billed_amount": 21977.0
+      },
+      {
+        "trip_id": "trip-153682621025969568",
+        "date": "2018-09-13T08:10:10.259916",
+        "route": "Nalbari_Bhgtpura_D (Assam)->Barpeta_ShivBari_D (Assam)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 26638.0
+      }
+    ],
+    "trip_summary": "104 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": true,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=16.0 <= 50 -> replacement from Gurgaon hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 16.0,
+          "origin_hub": "Gurgaon"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=16.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 16.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 winter=False touches_ncr=True -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "touches_ncr": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=8 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 8,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 2398d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 2398,
+          "night": true,
+          "driver_id": "DRV-017"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM"
+    ],
+    "eta": {
+      "base_hours": 0.8,
+      "padding_frac": 0.0,
+      "estimated_hours": 0.8,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 24.2,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=HR24VR5371",
+        "entity": "VEHICLE_HR24VR5371",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-017",
+        "entity": "DRIVER_DRV-017",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0025",
+        "entity": "CLIENT_Internal",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=HR24VR5371",
+        "entity": "VEHICLE_HR24VR5371",
+        "document_type": "maintenance_history",
+        "records": 3
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0025",
+      "created_at": "2026-08-19 04:00:00",
+      "vehicle": "HR-24-VR-5371",
+      "driver_id": "DRV-017",
+      "origin_hub": "Gurgaon",
+      "km_from_origin_hub": 16.0,
+      "destination": "Delhi",
+      "issue": "suspension damage",
+      "severity": "LOW",
+      "client": "Internal",
+      "status": "CLOSED",
+      "resolution_note": "Resolved by roadside assistance.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0025",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0025"
+  },
+  "langsmith_trace": "01a05218-5140-71a2-a8fb-0e802ead6f9c"
+}

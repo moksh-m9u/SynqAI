@@ -1,0 +1,296 @@
+{
+  "node": "enrich",
+  "run_id": "sbx-8bd43cff27fb",
+  "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0020",
+  "at": "2026-08-30T09:27:48.360040+00:00",
+  "timing_ms": 0.2,
+  "ticket_id": "TKT-0020",
+  "context": {
+    "vehicle": {
+      "canonical_reg": "HR16SP9238",
+      "vehicle_id": "MF-034",
+      "model": "Ashok Leyland 3520",
+      "year": 2024,
+      "bs_stage": "BS6",
+      "engine_heater": true,
+      "home_hub": "Gurgaon",
+      "capacity_tonnes": 31.0,
+      "status": "Active",
+      "aliases": [
+        "hr-16-sp-9238",
+        "HR16SP9238"
+      ]
+    },
+    "driver": {
+      "driver_id": "DRV-010",
+      "home_hub": "Jaipur",
+      "joining_date": "2023-12-30",
+      "tenure_days": 784,
+      "pii_masked": true
+    },
+    "client": "Shakti Cement",
+    "client_source": "Shakti Cement",
+    "maintenance": {
+      "records": [
+        {
+          "date": "2026-06-21",
+          "odometer_km": 294586.0,
+          "mechanic": "Anand",
+          "notes": "battery gear slip kar raha tha, replace kiya. Next check 5k km pe."
+        },
+        {
+          "date": "2026-06-18",
+          "odometer_km": 163890.0,
+          "mechanic": "Anand",
+          "notes": "AC compressor overheat ho raha tha, clean karke wapas lagaya. Next check 10k km pe."
+        }
+      ],
+      "brake_work_dates": [],
+      "jugaad": {
+        "active": false,
+        "last_entry": null,
+        "permanent_fix_done": false,
+        "within_7d": false,
+        "evidence": []
+      },
+      "service_due": {
+        "due_date_evidence": [],
+        "triggered": false,
+        "note": "no service-due records in ingested maintenance_log"
+      }
+    },
+    "recent_trips": [
+      {
+        "trip_id": "trip-153721522270597538",
+        "date": "2018-09-17T20:13:42.706192",
+        "route": "Hyderabad_Mhdiptnm_C (Telangana)->Hyderabad_Shamshbd_P (Telangana)",
+        "client": "Internal",
+        "status": "COMPLETED",
+        "billed_amount": 76955.0
+      },
+      {
+        "trip_id": "trip-153790346132447031",
+        "date": "2018-09-25T19:24:21.324730",
+        "route": "Rajamundry_AtoNgrRd_I (Andhra Pradesh)->Mandapeta_Mainrd_D (Andhra Pradesh)",
+        "client": "Vertex Retail",
+        "status": "COMPLETED",
+        "billed_amount": 24358.0
+      },
+      {
+        "trip_id": "trip-153765877546262006",
+        "date": "2018-09-22T23:26:15.462855",
+        "route": "Pune_Tathawde_H (Maharashtra)->Pune_Mundhawa_L (Maharashtra)",
+        "client": "Apex Chemicals",
+        "status": "COMPLETED",
+        "billed_amount": 22335.0
+      }
+    ],
+    "trip_summary": "102 historical trips on file (corpus 2018 sample); no active trip in the 2026 operating window — insufficient information for live position",
+    "region": {
+      "touches_ncr": true,
+      "hill": false,
+      "east_lucknow": false
+    },
+    "verdicts": [
+      {
+        "rule_id": "R_ORIGIN_50KM",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "km_from_origin_hub=47.0 <= 50 -> replacement from Gurgaon hub",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 47.0,
+          "origin_hub": "Gurgaon"
+        }
+      },
+      {
+        "rule_id": "R_NEAREST_HUB",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "km_from_origin_hub=47.0 > 50 -> replacement from nearest hub with an eligible vehicle",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "km_from_origin_hub": 47.0
+        }
+      },
+      {
+        "rule_id": "R_NCR_BS6_WINTER",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "month=2 winter=True touches_ncr=True -> BS6 only",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "touches_ncr": true
+        }
+      },
+      {
+        "rule_id": "R_HILL_ENGINE_HEATER",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> engine_heater required",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_HILL_BRAKE_30D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "month=2 hill=False -> no brake work in last 30 days",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "month": 2,
+          "hill": false
+        }
+      },
+      {
+        "rule_id": "R_JUGAAD_7D",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "broken vehicle carries an active jogadi restriction (7-day clock / home-region only)",
+        "citation": [
+          "dispatcher_interview maintenance_log"
+        ],
+        "evidence": {
+          "active": false,
+          "last_entry": null,
+          "permanent_fix_done": false,
+          "within_7d": false,
+          "evidence": []
+        }
+      },
+      {
+        "rule_id": "R_OVERDUE_SERVICE_GROUNDED",
+        "severity": "hard_constraint",
+        "triggered": false,
+        "detail": "no service-due records in ingested maintenance_log",
+        "citation": [
+          "dispatcher_interview"
+        ],
+        "evidence": {
+          "due_date_evidence": [],
+          "triggered": false,
+          "note": "no service-due records in ingested maintenance_log"
+        }
+      },
+      {
+        "rule_id": "R_SHAKTI_36H",
+        "severity": "hard_constraint",
+        "triggered": true,
+        "detail": "Shakti loads planned to 36h door-to-door (contract 48h is legacy)",
+        "citation": [
+          "dispatcher_interview threads/thread_01 threads/thread_02"
+        ],
+        "evidence": {
+          "client": "Shakti Cement"
+        }
+      },
+      {
+        "rule_id": "R_NEW_DRIVER_NIGHT",
+        "severity": "heuristic",
+        "triggered": false,
+        "detail": "driver new (<6mo, 784d) and night run -> not solo",
+        "citation": [
+          "dispatcher_interview threads/thread_24"
+        ],
+        "evidence": {
+          "tenure_days": 784,
+          "night": true,
+          "driver_id": "DRV-010"
+        }
+      }
+    ],
+    "applied_rule_ids": [
+      "R_ORIGIN_50KM",
+      "R_NCR_BS6_WINTER",
+      "R_SHAKTI_36H"
+    ],
+    "eta": {
+      "base_hours": 12.8,
+      "padding_frac": 0.0,
+      "estimated_hours": 12.8,
+      "avg_speed_kph": 30.96,
+      "basis": "hub_coords + fleet avg speed (meridian_trips)",
+      "vertex_hold_until_morning": false
+    },
+    "route_distance_est_km": 394.9,
+    "citations": [
+      {
+        "source": "fleet_master.csv",
+        "ref": "plate=HR16SP9238",
+        "entity": "VEHICLE_HR16SP9238",
+        "document_type": "fleet_record"
+      },
+      {
+        "source": "drivers_roster.csv",
+        "ref": "DRV-010",
+        "entity": "DRIVER_DRV-010",
+        "document_type": "roster_record"
+      },
+      {
+        "source": "tickets.json",
+        "ref": "TKT-0020",
+        "entity": "CLIENT_Shakti_Cement",
+        "document_type": "ticket"
+      },
+      {
+        "source": "maintenance_log.xlsx",
+        "ref": "plate=HR16SP9238",
+        "entity": "VEHICLE_HR16SP9238",
+        "document_type": "maintenance_history",
+        "records": 2
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_ORIGIN_50KM",
+        "entity": "RULE_R_ORIGIN_50KM",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NCR_BS6_WINTER",
+        "entity": "RULE_R_NCR_BS6_WINTER",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_01 threads/thread_02",
+        "ref": "R_SHAKTI_36H",
+        "entity": "RULE_R_SHAKTI_36H",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "ticket": {
+      "ticket_id": "TKT-0020",
+      "created_at": "2026-02-21 04:00:00",
+      "vehicle": "HR16SP9238",
+      "driver_id": "DRV-010",
+      "origin_hub": "Gurgaon",
+      "km_from_origin_hub": 47.0,
+      "destination": "Kanpur",
+      "issue": "clutch slipping",
+      "severity": "MEDIUM",
+      "client": "Shakti Cement",
+      "status": "CLOSED",
+      "resolution_note": "Towed to hub workshop.",
+      "source_file": "tickets.json",
+      "raw": {}
+    },
+    "ticket_id": "TKT-0020",
+    "run_id": "sbx-8bd43cff27fb",
+    "thread_id": "sbx-sbx-8bd43cff27fb-tkt-0020"
+  },
+  "langsmith_trace": "01a051ff-1b87-7262-98a6-a1e668ca5ae0"
+}

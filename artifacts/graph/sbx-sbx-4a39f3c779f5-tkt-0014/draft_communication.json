@@ -1,0 +1,51 @@
+{
+  "node": "draft_communication",
+  "run_id": "sbx-4a39f3c779f5",
+  "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0014",
+  "at": "2026-08-30T09:54:52.919977+00:00",
+  "timing_ms": 753.5,
+  "draft": {
+    "message_id": "MSG-TKT-0014",
+    "ticket_id": "TKT-0014",
+    "recipient": "Orion Pharma",
+    "subject": "Subject: Update: Replacement Vehicle Dispatched for Route Delhi to Ludhiana",
+    "body": "Subject: Update: Replacement Vehicle Dispatched for Route Delhi to Ludhiana\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle DL64IB1058, a replacement unit (HR73CY1771) has been dispatched from the Ambala hub.\nThe new vehicle is currently en route to complete the Delhi to Ludhiana delivery.\nPlease note the estimated arrival time is approximately 9.3 hours from now.\nWe apologize for the delay and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "citations": [
+      {
+        "source": "dispatcher_interview",
+        "ref": "R_NEAREST_HUB",
+        "document_type": "dispatcher_rule"
+      },
+      {
+        "source": "dispatcher_interview threads/thread_17 threads/thread_18",
+        "ref": "R_ORION_2020",
+        "document_type": "dispatcher_rule"
+      }
+    ],
+    "context_summary": {
+      "broken_vehicle": "DL64IB1058",
+      "replacement": "HR73CY1771",
+      "hub": "Ambala",
+      "eta_hours": 9.3,
+      "applied_rules": [
+        "R_NEAREST_HUB",
+        "R_ORION_2020"
+      ],
+      "quarantine_note": ""
+    },
+    "status": "PENDING_APPROVAL",
+    "run_id": "sbx-4a39f3c779f5",
+    "thread_id": "sbx-sbx-4a39f3c779f5-tkt-0014"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Orion Pharma\nBroken vehicle reg: DL64IB1058\nReplacement vehicle reg: HR73CY1771\nDispatch hub: Ambala\nRoute: Delhi → Ludhiana\nETA detail: Estimated arrival in about 9.3 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Route Delhi to Ludhiana\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle DL64IB1058, a replacement unit (HR73CY1771) has been dispatched from the Ambala hub.\nThe new vehicle is currently en route to complete the Delhi to Ludhiana delivery.\nPlease note the estimated arrival time is approximately 9.3 hours from now.\nWe apologize for the delay and will continue to monitor the shipment closely.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 738.0,
+    "tokens": {
+      "prompt": 132,
+      "completion": 119
+    }
+  }
+}

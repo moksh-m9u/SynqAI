@@ -2,6 +2,8 @@
   "node": "draft_communication",
   "run_id": "run-4616427b29a9",
   "thread_id": "tkt-tkt-0013",
+  "at": "2026-08-30T08:46:09.256324+00:00",
+  "timing_ms": 2842.8,
   "draft": {
     "message_id": "MSG-TKT-0013",
     "ticket_id": "TKT-0013",
@@ -34,5 +36,16 @@
     "status": "PENDING_APPROVAL",
     "run_id": "run-4616427b29a9",
     "thread_id": "tkt-tkt-0013"
+  },
+  "llm_debug": {
+    "mode": "qwen_groq",
+    "model": "qwen/qwen3.8-27b",
+    "prompt": "You are Meridian Freight's dispatcher. Draft a short client email (subject + body, ~5 lines) about a replacement vehicle after a breakdown. It must be professional and factual. NEVER include any personal data (names of drivers, phone numbers, ID numbers, licence numbers). Return ONLY the email text.\nClient: Orion Pharma\nBroken vehicle reg: HR14LS3426\nReplacement vehicle reg: HR63TT4697\nDispatch hub: Ambala\nRoute: Ambala → Rudrapur\nETA detail: Estimated arrival in about 9.6 hours\n",
+    "llm_output": "Subject: Update: Replacement Vehicle Dispatched for Orion Pharma Shipment\n\nDear Orion Pharma Team,\n\nFollowing a mechanical breakdown of vehicle HR14LS3426, we have dispatched a replacement unit, HR63TT4697, from our Ambala hub. The new vehicle is currently en route to Rudrapur with an estimated arrival time of approximately 9.6 hours. We are monitoring the journey closely to ensure timely delivery and will provide further updates as needed.\n\nBest regards,\nMeridian Freight Dispatch",
+    "timing_ms": 2830.4,
+    "tokens": {
+      "prompt": 133,
+      "completion": 109
+    }
   }
 }
